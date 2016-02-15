@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  MyCircle
+
+  Created by and on 16/1/28.
+  Copyright © 2016年 and. All rights reserved.
+*/
+"projectName"       = "圈子";
+//tabBar
+"tab_circle"         = "圈子";
+"tab_message"       = "消息";
+"tab_find"          = "发现";
+"tab_me"            = "我";
+
+//ad
+"ad_skip"           = "跳过";
+"ad_shake"          = "试试摇一摇";
+
+//circle
+"circle_hot"        = "最热";
+"circle_new"        = "最新";
+"circle_all"        = "全部";
+
+//message
+"mes_friends"        = "朋友";
+
+//set
+"set_setting"       = "设置";
+"set_night"         = "夜间";

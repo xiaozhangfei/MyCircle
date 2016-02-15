@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  MyCircle
+
+  Created by and on 16/1/28.
+  Copyright © 2016年 and. All rights reserved.
+*/
+"projectName" = "Circle";
+//tabBar
+"tab_circle"        = "Circle";
+"tab_message"       = "Message";
+"tab_find"          = "Find";
+"tab_me"            = "Me";
+
+//ad
+"ad_skip"           = "Skip";
+"ad_shake"          = "Shake it off";
+
+//circle
+"circle_hot"        = "Hot";
+"circle_new"        = "New";
+"circle_all"        = "All";
+
+//message
+"mes_friends"        = "Friends";
+
+
+//set
+"set_setting"       = "Setting";
+"set_night"         = "Night";
