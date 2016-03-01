@@ -8,9 +8,11 @@
 
 #import "BaseViewController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
-#import <iToast/iToast.h>
+#import "iToast.h"
 #import "AppMacro.h"
 #import "UtilsMacro.h"
+#import "XFTopToast.h"
+
 
 @interface BaseViewController ()<UIAlertViewDelegate>
 {
@@ -30,7 +32,12 @@
     
     [self addNotification];
     
+    [self addobserver];
+}
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self removeobserver];
 }
 
 #pragma mark - iToast Functions
@@ -167,5 +174,50 @@
     }
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskPortrait;
+}
+
+- (void)addobserver{
+    // Do any additional setup after loading the view from its nib.
+    //----- SETUP DEVICE ORIENTATION CHANGE NOTIFICATION -----
+    UIDevice *device = [UIDevice currentDevice]; //Get the device object
+    [device beginGeneratingDeviceOrientationNotifications]; //Tell it to start monitoring the accelerometer for orientation
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter]; //Get the notification centre for the app
+    [nc addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification  object:device];
+}
+
+- (void)removeobserver{
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    UIDevice *device = [UIDevice currentDevice]; //Get the device object
+    [nc removeObserver:self name:UIDeviceOrientationDidChangeNotification object:device];
+}
+
+- (void)orientationChanged:(NSNotification *)note  {      UIDeviceOrientation o = [[UIDevice currentDevice] orientation];
+    switch (o) {
+        case UIDeviceOrientationPortrait:            // Device oriented vertically, home button on the bottom
+            [self  rotation_icon:0.0];
+            break;
+        case UIDeviceOrientationPortraitUpsideDown:  // Device oriented vertically, home button on the top
+            [self  rotation_icon:180.0];
+            break;
+        case UIDeviceOrientationLandscapeLeft :      // Device oriented horizontally, home button on the right
+            [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeRight animated:YES];
+            
+            [self  rotation_icon:90.0*3];
+            break;
+        case UIDeviceOrientationLandscapeRight:      // Device oriented horizontally, home button on the left
+            [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeLeft animated:YES];
+            
+            [self  rotation_icon:90.0];
+            break;
+        default:
+            break;
+    }
+}
+
+-(void)rotation_icon:(float)n {
+    
+}
 
 @end

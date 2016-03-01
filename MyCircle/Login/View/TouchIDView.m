@@ -10,8 +10,7 @@
 
 #import <Masonry.h>
 #import <UIImageView+WebCache.h>
-#import "XFAPI.h"
-#import "XFAppContext.h"
+
 @implementation TouchIDView
 
 - (instancetype)initWithFrame:(CGRect)frame {

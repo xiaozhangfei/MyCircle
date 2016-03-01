@@ -17,9 +17,6 @@
 //RSA加密
 #import "RSA.h"
 
-#import "AFHTTPRequestOperationManager+URLData.h"
-#import "XFAPI.h"
-#import "BaseModel.h"
 #import "MiscTool.h"
 
 // RSA 公钥
@@ -83,6 +80,7 @@
  */
 - (void)upJSHandle:(NSDictionary *)response {
     NSMutableString *jsString = [NSMutableString string];
+    if (response && [(NSArray *)response count])
     for (NSDictionary *di in (NSArray *)response) {
         NSString *js = di[@"con"];
         
@@ -103,8 +101,8 @@
         //将代码下载到本地，保存成文件Document/up.js, 各个方法之间使用 ***** 分隔符
         [jsString appendString:@"*****"];
     }
-    if ( jsString == nil) {//js为空
-        return;
+    if ( [jsString isEqualToString:@""]) {//js为空
+        [jsString appendString:@"*****"];
     }
     NSString *jsPath = [self jsFilePath];
     NSLog(@"js xx = 写入 %@",jsString);
@@ -142,6 +140,7 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"up.js"];
+    NSLog(@"xx filePath = %@",filePath);
     return filePath;
 }
 

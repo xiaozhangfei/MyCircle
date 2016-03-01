@@ -7,8 +7,7 @@
 //
 
 #import "XFAppContext.h"
-#import "UtilsMacro.h"
-#import "AppMacro.h"
+
 //#import <UICKeyChainStore.h>
 
 static NSString *const GAAPPDataGuideRun = @"guideRun";

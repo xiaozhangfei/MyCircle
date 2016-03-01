@@ -9,24 +9,19 @@
 #import "LoginViewController.h"
 
 #import "AppDelegate.h"
-#import "XFAppContext.h"
 
 #import "LoginView.h"
-#import "UtilsMacro.h"
 
 #import <SMS_SDK/SMSSDK.h>
 #import <SMS_SDK/SMSSDKCountryAndAreaCode.h>
 #import <SMS_SDK/SMSSDK+DeprecatedMethods.h>
 #import <SMS_SDK/SMSSDK+ExtexdMethods.h>
 
-#import "AFHTTPRequestOperationManager+URLData.h"
-#import "XFAPI.h"
-#import "BaseModel.h"
-#import "PersonModel.h"
 #import "AFManagerHandle.h"
 
 #import "RegisterViewController.h"
 #import <LJWKeyboardHandlerHeaders.h>
+#import "PersonModel.h"
 
 @interface LoginViewController ()
 

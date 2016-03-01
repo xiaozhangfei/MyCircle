@@ -7,7 +7,6 @@
 //
 
 #import "UIView+Ext.h"
-#import "UtilsMacro.h"
 
 @implementation UIView (Ext)
 

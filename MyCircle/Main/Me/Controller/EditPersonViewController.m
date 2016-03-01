@@ -7,21 +7,13 @@
 //
 
 #import "EditPersonViewController.h"
-#import "AppMacro.h"
 #import <UIImageView+WebCache.h>
 #import <UIImageView+UIActivityIndicatorForSDWebImage.h>
 
-#import "XFAPI.h"
-#import "XFAppContext.h"
-#import "UtilsMacro.h"
-#import "UIView+Ext.h"
 #import "XFPicVideoPicker.h"
 
 //上传图片需要的类
 #import "AFManagerHandle.h"
-#import "XFAPI.h"
-#import "BaseModel.h"
-#import "AFHTTPRequestOperationManager+URLData.h"
 
 #import "MiscTool.h"
 #import "PersonModel.h"

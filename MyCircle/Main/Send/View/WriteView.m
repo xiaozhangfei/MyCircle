@@ -8,10 +8,8 @@
 
 #import "WriteView.h"
 #import <Masonry.h>
-#import "AppMacro.h"
 //定位
 #import <CoreLocation/CoreLocation.h>
-#import "UIView+Ext.h"
 
 
 @interface WriteView () <CLLocationManagerDelegate>

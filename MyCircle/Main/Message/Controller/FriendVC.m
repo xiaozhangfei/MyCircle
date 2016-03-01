@@ -7,12 +7,6 @@
 //
 
 #import "FriendVC.h"
-#import "AppMacro.h"
-
-#import "AFHTTPRequestOperationManager+URLData.h"
-#import "BaseModel.h"
-#import "XFAPI.h"
-#import "XFAppContext.h"
 
 #import "FriendModel.h"
 #import <UIImageView+WebCache.h>

@@ -10,10 +10,6 @@
 
 #import "RegisterView.h"
 
-#import "XFAPI.h"
-#import "XFAppContext.h"
-#import "AFHTTPRequestOperationManager+URLData.h"
-#import "BaseModel.h"
 #import "PersonModel.h"
 #import "AFManagerHandle.h"
 
@@ -22,7 +18,6 @@
 #import <SMS_SDK/SMSSDK+DeprecatedMethods.h>
 #import <SMS_SDK/SMSSDK+ExtexdMethods.h>
 
-#import "UtilsMacro.h"
 #import "MiscTool.h"
 
 #import <LJWKeyboardHandlerHeaders.h>

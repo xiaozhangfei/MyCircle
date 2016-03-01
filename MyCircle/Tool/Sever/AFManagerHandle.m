@@ -8,9 +8,7 @@
 
 #import "AFManagerHandle.h"
 #import <AFHTTPRequestOperationManager.h>
-#import "XFAppContext.h"
-#import "UtilsMacro.h"
-#import "AppMacro.h"
+
 static AFManagerHandle *_manager = nil;
 @implementation AFManagerHandle
 

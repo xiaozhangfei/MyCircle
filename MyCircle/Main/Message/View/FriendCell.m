@@ -7,11 +7,7 @@
 //
 
 #import "FriendCell.h"
-#import "UtilsMacro.h"
-#import "AppMacro.h"
-#import "UIView+Ext.h"
 #import <UIImageView+WebCache.h>
-#import "XFAPI.h"
 
 @interface FriendCell ()
 

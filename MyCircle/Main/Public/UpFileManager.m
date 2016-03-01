@@ -8,15 +8,8 @@
 
 #import "UpFileManager.h"
 
-#import "XFAPI.h"
-#import "AFHTTPRequestOperationManager+URLData.h"
-#import "XFAppContext.h"
-#import "BaseModel.h"
-
 #import <QiniuSDK.h>
-#import "UIView+Ext.h"
 #import "XFTopToast.h"
-#import "UtilsMacro.h"
 
 static UpFileManager *_manager = nil;
 @implementation UpFileManager

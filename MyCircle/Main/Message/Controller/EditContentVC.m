@@ -7,9 +7,7 @@
 //
 
 #import "EditContentVC.h"
-#import "AppMacro.h"
-#import "UtilsMacro.h"
-#import "UIView+Ext.h"
+
 @interface EditContentVC () <UITableViewDataSource, UITableViewDelegate>
 {
     UITextField *_tf;

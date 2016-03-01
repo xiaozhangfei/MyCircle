@@ -13,11 +13,6 @@
 
 #import <Qiniu/QiniuSDK.h>
 #import <QNUploadManager.h>
-#import "XFAppContext.h"
-
-#import "AFHTTPRequestOperationManager+URLData.h"
-#import "XFAPI.h"
-#import "BaseModel.h"
 
 #import "MyControl.h"
 @interface MessageViewController () <UIImagePickerControllerDelegate>

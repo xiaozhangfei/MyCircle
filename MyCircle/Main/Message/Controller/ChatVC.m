@@ -7,12 +7,7 @@
 //
 
 #import "ChatVC.h"
-#import "XFAppContext.h"
-#import "XFAPI.h"
-#import "UtilsMacro.h"
 #import "AppDelegate.h"
-#import "AppMacro.h"
-#import "UIView+Ext.h"
 
 #import "WebVC.h"
 @interface ChatVC ()

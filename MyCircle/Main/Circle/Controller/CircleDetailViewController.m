@@ -8,20 +8,13 @@
 
 #import "CircleDetailViewController.h"
 #import "RxWebViewController.h"
-#import "XFAppContext.h"
 
-#import "XFAPI.h"
-#import "AFHTTPRequestOperationManager+URLData.h"
-#import "BaseModel.h"
 #import "CircleDetailModel.h"
 #import <LocalAuthentication/LocalAuthentication.h>
 
 #import "CircleDetailView.h"
-#import "UIView+Ext.h"
 
 #import <AVFoundation/AVFoundation.h>
-#import "AppMacro.h"
-#import "UtilsMacro.h"
 
 #import "ChatVC.h"
 @interface CircleDetailViewController ()
@@ -137,7 +130,9 @@
 - (void)playAction:(UIGestureRecognizer *)sender {
     //[self showXFToastWithText:@"播放视频" image:[UIImage imageNamed:@"Action_Moments"]];
     //播放网络视频
-    [self playVideoWithURL:[NSURL URLWithString:[XFAPI video_url:_detailModel.vpath]]];
+//    [self playVideoWithURL:[NSURL URLWithString:[XFAPI video_url:_detailModel.vpath]]];
+    [self playVideoWithURL:[NSURL URLWithString:@"http://7xo6u7.com1.z0.glb.clouddn.com/Taylor%20Swift%20-%20You%20Belong%20With%20Me.mp4"]];
+
 }
 
 - (void)btnAction:(UIButton *)sender {

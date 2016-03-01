@@ -14,12 +14,7 @@
 #import "CircleAllPageViewController.h"
 
 #import "AppDelegate.h"
-#import "XFAPI.h"
-#import "XFAppContext.h"
-#import "UtilsMacro.h"
-#import "UIView+Ext.h"
 #import <UIImageView+WebCache.h>
-#import "AppMacro.h"
 
 #import "NirKxMenu.h"
 #import "Language.h"
@@ -172,5 +167,12 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [KxMenu dismissMenu];
 }
+
+- (void)rotation_icon:(float)n {
+    if (n == 0) {
+        //[self refreshDisplay];
+    }
+}
+
 
 @end

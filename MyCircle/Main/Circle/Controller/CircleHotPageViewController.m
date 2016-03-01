@@ -10,19 +10,16 @@
 
 #import "CircleDetailViewController.h"
 
-#import "AppMacro.h"
-#import "AFHTTPRequestOperationManager+URLData.h"
-#import "XFAPI.h"
-#import "BaseModel.h"
 #import "CircleHotModel.h"
 
 #import <MJRefresh/MJRefresh.h>
-#import "XFAppContext.h"
 
 #import "CircleHotTableViewCell.h"
 #import <UIImageView+WebCache.h>
 #import "AppDelegate.h"
-#import "UtilsMacro.h"
+
+#import "CircleDetailVC.h"
+
 @interface CircleHotPageViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) UITableView *hotTableView;
@@ -164,6 +161,8 @@
     //[self.navigationController.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%ld", indexPath.row+1]];
     CircleHotModel *model = _hotDataArray[indexPath.row];
     CircleDetailViewController *detailVC = [[CircleDetailViewController alloc] init];
+//    CircleDetailVC *detailVC = [[CircleDetailVC alloc] init];
+
     detailVC.srcTitle = model.title;
     detailVC.cid = model.cid;
     //[self.navigationController pushViewController:detailVC animated:YES];

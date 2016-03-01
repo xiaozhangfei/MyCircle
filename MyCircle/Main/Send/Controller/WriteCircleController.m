@@ -9,20 +9,13 @@
 #import "WriteCircleController.h"
 #import "WriteView.h"
 
-#import "AFHTTPRequestOperationManager+URLData.h"
-#import "BaseModel.h"
-#import "XFAPI.h"
-#import "XFAppContext.h"
-#import "AppMacro.h"
 #import <UIViewController+LJWKeyboardHandlerHelper.h>
 
-#import "UIView+Ext.h"
 
 
 //图片上传
 #import "AFManagerHandle.h"
 #import "MiscTool.h"
-#import "UtilsMacro.h"
 
 #import "XFPicVideoPicker.h"
 //

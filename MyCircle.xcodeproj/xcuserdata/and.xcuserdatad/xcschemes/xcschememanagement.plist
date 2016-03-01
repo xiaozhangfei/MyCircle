@@ -9,10 +9,35 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MyCircleToday.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>MyCircleWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>30</integer>
+		</dict>
+		<key>Notification - MyCircleWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>31</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>AD169F951C76A7B2005FE335</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>AD318BB51C1C15E300138E2A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AD5B1A561C7B02920018ABC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

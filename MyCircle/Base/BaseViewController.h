@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XFTopToast.h"
 @interface BaseViewController : UIViewController
 
 - (void)showToast:(NSString *)msg;
@@ -33,4 +32,7 @@
 - (void)showXFToastWithText:(NSString *)text image:(UIImage *)image;
 
 - (void)pushVC:(UIViewController *)vc animated:(BOOL)animated;
+
+-(void)rotation_icon:(float)n;
+
 @end

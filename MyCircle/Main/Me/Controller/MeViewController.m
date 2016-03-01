@@ -7,8 +7,6 @@
 //
 
 #import "MeViewController.h"
-#import "XFAppContext.h"
-#import "AppMacro.h"
 
 #import "VideoDownloaderVC.h"
 
@@ -17,19 +15,14 @@
 
 #import "PlayerVC.h"
 #import <UIImageView+WebCache.h>
-#import "UtilsMacro.h"
-#import "XFAPI.h"
-#import "UIView+Ext.h"
 
 #import "XFPicVideoPicker.h"
-#import "AFHTTPRequestOperationManager+URLData.h"
-#import "BaseModel.h"
 #import "UpFileManager.h"
 
 #import "AppDelegate.h"
 #import <RongIMKit/RongIMKit.h>
 
-@interface MeViewController() <UITableViewDataSource, UITableViewDelegate, XFPicVideoPickerProtocol>
+@interface MeViewController() <UITableViewDataSource, UITableViewDelegate, XFPicVideoPickerProtocol, UIAlertViewDelegate>
 {
     UIView *_refreshView;
     UIImageView *_refreshImg;
@@ -166,8 +159,10 @@
     }else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
             cell.textLabel.text = @"我收藏的视频";
-        }else {
+        }else if (indexPath.row == 1) {
             cell.textLabel.text = @"我喜欢的";
+        }else if (indexPath.row == 2) {
+            cell.textLabel.text = @"打赏好评";
         }
     }else {
         cell.textLabel.text = @"退出登录";
@@ -184,7 +179,7 @@
     if (section == 0) {
         return 1;
     }else if (section == 1) {
-        return 2;
+        return 3;
     }else {
         return 1;
     }
@@ -208,6 +203,9 @@
         PlayerVC *player = [[PlayerVC alloc] init];
         player.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:player animated:YES];
+    }else if (indexPath.section == 1 && indexPath.row == 2) {
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"你打算评价我们的应用吗？" delegate:self cancelButtonTitle:@"现在不" otherButtonTitles:@"YES-AppStore中",@"YES-iTunes中", nil];
+        [alert show];
     }
     else if (indexPath.section == 2) {
         //退出登录
@@ -223,6 +221,15 @@
         [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
         //[((AppDelegate *)[UIApplication sharedApplication].delegate).drawerController removeFromParentViewController];
         [((AppDelegate *)[UIApplication sharedApplication].delegate) setWindowRootVC];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/cn/app/guang-dian-bi-zhi/id511587202?mt=8"]];
+    } else if (buttonIndex == 2) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms://itunes.apple.com/cn/app/guang-dian-bi-zhi/id511587202?mt=8"]];
     }
 }
 

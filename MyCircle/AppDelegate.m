@@ -24,11 +24,8 @@
 
 #import "MMExampleDrawerVisualStateManager.h"
 
-#import "UtilsMacro.h"
 #import "UIColor+Utils.h"
-#import "XFAppContext.h"
-#import "MiscTool.h"
-#import "AppMacro.h"
+
 //touchVC
 #import "TouchIDViewController.h"
 //登录
@@ -45,27 +42,11 @@
 
 #import "LaunchVC.h"
 
-#import "XFAPI.h"
-#import "AFHTTPRequestOperationManager+URLData.h"
-#import "BaseModel.h"
-
 #import "AppDelegate+ZXFJSPatch.h"
 
+#import <MobClick.h>
 
-//Mob.com短信验证码
-#define mobAppKey @"bc9163d636e0"
-#define mobAppSecret @"a1f6f9c2167465427458babc40c540ee"
-
-//xg push
-#define xgAppKey 2200160518
-#define xgAppSecret @"IL2AX694V5VZ"
-
-//融云
-#define RCKey @"pwe86ga5e0gw6"
-
-#define aesKey @"wodetian123"
-
-#define rsa_public_key @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDdg086h7CIhMPG0EdzE/RacFc3rfpBkKYSQhX2OgObuICugbolSqiaUa6CZc4Ock988ubc6MKUqiLjGfNdOJ3Iod7ryqDb7z4cI08uphhyR6CmhgZZyu6DFzpoudMFQPKr3/vpGZ8Z/Vu7TGJwnuhkpEAUuSoMrYaSKj2qnGmNXQIDAQAB"
+#define kTime 5
 
 @interface AppDelegate () <UITabBarControllerDelegate>
 {
@@ -88,6 +69,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
 
+    
     [self setUpNavigationBarAppearance];    
     
     LaunchVC *launch = [[LaunchVC alloc] init];
@@ -100,13 +82,20 @@
     
     //[MiscTool deviceIPAdress];//本地ip
     
+    NSUserDefaults *userDefault=[[NSUserDefaults alloc] initWithSuiteName:@"group.MyCircleContainer"];
+    [userDefault setObject:@"侠之大者，为国为民" forKey:@"xia"];
+    [userDefault synchronize];
 
+    NSLog(@"sss %@",[userDefault valueForKey:@"xia"]);
     XFAppContext *context = [XFAppContext sharedContext];
     NSLog(@"uid = %@",context.uid);
     NSLog(@"token  = %@",context.token);
     
     //初始化key
     [self initKeyAndSecretWithOptions:(NSDictionary *)launchOptions];
+    
+    [MobClick startWithAppkey:UmengAppKey reportPolicy:BATCH channelId:@"Ceshi"];
+
     
     [self initPush];
     
@@ -117,14 +106,10 @@
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(xfHomeViewTapAction:) name:@"xfHomeViewTapNoti" object:nil];
     
     //修改JS
-    [self getUpJS];
+    //[self getUpJS];
     
     return YES;
 }
-
-
-
-
 
 #pragma mark -
 - (void)xfHomeViewTapAction:(NSNotification *)sender
@@ -138,23 +123,23 @@
 #pragma mark -- 初始化tabBar
 - (void)setTabBar {
     
-    CircleViewController *circleVC = [[CircleViewController alloc] init];
-    UINavigationController *circleNC = [[UINavigationController alloc] initWithRootViewController:circleVC];
-    circleVC.tabBarController.selectedIndex = 1001;
-    
-    ChatListVC *chatListVC = [[ChatListVC alloc] init];
-    UINavigationController *messageNC = [[UINavigationController alloc] initWithRootViewController:chatListVC];
+    CircleViewController *circleVC            = [[CircleViewController alloc] init];
+    UINavigationController *circleNC          = [[UINavigationController alloc] initWithRootViewController:circleVC];
+    circleVC.tabBarController.selectedIndex   = 1001;
+
+    ChatListVC *chatListVC                    = [[ChatListVC alloc] init];
+    UINavigationController *messageNC         = [[UINavigationController alloc] initWithRootViewController:chatListVC];
     chatListVC.tabBarController.selectedIndex = 1002;
-    
-    FindViewController *findVC = [[FindViewController alloc] init];
-    UINavigationController *findNC = [[UINavigationController alloc] initWithRootViewController:findVC];
-    findVC.tabBarController.selectedIndex = 1003;
-    
-    MeViewController *meVC = [[MeViewController alloc] init];
-    UINavigationController *meNC = [[UINavigationController alloc] initWithRootViewController:meVC];
-    meVC.tabBarController.selectedIndex = 1004;
-    
-    CYLTabBarController *tabBarController = [[CYLTabBarController alloc] init];
+
+    FindViewController *findVC                = [[FindViewController alloc] init];
+    UINavigationController *findNC            = [[UINavigationController alloc] initWithRootViewController:findVC];
+    findVC.tabBarController.selectedIndex     = 1003;
+
+    MeViewController *meVC                    = [[MeViewController alloc] init];
+    UINavigationController *meNC              = [[UINavigationController alloc] initWithRootViewController:meVC];
+    meVC.tabBarController.selectedIndex       = 1004;
+
+    CYLTabBarController *tabBarController     = [[CYLTabBarController alloc] init];
     [self customizeTabBarForController:tabBarController];
     
     [tabBarController setViewControllers:@[
@@ -178,7 +163,7 @@
 - (void)initDrawerController {
     
     //左侧页面
-    LeftViewController *leftVC = [[LeftViewController alloc] init];
+    LeftViewController *leftVC     = [[LeftViewController alloc] init];
     UINavigationController *leftNC = [[UINavigationController alloc] initWithRootViewController:leftVC];
     //中间tabBar
     [self setTabBar];
@@ -211,6 +196,7 @@
 - (void)setWindowRootVC {
     //设置rootVC
     [self initDrawerController];
+    
     self.window.rootViewController = self.drawerController;
 }
 
@@ -416,6 +402,7 @@
                             CYLTabBarItemImage : @"circle_no",
                             CYLTabBarItemSelectedImage : @"circle",
                             };
+    
     NSDictionary *dict2 = @{
                             CYLTabBarItemTitle : titles[1],
                             CYLTabBarItemImage : @"message_no",
@@ -478,16 +465,22 @@
 
 #pragma mark -- 弹出验证指纹框
 - (void)showTouchVC {
-    //进入页面弹出验证指纹框
-    TouchIDViewController *touch = [[TouchIDViewController alloc] init];
-    UINavigationController *touchNC = [[UINavigationController alloc] initWithRootViewController:touch];
-    touchNC.navigationBarHidden = YES;
-    //将token，id等存储到钥匙串
-    //BOOL ss = [SFHFKeychainUtils storeUsername:@"哈哈" andPassword:@"123" forServiceName:@"abc" updateExisting:YES error:nil];
-    //ss == YES ? NSLog(@"已存储") : NSLog(@"存储失败");
-    [self.window.rootViewController presentViewController:touchNC animated:YES completion:^{
-        
-    }];
+//    if (_touchNC && [_touchNC viewControllers].count > 0) {
+//        return;
+//    }
+//    if (_time > kTime) {
+//        return;
+//    }
+//    //进入页面弹出验证指纹框
+//    TouchIDViewController *touch = [[TouchIDViewController alloc] init];
+//    _touchNC = [[UINavigationController alloc] initWithRootViewController:touch];
+//    _touchNC.navigationBarHidden = YES;
+//    //将token，id等存储到钥匙串
+//    //BOOL ss = [SFHFKeychainUtils storeUsername:@"哈哈" andPassword:@"123" forServiceName:@"abc" updateExisting:YES error:nil];
+//    //ss == YES ? NSLog(@"已存储") : NSLog(@"存储失败");
+//    [self.window.rootViewController presentViewController:_touchNC animated:YES completion:^{
+//        
+//    }];
 }
 
 
@@ -507,28 +500,26 @@
                                                                          @(ConversationType_GROUP)
                                                                          ]];
     application.applicationIconBadgeNumber = unreadMsgCount;
-    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     
-    TouchIDViewController *touch = [[TouchIDViewController alloc] init];
-    UINavigationController *touchNC = [[UINavigationController alloc] initWithRootViewController:touch];
-    touchNC.navigationBarHidden = YES;
-    [self.window.rootViewController presentViewController:touchNC animated:YES completion:^{
-        
-    }];
+//    TouchIDViewController *touch = [[TouchIDViewController alloc] init];
+//    UINavigationController *touchNC = [[UINavigationController alloc] initWithRootViewController:touch];
+//    touchNC.navigationBarHidden = YES;
+//    [self.window.rootViewController presentViewController:touchNC animated:YES completion:^{
+//        
+//    }];
     
 }
 
 
-
-
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    //[self showTouchVC];
     //每次进入时执行js
-    [self execJs];
+    //[self execJs];
     
 }
 
@@ -633,6 +624,23 @@
         //操作
     }
 }
+
+
+#pragma mark openUrl
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    if ([url.description hasPrefix:@"Today"]) {
+        //你的处理逻辑
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:url.host
+                              message:@"来源于Today扩展"
+                              delegate:nil
+                              cancelButtonTitle:@"知道了"
+                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    return NO;
+}
+
 
 
 @end

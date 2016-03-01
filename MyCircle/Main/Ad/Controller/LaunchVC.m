@@ -8,15 +8,10 @@
 
 #import "LaunchVC.h"
 #import <UIImageView+WebCache.h>
-#import "XFAPI.h"
-#import "UIView+Ext.h"
 #import "AppDelegate.h"
 #import "AdVC.h"
-#import "UtilsMacro.h"
-#import "AppMacro.h"
 #import "AdModel.h"
-#import "AFHTTPRequestOperationManager+URLData.h"
-#import "BaseModel.h"
+
 @interface LaunchVC ()
 {
     NSTimer *_timer;
@@ -56,7 +51,9 @@
     [self becomeFirstResponder];
     
     //5s内如果数据请求不到，则跳过
-    _timer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(delayMethod) userInfo:nil repeats:NO];
+    //if (!_timer) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(delayMethod) userInfo:nil repeats:NO];
+    //}
 }
 
 - (void)initView {
@@ -105,8 +102,6 @@
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error, BaseModel *baseModel) {
         NSLog(@"请求失败 error = %@", error);
-    } dataRequestProgress:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
-        
     }];
 }
 
@@ -215,6 +210,9 @@
     _bottomImv = nil;
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

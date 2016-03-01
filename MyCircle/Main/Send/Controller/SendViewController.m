@@ -9,14 +9,8 @@
 #import "SendViewController.h"
 #import "WriteCircleController.h"
 
-#import "AFHTTPRequestOperationManager+URLData.h"
-#import "XFAPI.h"
-#import "XFAppContext.h"
-#import "BaseModel.h"
 #import "CircleHotModel.h"
-#import "UtilsMacro.h"
 #import <masonry.h>
-#import "UIView+Ext.h"
 
 #import "FactoryMethod.h"
 #import "AppDelegate.h"
@@ -26,7 +20,6 @@
 
 #import <POP.h>
 #import "BtnExt.h"
-#import "AppMacro.h"
 
 @interface SendViewController ()
 

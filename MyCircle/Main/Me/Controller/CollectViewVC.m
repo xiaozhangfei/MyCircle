@@ -7,9 +7,7 @@
 //
 
 #import "CollectViewVC.h"
-#import "AppMacro.h"
 
-#import "UIView+Ext.h"
 @interface CollectViewVC () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) UITableView *collectTV;

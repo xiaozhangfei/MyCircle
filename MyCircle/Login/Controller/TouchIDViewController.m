@@ -9,7 +9,6 @@
 #import "TouchIDViewController.h"
 #import "TouchIDView.h"
 
-#import "UIView+Ext.h"
 #import <LocalAuthentication/LocalAuthentication.h>
 
 #import "LoginViewController.h"
@@ -114,6 +113,8 @@
     }
 }
 
+- (void)dealloc {
+}
 
 
 

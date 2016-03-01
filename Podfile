@@ -1,5 +1,6 @@
-
 platform :ios,'7.0'
+
+target 'MyCircle' do
 
 pod 'Masonry'
 pod 'AFNetworking'
@@ -9,7 +10,6 @@ pod 'TTTAttributedLabel'
 pod 'SSKeychain'
 pod 'GPUImage'
 pod 'CYLTabBarController'
-pod 'iToast'
 pod 'WMPageController'
 pod 'MJRefresh'
 pod 'AVOSCloudIM'
@@ -24,4 +24,23 @@ pod 'RongCloudIMKitWithVoip'
 pod 'SWTableViewCell'
 pod 'JSPatch'
 pod 'VEVerbalExpressions'
-pod 'CTAssetsPickerController', :path => '.'
+pod 'CTAssetsPickerController'
+pod 'UMengAnalytics-NO-IDFA'
+end
+
+target 'MyCircleToday' do
+
+pod 'AFNetworking'
+pod 'SDWebImage'
+
+end
+
+target 'MyCircleWatch' do
+
+
+end
+
+target 'MyCircleWatch Extension' do
+    
+end
+

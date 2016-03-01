@@ -7,9 +7,7 @@
 //
 
 #import "MiscTool.h"
-#import "UIView+Ext.h"
-#import "AppMacro.h"
-#import "UtilsMacro.h"
+
 #import "NSString+URLEncoding.h"
 #import <CoreText/CoreText.h>
 #import <CFNetwork/CFNetwork.h>

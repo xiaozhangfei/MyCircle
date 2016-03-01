@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71BA741CBD01DC73C544C907 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BABAE3642608C609518D365 /* libPods.a */; };
+		79A3158194B0D4A23E1B2318 /* libPods-MyCircleWatch Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A39F23416AFE4C7792781585 /* libPods-MyCircleWatch Extension.a */; };
+		97CDC9B9AA0C45DC1EFAF31D /* libPods-MyCircleWatch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D69F8B431B002834920AE6 /* libPods-MyCircleWatch.a */; };
+		983F67A8C7823E6BF8833CC4 /* libPods-MyCircleToday.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D48BD82DB2C71EB596AD4D8C /* libPods-MyCircleToday.a */; };
 		AD07487C1C5B41090092652F /* SecurityUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AD07487B1C5B41090092652F /* SecurityUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AD0748801C5B42190092652F /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = AD07487E1C5B42190092652F /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AD0748831C5B42AF0092652F /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0748821C5B42AF0092652F /* NSData+AES.m */; };
@@ -15,6 +17,12 @@
 		AD07488E1C5F2D620092652F /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = AD07488D1C5F2D620092652F /* RSA.m */; };
 		AD07B42A1C1EB71F00BC630D /* VideoDownloaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD07B4291C1EB71F00BC630D /* VideoDownloaderVC.m */; };
 		AD07B42E1C1EB75A00BC630D /* MQLResumeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD07B42D1C1EB75A00BC630D /* MQLResumeManager.m */; };
+		AD099F981C71730C0011DAEF /* UIScrollView+XFRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = AD099F971C71730C0011DAEF /* UIScrollView+XFRefresh.m */; };
+		AD169F981C76A7B2005FE335 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD169F971C76A7B2005FE335 /* NotificationCenter.framework */; };
+		AD169F9C1C76A7B2005FE335 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD169F9B1C76A7B2005FE335 /* TodayViewController.m */; };
+		AD169FA31C76A7B2005FE335 /* MyCircleToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AD169F961C76A7B2005FE335 /* MyCircleToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AD169FAC1C76F0F9005FE335 /* XFAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = AD318D671C1D48C000138E2A /* XFAPI.m */; };
+		AD169FC71C7AA7FE005FE335 /* TodayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD169FC61C7AA7FE005FE335 /* TodayModel.m */; };
 		AD1B060C1C391B6E00D0F1A4 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1B060B1C391B6E00D0F1A4 /* JavaScriptCore.framework */; };
 		AD1B06151C3932F400D0F1A4 /* btn_release@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD1B06141C3932F400D0F1A4 /* btn_release@2x.png */; };
 		AD1B06181C3A535000D0F1A4 /* BtnExt.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1B06171C3A535000D0F1A4 /* BtnExt.m */; };
@@ -205,6 +213,14 @@
 		AD4C6C8C1C356A070008A6FB /* chat_pendant.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4C6C8B1C356A070008A6FB /* chat_pendant.png */; };
 		AD4C6C8E1C356E8B0008A6FB /* header_leftbtn_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4C6C8D1C356E8B0008A6FB /* header_leftbtn_nor@2x.png */; };
 		AD4C6C911C3580A30008A6FB /* WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4C6C901C3580A30008A6FB /* WebVC.m */; };
+		AD5B1A5B1C7B02920018ABC3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5B1A591C7B02920018ABC3 /* Interface.storyboard */; };
+		AD5B1A5D1C7B02920018ABC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5B1A5C1C7B02920018ABC3 /* Assets.xcassets */; };
+		AD5B1A641C7B02920018ABC3 /* MyCircleWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AD5B1A631C7B02920018ABC3 /* MyCircleWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AD5B1A6C1C7B02920018ABC3 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B1A6B1C7B02920018ABC3 /* InterfaceController.m */; };
+		AD5B1A6F1C7B02920018ABC3 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B1A6E1C7B02920018ABC3 /* ExtensionDelegate.m */; };
+		AD5B1A721C7B02920018ABC3 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B1A711C7B02920018ABC3 /* NotificationController.m */; };
+		AD5B1A741C7B02920018ABC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5B1A731C7B02920018ABC3 /* Assets.xcassets */; };
+		AD5B1A781C7B02930018ABC3 /* MyCircleWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AD5B1A571C7B02920018ABC3 /* MyCircleWatch.app */; };
 		AD7C46661C59FD5300B125D6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD7C46651C59FD5300B125D6 /* Info.plist */; };
 		AD7C46691C59FD9300B125D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD7C466B1C59FD9300B125D6 /* InfoPlist.strings */; };
 		AD7C466F1C5A021A00B125D6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD7C46711C5A021A00B125D6 /* Localizable.strings */; };
@@ -212,6 +228,10 @@
 		AD86601A1C605E9B00BDDE31 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8660191C605E9B00BDDE31 /* Photos.framework */; };
 		AD86601C1C605EC200BDDE31 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD86601B1C605EC200BDDE31 /* PhotosUI.framework */; };
 		AD90FCDC1C2B89CD00A70220 /* Language.m in Sources */ = {isa = PBXBuildFile; fileRef = AD90FCDB1C2B89CD00A70220 /* Language.m */; };
+		AD991D4B1C7BFDB40027A325 /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = AD991D4A1C7BFDB40027A325 /* iToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD991D541C7C42380027A325 /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD991D511C7C42380027A325 /* WMPlayer.bundle */; };
+		AD991D551C7C42380027A325 /* WMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD991D531C7C42380027A325 /* WMPlayer.m */; };
+		AD991D581C7C45A20027A325 /* CircleDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD991D571C7C45A20027A325 /* CircleDetailVC.m */; };
 		ADA4227C1C301E7300D9877D /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA422771C301E7300D9877D /* SMS_SDKLocalizable.strings */; };
 		ADA4227D1C301E7300D9877D /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA422791C301E7300D9877D /* MOBFoundation.framework */; };
 		ADA4227E1C301E7300D9877D /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4227A1C301E7300D9877D /* SMS_SDK.framework */; };
@@ -240,12 +260,81 @@
 		ADF523911C58C1E200C6E49F /* LKViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF5238F1C58C1E200C6E49F /* LKViewUtils.m */; };
 		ADF523941C58C2FF00C6E49F /* HYPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF523931C58C2FF00C6E49F /* HYPageControl.m */; };
 		ADF523971C58C8BE00C6E49F /* XFPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF523961C58C8BE00C6E49F /* XFPageView.m */; };
+		CA885FA34F19D12752FC3EA5 /* libPods-MyCircle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CC154890CC02C61D5FC94F /* libPods-MyCircle.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AD169FA11C76A7B2005FE335 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD318BAE1C1C15E300138E2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD169F951C76A7B2005FE335;
+			remoteInfo = MyCircleToday;
+		};
+		AD5B1A651C7B02920018ABC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD318BAE1C1C15E300138E2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD5B1A621C7B02920018ABC3;
+			remoteInfo = "MyCircleWatch Extension";
+		};
+		AD5B1A761C7B02930018ABC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD318BAE1C1C15E300138E2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD5B1A561C7B02920018ABC3;
+			remoteInfo = MyCircleWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD169FA81C76A7B2005FE335 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AD169FA31C76A7B2005FE335 /* MyCircleToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD5B1A7D1C7B02930018ABC3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AD5B1A641C7B02920018ABC3 /* MyCircleWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD5B1A821C7B02930018ABC3 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				AD5B1A781C7B02930018ABC3 /* MyCircleWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		19644058EA2D431068A78D7B /* Pods-MyCircleWatch Extension.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleWatch Extension.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleWatch Extension/Pods-MyCircleWatch Extension.adhoc.xcconfig"; sourceTree = "<group>"; };
 		1BABAE3642608C609518D365 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		33D84F9EC5CE9D5B07766DD0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		3F7AC2F26583A5812043C681 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4B16B17899253A19378ECF91 /* Pods-MyCircle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircle.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircle/Pods-MyCircle.release.xcconfig"; sourceTree = "<group>"; };
+		74CB07F8616594CE28613396 /* Pods-MyCircleToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleToday/Pods-MyCircleToday.release.xcconfig"; sourceTree = "<group>"; };
+		81F494A8FFDCB0C5B69D85BD /* Pods-MyCircle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircle/Pods-MyCircle.debug.xcconfig"; sourceTree = "<group>"; };
+		8316425EFCD3F3DB2410445F /* Pods-MyCircleWatch.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleWatch.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleWatch/Pods-MyCircleWatch.adhoc.xcconfig"; sourceTree = "<group>"; };
+		8AF3F2F08BFB739F40DEF904 /* Pods-MyCircleWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleWatch/Pods-MyCircleWatch.debug.xcconfig"; sourceTree = "<group>"; };
+		919BC0FBAB4CBF2FD1ACC5E7 /* Pods-MyCircleWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleWatch/Pods-MyCircleWatch.release.xcconfig"; sourceTree = "<group>"; };
+		98CC154890CC02C61D5FC94F /* libPods-MyCircle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCircle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A96F6F0F5B880930C8EECC3 /* Pods-MyCircleWatch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleWatch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleWatch Extension/Pods-MyCircleWatch Extension.release.xcconfig"; sourceTree = "<group>"; };
+		A39F23416AFE4C7792781585 /* libPods-MyCircleWatch Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCircleWatch Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD07487A1C5B41090092652F /* SecurityUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityUtil.h; sourceTree = "<group>"; };
 		AD07487B1C5B41090092652F /* SecurityUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityUtil.m; sourceTree = "<group>"; };
 		AD07487D1C5B42190092652F /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
@@ -260,6 +349,29 @@
 		AD07B4291C1EB71F00BC630D /* VideoDownloaderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDownloaderVC.m; sourceTree = "<group>"; };
 		AD07B42C1C1EB75A00BC630D /* MQLResumeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQLResumeManager.h; sourceTree = "<group>"; };
 		AD07B42D1C1EB75A00BC630D /* MQLResumeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQLResumeManager.m; sourceTree = "<group>"; };
+		AD099F961C71730C0011DAEF /* UIScrollView+XFRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+XFRefresh.h"; sourceTree = "<group>"; };
+		AD099F971C71730C0011DAEF /* UIScrollView+XFRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+XFRefresh.m"; sourceTree = "<group>"; };
+		AD099F991C717E2E0011DAEF /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		AD169F961C76A7B2005FE335 /* MyCircleToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyCircleToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD169F971C76A7B2005FE335 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		AD169F9A1C76A7B2005FE335 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		AD169F9B1C76A7B2005FE335 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		AD169FA01C76A7B2005FE335 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD169FA91C76C4DA005FE335 /* MyCircle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyCircle.entitlements; sourceTree = "<group>"; };
+		AD169FAA1C76ED20005FE335 /* MyCircleToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyCircleToday.entitlements; sourceTree = "<group>"; };
+		AD169FB31C76F133005FE335 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
+		AD169FB51C76F1A7005FE335 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		AD169FB91C76F52E005FE335 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AD169FBA1C76F52E005FE335 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		AD169FBB1C76F52E005FE335 /* Pods-dummy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		AD169FBC1C76F52E005FE335 /* Pods-frameworks.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		AD169FBD1C76F52E005FE335 /* Pods-resources.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		AD169FBE1C76F52E005FE335 /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Pods.adhoc.xcconfig; sourceTree = "<group>"; };
+		AD169FBF1C76F52E005FE335 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		AD169FC01C76F52E005FE335 /* Pods.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		AD169FC11C76F704005FE335 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		AD169FC51C7AA7FE005FE335 /* TodayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayModel.h; sourceTree = "<group>"; };
+		AD169FC61C7AA7FE005FE335 /* TodayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayModel.m; sourceTree = "<group>"; };
 		AD1B060B1C391B6E00D0F1A4 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		AD1B06141C3932F400D0F1A4 /* btn_release@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_release@2x.png"; sourceTree = "<group>"; };
 		AD1B06161C3A535000D0F1A4 /* BtnExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtnExt.h; sourceTree = "<group>"; };
@@ -584,6 +696,21 @@
 		AD4C6C8D1C356E8B0008A6FB /* header_leftbtn_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header_leftbtn_nor@2x.png"; sourceTree = "<group>"; };
 		AD4C6C8F1C3580A30008A6FB /* WebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebVC.h; sourceTree = "<group>"; };
 		AD4C6C901C3580A30008A6FB /* WebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVC.m; sourceTree = "<group>"; };
+		AD5B1A531C7AFA6A0018ABC3 /* libMJRefresh.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMJRefresh.a; path = "Pods/../build/Debug-iphoneos/libMJRefresh.a"; sourceTree = "<group>"; };
+		AD5B1A571C7B02920018ABC3 /* MyCircleWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCircleWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD5B1A5A1C7B02920018ABC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		AD5B1A5C1C7B02920018ABC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD5B1A5E1C7B02920018ABC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD5B1A631C7B02920018ABC3 /* MyCircleWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MyCircleWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD5B1A691C7B02920018ABC3 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		AD5B1A6A1C7B02920018ABC3 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		AD5B1A6B1C7B02920018ABC3 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		AD5B1A6D1C7B02920018ABC3 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		AD5B1A6E1C7B02920018ABC3 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		AD5B1A701C7B02920018ABC3 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		AD5B1A711C7B02920018ABC3 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		AD5B1A731C7B02920018ABC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD5B1A751C7B02920018ABC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7C46651C59FD5300B125D6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7C466A1C59FD9300B125D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AD7C466C1C59FD9400B125D6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -595,6 +722,38 @@
 		AD86601B1C605EC200BDDE31 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		AD90FCDA1C2B89CD00A70220 /* Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Language.h; sourceTree = "<group>"; };
 		AD90FCDB1C2B89CD00A70220 /* Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Language.m; sourceTree = "<group>"; };
+		AD991D121C7B05940027A325 /* MyCircleWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyCircleWatch.entitlements; sourceTree = "<group>"; };
+		AD991D131C7B05BC0027A325 /* MyCircleWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "MyCircleWatch Extension.entitlements"; sourceTree = "<group>"; };
+		AD991D161C7BEC850027A325 /* libCRToast.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCRToast.a; path = "Pods/../build/Debug-iphoneos/libCRToast.a"; sourceTree = "<group>"; };
+		AD991D181C7BEC8B0027A325 /* libCTAssetsPickerController.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCTAssetsPickerController.a; path = "Pods/../build/Debug-iphoneos/libCTAssetsPickerController.a"; sourceTree = "<group>"; };
+		AD991D1A1C7BEC900027A325 /* libCYLTabBarController.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCYLTabBarController.a; path = "Pods/../build/Debug-iphoneos/libCYLTabBarController.a"; sourceTree = "<group>"; };
+		AD991D1C1C7BEC940027A325 /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGPUImage.a; path = "Pods/../build/Debug-iphoneos/libGPUImage.a"; sourceTree = "<group>"; };
+		AD991D1E1C7BEC980027A325 /* libHappyDNS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHappyDNS.a; path = "Pods/../build/Debug-iphoneos/libHappyDNS.a"; sourceTree = "<group>"; };
+		AD991D201C7BEC9C0027A325 /* libiToast.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiToast.a; path = "Pods/../build/Debug-iphoneos/libiToast.a"; sourceTree = "<group>"; };
+		AD991D221C7BEC9F0027A325 /* libJSPatch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libJSPatch.a; path = "Pods/../build/Debug-iphoneos/libJSPatch.a"; sourceTree = "<group>"; };
+		AD991D241C7BECAE0027A325 /* libPods-MyCircle-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MyCircle-AFNetworking.a"; path = "Pods/../build/Debug-iphoneos/libPods-MyCircle-AFNetworking.a"; sourceTree = "<group>"; };
+		AD991D261C7BECB30027A325 /* libPods-MyCircle-Qiniu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MyCircle-Qiniu.a"; path = "Pods/../build/Debug-iphoneos/libPods-MyCircle-Qiniu.a"; sourceTree = "<group>"; };
+		AD991D281C7BECBA0027A325 /* libPods-MyCircle-SDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MyCircle-SDWebImage.a"; path = "Pods/../build/Debug-iphoneos/libPods-MyCircle-SDWebImage.a"; sourceTree = "<group>"; };
+		AD991D2A1C7BECBE0027A325 /* libPods-MyCircle-UIActivityIndicator-for-SDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MyCircle-UIActivityIndicator-for-SDWebImage.a"; path = "Pods/../build/Debug-iphoneos/libPods-MyCircle-UIActivityIndicator-for-SDWebImage.a"; sourceTree = "<group>"; };
+		AD991D2C1C7BECD10027A325 /* libLJWKeyboardHandler.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLJWKeyboardHandler.a; path = "Pods/../build/Debug-iphoneos/libLJWKeyboardHandler.a"; sourceTree = "<group>"; };
+		AD991D2E1C7BECEA0027A325 /* libMasonry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMasonry.a; path = "Pods/../build/Debug-iphoneos/libMasonry.a"; sourceTree = "<group>"; };
+		AD991D301C7BECED0027A325 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/libMBProgressHUD.a"; sourceTree = "<group>"; };
+		AD991D321C7BECF10027A325 /* libMJExtension.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMJExtension.a; path = "Pods/../build/Debug-iphoneos/libMJExtension.a"; sourceTree = "<group>"; };
+		AD991D341C7BECF40027A325 /* libMJRefresh.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMJRefresh.a; path = "Pods/../build/Debug-iphoneos/libMJRefresh.a"; sourceTree = "<group>"; };
+		AD991D361C7BECF90027A325 /* libpop.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpop.a; path = "Pods/../build/Debug-iphoneos/libpop.a"; sourceTree = "<group>"; };
+		AD991D381C7BECFE0027A325 /* libSBJson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSBJson.a; path = "Pods/../build/Debug-iphoneos/libSBJson.a"; sourceTree = "<group>"; };
+		AD991D3A1C7BED020027A325 /* libSSKeychain.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSSKeychain.a; path = "Pods/../build/Debug-iphoneos/libSSKeychain.a"; sourceTree = "<group>"; };
+		AD991D3C1C7BED060027A325 /* libSWTableViewCell.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSWTableViewCell.a; path = "Pods/../build/Debug-iphoneos/libSWTableViewCell.a"; sourceTree = "<group>"; };
+		AD991D3E1C7BED090027A325 /* libTTTAttributedLabel.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTTTAttributedLabel.a; path = "Pods/../build/Debug-iphoneos/libTTTAttributedLabel.a"; sourceTree = "<group>"; };
+		AD991D401C7BED0D0027A325 /* libVEVerbalExpressions.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVEVerbalExpressions.a; path = "Pods/../build/Debug-iphoneos/libVEVerbalExpressions.a"; sourceTree = "<group>"; };
+		AD991D421C7BED110027A325 /* libWMPageController.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWMPageController.a; path = "Pods/../build/Debug-iphoneos/libWMPageController.a"; sourceTree = "<group>"; };
+		AD991D491C7BFDB40027A325 /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
+		AD991D4A1C7BFDB40027A325 /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
+		AD991D511C7C42380027A325 /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
+		AD991D521C7C42380027A325 /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
+		AD991D531C7C42380027A325 /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
+		AD991D561C7C45A20027A325 /* CircleDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleDetailVC.h; sourceTree = "<group>"; };
+		AD991D571C7C45A20027A325 /* CircleDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleDetailVC.m; sourceTree = "<group>"; };
 		ADA422781C301E7300D9877D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
 		ADA422791C301E7300D9877D /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		ADA4227A1C301E7300D9877D /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
@@ -641,9 +800,24 @@
 		ADF523931C58C2FF00C6E49F /* HYPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPageControl.m; sourceTree = "<group>"; };
 		ADF523951C58C8BE00C6E49F /* XFPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFPageView.h; sourceTree = "<group>"; };
 		ADF523961C58C8BE00C6E49F /* XFPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFPageView.m; sourceTree = "<group>"; };
+		C7C1333E197356C131ADAAF1 /* Pods-MyCircle.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircle.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircle/Pods-MyCircle.adhoc.xcconfig"; sourceTree = "<group>"; };
+		D48BD82DB2C71EB596AD4D8C /* libPods-MyCircleToday.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCircleToday.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB21523BB46F183194B16795 /* Pods-MyCircleWatch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleWatch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleWatch Extension/Pods-MyCircleWatch Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		E3D69F8B431B002834920AE6 /* libPods-MyCircleWatch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCircleWatch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3F1A1FE18BB3A7AC8B8E764 /* Pods-MyCircleToday.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleToday.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleToday/Pods-MyCircleToday.adhoc.xcconfig"; sourceTree = "<group>"; };
+		FB93E61D36F479D5D8617662 /* Pods-MyCircleToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleToday/Pods-MyCircleToday.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AD169F931C76A7B2005FE335 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD169F981C76A7B2005FE335 /* NotificationCenter.framework in Frameworks */,
+				983F67A8C7823E6BF8833CC4 /* libPods-MyCircleToday.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD318BB31C1C15E300138E2A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -654,8 +828,24 @@
 				AD1B060C1C391B6E00D0F1A4 /* JavaScriptCore.framework in Frameworks */,
 				ADA4227D1C301E7300D9877D /* MOBFoundation.framework in Frameworks */,
 				ADA4227E1C301E7300D9877D /* SMS_SDK.framework in Frameworks */,
-				71BA741CBD01DC73C544C907 /* libPods.a in Frameworks */,
 				AD318D261C1C199400138E2A /* libXG-SDK.a in Frameworks */,
+				CA885FA34F19D12752FC3EA5 /* libPods-MyCircle.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD5B1A601C7B02920018ABC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79A3158194B0D4A23E1B2318 /* libPods-MyCircleWatch Extension.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA76E7906BEF6BEFE3BCEC85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97CDC9B9AA0C45DC1EFAF31D /* libPods-MyCircleWatch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,8 +855,18 @@
 		3831126EF8640C401929CE73 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				33D84F9EC5CE9D5B07766DD0 /* Pods.debug.xcconfig */,
-				3F7AC2F26583A5812043C681 /* Pods.release.xcconfig */,
+				FB93E61D36F479D5D8617662 /* Pods-MyCircleToday.debug.xcconfig */,
+				74CB07F8616594CE28613396 /* Pods-MyCircleToday.release.xcconfig */,
+				E3F1A1FE18BB3A7AC8B8E764 /* Pods-MyCircleToday.adhoc.xcconfig */,
+				81F494A8FFDCB0C5B69D85BD /* Pods-MyCircle.debug.xcconfig */,
+				4B16B17899253A19378ECF91 /* Pods-MyCircle.release.xcconfig */,
+				C7C1333E197356C131ADAAF1 /* Pods-MyCircle.adhoc.xcconfig */,
+				8AF3F2F08BFB739F40DEF904 /* Pods-MyCircleWatch.debug.xcconfig */,
+				919BC0FBAB4CBF2FD1ACC5E7 /* Pods-MyCircleWatch.release.xcconfig */,
+				8316425EFCD3F3DB2410445F /* Pods-MyCircleWatch.adhoc.xcconfig */,
+				DB21523BB46F183194B16795 /* Pods-MyCircleWatch Extension.debug.xcconfig */,
+				9A96F6F0F5B880930C8EECC3 /* Pods-MyCircleWatch Extension.release.xcconfig */,
+				19644058EA2D431068A78D7B /* Pods-MyCircleWatch Extension.adhoc.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -674,11 +874,44 @@
 		80A20C7693C50CE343799DC7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD991D421C7BED110027A325 /* libWMPageController.a */,
+				AD991D401C7BED0D0027A325 /* libVEVerbalExpressions.a */,
+				AD991D3E1C7BED090027A325 /* libTTTAttributedLabel.a */,
+				AD991D3C1C7BED060027A325 /* libSWTableViewCell.a */,
+				AD991D3A1C7BED020027A325 /* libSSKeychain.a */,
+				AD991D381C7BECFE0027A325 /* libSBJson.a */,
+				AD991D361C7BECF90027A325 /* libpop.a */,
+				AD991D341C7BECF40027A325 /* libMJRefresh.a */,
+				AD991D321C7BECF10027A325 /* libMJExtension.a */,
+				AD991D301C7BECED0027A325 /* libMBProgressHUD.a */,
+				AD991D2E1C7BECEA0027A325 /* libMasonry.a */,
+				AD991D2C1C7BECD10027A325 /* libLJWKeyboardHandler.a */,
+				AD991D2A1C7BECBE0027A325 /* libPods-MyCircle-UIActivityIndicator-for-SDWebImage.a */,
+				AD991D281C7BECBA0027A325 /* libPods-MyCircle-SDWebImage.a */,
+				AD991D261C7BECB30027A325 /* libPods-MyCircle-Qiniu.a */,
+				AD991D241C7BECAE0027A325 /* libPods-MyCircle-AFNetworking.a */,
+				AD991D221C7BEC9F0027A325 /* libJSPatch.a */,
+				AD991D201C7BEC9C0027A325 /* libiToast.a */,
+				AD991D1E1C7BEC980027A325 /* libHappyDNS.a */,
+				AD991D1C1C7BEC940027A325 /* libGPUImage.a */,
+				AD991D1A1C7BEC900027A325 /* libCYLTabBarController.a */,
+				AD991D181C7BEC8B0027A325 /* libCTAssetsPickerController.a */,
+				AD991D161C7BEC850027A325 /* libCRToast.a */,
+				AD5B1A531C7AFA6A0018ABC3 /* libMJRefresh.a */,
+				AD169FC11C76F704005FE335 /* libPods.a */,
+				AD169FB81C76F52E005FE335 /* Pods */,
+				AD169FB51C76F1A7005FE335 /* libPods.a */,
+				AD169FB31C76F133005FE335 /* libAFNetworking.a */,
 				AD86601B1C605EC200BDDE31 /* PhotosUI.framework */,
 				AD8660191C605E9B00BDDE31 /* Photos.framework */,
 				AD0748841C5EFF6B0092652F /* Security.framework */,
 				AD1B060B1C391B6E00D0F1A4 /* JavaScriptCore.framework */,
 				1BABAE3642608C609518D365 /* libPods.a */,
+				AD169F971C76A7B2005FE335 /* NotificationCenter.framework */,
+				98CC154890CC02C61D5FC94F /* libPods-MyCircle.a */,
+				D48BD82DB2C71EB596AD4D8C /* libPods-MyCircleToday.a */,
+				E3D69F8B431B002834920AE6 /* libPods-MyCircleWatch.a */,
+				A39F23416AFE4C7792781585 /* libPods-MyCircleWatch Extension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -713,6 +946,35 @@
 				AD07B42D1C1EB75A00BC630D /* MQLResumeManager.m */,
 			);
 			path = ResumeManager;
+			sourceTree = "<group>";
+		};
+		AD169F991C76A7B2005FE335 /* MyCircleToday */ = {
+			isa = PBXGroup;
+			children = (
+				AD169FAA1C76ED20005FE335 /* MyCircleToday.entitlements */,
+				AD169F9A1C76A7B2005FE335 /* TodayViewController.h */,
+				AD169F9B1C76A7B2005FE335 /* TodayViewController.m */,
+				AD169FA01C76A7B2005FE335 /* Info.plist */,
+				AD169FC51C7AA7FE005FE335 /* TodayModel.h */,
+				AD169FC61C7AA7FE005FE335 /* TodayModel.m */,
+			);
+			path = MyCircleToday;
+			sourceTree = "<group>";
+		};
+		AD169FB81C76F52E005FE335 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD169FB91C76F52E005FE335 /* Pods-acknowledgements.markdown */,
+				AD169FBA1C76F52E005FE335 /* Pods-acknowledgements.plist */,
+				AD169FBB1C76F52E005FE335 /* Pods-dummy.m */,
+				AD169FBC1C76F52E005FE335 /* Pods-frameworks.sh */,
+				AD169FBD1C76F52E005FE335 /* Pods-resources.sh */,
+				AD169FBE1C76F52E005FE335 /* Pods.adhoc.xcconfig */,
+				AD169FBF1C76F52E005FE335 /* Pods.debug.xcconfig */,
+				AD169FC01C76F52E005FE335 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Pods/Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
 		AD1B06561C3BC16600D0F1A4 /* DoImagePicker */ = {
@@ -762,6 +1024,9 @@
 			isa = PBXGroup;
 			children = (
 				AD318BB81C1C15E300138E2A /* MyCircle */,
+				AD169F991C76A7B2005FE335 /* MyCircleToday */,
+				AD5B1A581C7B02920018ABC3 /* MyCircleWatch */,
+				AD5B1A671C7B02920018ABC3 /* MyCircleWatch Extension */,
 				AD318BB71C1C15E300138E2A /* Products */,
 				3831126EF8640C401929CE73 /* Pods */,
 				80A20C7693C50CE343799DC7 /* Frameworks */,
@@ -772,6 +1037,9 @@
 			isa = PBXGroup;
 			children = (
 				AD318BB61C1C15E300138E2A /* MyCircle.app */,
+				AD169F961C76A7B2005FE335 /* MyCircleToday.appex */,
+				AD5B1A571C7B02920018ABC3 /* MyCircleWatch.app */,
+				AD5B1A631C7B02920018ABC3 /* MyCircleWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -779,6 +1047,7 @@
 		AD318BB81C1C15E300138E2A /* MyCircle */ = {
 			isa = PBXGroup;
 			children = (
+				AD169FA91C76C4DA005FE335 /* MyCircle.entitlements */,
 				AD318CB91C1C199400138E2A /* 3rd */,
 				AD318BD31C1C171700138E2A /* Base */,
 				AD318BDA1C1C171700138E2A /* Login */,
@@ -804,6 +1073,7 @@
 				AD7C466B1C59FD9300B125D6 /* InfoPlist.strings */,
 				AD318BBA1C1C15E300138E2A /* main.m */,
 				AD7C46711C5A021A00B125D6 /* Localizable.strings */,
+				AD099F991C717E2E0011DAEF /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -911,10 +1181,14 @@
 				AD318BF61C1C171700138E2A /* CircleNewPageViewController.m */,
 				AD318BF11C1C171700138E2A /* CircleDetailViewController.h */,
 				AD318BF21C1C171700138E2A /* CircleDetailViewController.m */,
+				AD991D561C7C45A20027A325 /* CircleDetailVC.h */,
+				AD991D571C7C45A20027A325 /* CircleDetailVC.m */,
 				AD318BF71C1C171700138E2A /* CircleViewController.h */,
 				AD318BF81C1C171700138E2A /* CircleViewController.m */,
 				ADE8BD1E1C25988400168B04 /* PracticeVC.h */,
 				ADE8BD1F1C25988400168B04 /* PracticeVC.m */,
+				AD099F961C71730C0011DAEF /* UIScrollView+XFRefresh.h */,
+				AD099F971C71730C0011DAEF /* UIScrollView+XFRefresh.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1404,6 +1678,8 @@
 		AD318CB91C1C199400138E2A /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				AD991D501C7C42380027A325 /* WMPlayer */,
+				AD991D481C7BFDB40027A325 /* iToast */,
 				AD07488B1C5F2D620092652F /* RSA */,
 				AD0748761C5B406B0092652F /* AES */,
 				AD1B067F1C3D073600D0F1A4 /* AGImagePickerController */,
@@ -1712,6 +1988,42 @@
 			path = Public;
 			sourceTree = "<group>";
 		};
+		AD5B1A581C7B02920018ABC3 /* MyCircleWatch */ = {
+			isa = PBXGroup;
+			children = (
+				AD991D121C7B05940027A325 /* MyCircleWatch.entitlements */,
+				AD5B1A591C7B02920018ABC3 /* Interface.storyboard */,
+				AD5B1A5C1C7B02920018ABC3 /* Assets.xcassets */,
+				AD5B1A5E1C7B02920018ABC3 /* Info.plist */,
+			);
+			path = MyCircleWatch;
+			sourceTree = "<group>";
+		};
+		AD5B1A671C7B02920018ABC3 /* MyCircleWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AD991D131C7B05BC0027A325 /* MyCircleWatch Extension.entitlements */,
+				AD5B1A6A1C7B02920018ABC3 /* InterfaceController.h */,
+				AD5B1A6B1C7B02920018ABC3 /* InterfaceController.m */,
+				AD5B1A6D1C7B02920018ABC3 /* ExtensionDelegate.h */,
+				AD5B1A6E1C7B02920018ABC3 /* ExtensionDelegate.m */,
+				AD5B1A701C7B02920018ABC3 /* NotificationController.h */,
+				AD5B1A711C7B02920018ABC3 /* NotificationController.m */,
+				AD5B1A731C7B02920018ABC3 /* Assets.xcassets */,
+				AD5B1A751C7B02920018ABC3 /* Info.plist */,
+				AD5B1A681C7B02920018ABC3 /* Supporting Files */,
+			);
+			path = "MyCircleWatch Extension";
+			sourceTree = "<group>";
+		};
+		AD5B1A681C7B02920018ABC3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B1A691C7B02920018ABC3 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		AD90FCD91C2B89CD00A70220 /* Hodor */ = {
 			isa = PBXGroup;
 			children = (
@@ -1719,6 +2031,25 @@
 				AD90FCDB1C2B89CD00A70220 /* Language.m */,
 			);
 			path = Hodor;
+			sourceTree = "<group>";
+		};
+		AD991D481C7BFDB40027A325 /* iToast */ = {
+			isa = PBXGroup;
+			children = (
+				AD991D491C7BFDB40027A325 /* iToast.h */,
+				AD991D4A1C7BFDB40027A325 /* iToast.m */,
+			);
+			path = iToast;
+			sourceTree = "<group>";
+		};
+		AD991D501C7C42380027A325 /* WMPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				AD991D511C7C42380027A325 /* WMPlayer.bundle */,
+				AD991D521C7C42380027A325 /* WMPlayer.h */,
+				AD991D531C7C42380027A325 /* WMPlayer.m */,
+			);
+			path = WMPlayer;
 			sourceTree = "<group>";
 		};
 		ADA422761C301E7300D9877D /* SMS_SDK */ = {
@@ -1809,6 +2140,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AD169F951C76A7B2005FE335 /* MyCircleToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD169FA71C76A7B2005FE335 /* Build configuration list for PBXNativeTarget "MyCircleToday" */;
+			buildPhases = (
+				0E39592BB29BE0E6A9FBD435 /* Check Pods Manifest.lock */,
+				AD169F921C76A7B2005FE335 /* Sources */,
+				AD169F931C76A7B2005FE335 /* Frameworks */,
+				AD169F941C76A7B2005FE335 /* Resources */,
+				2D6871B239080B3F8ABDDDAC /* Embed Pods Frameworks */,
+				CC85ECDE40F7581975EA5B2F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyCircleToday;
+			productName = MyCircleToday;
+			productReference = AD169F961C76A7B2005FE335 /* MyCircleToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		AD318BB51C1C15E300138E2A /* MyCircle */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD318BD01C1C15E300138E2A /* Build configuration list for PBXNativeTarget "MyCircle" */;
@@ -1819,15 +2170,59 @@
 				AD318BB41C1C15E300138E2A /* Resources */,
 				9CBB01F7399C7191D1B24BDA /* Embed Pods Frameworks */,
 				D5FEC6EC7BB5A2B2DA472383 /* Copy Pods Resources */,
+				AD169FA81C76A7B2005FE335 /* Embed App Extensions */,
+				AD5B1A821C7B02930018ABC3 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AD169FA21C76A7B2005FE335 /* PBXTargetDependency */,
+				AD5B1A771C7B02930018ABC3 /* PBXTargetDependency */,
 			);
 			name = MyCircle;
 			productName = MyCircle;
 			productReference = AD318BB61C1C15E300138E2A /* MyCircle.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AD5B1A561C7B02920018ABC3 /* MyCircleWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD5B1A7E1C7B02930018ABC3 /* Build configuration list for PBXNativeTarget "MyCircleWatch" */;
+			buildPhases = (
+				5765FE21907CD87CFDEE7BEF /* Check Pods Manifest.lock */,
+				AD5B1A551C7B02920018ABC3 /* Resources */,
+				AD5B1A7D1C7B02930018ABC3 /* Embed App Extensions */,
+				CA76E7906BEF6BEFE3BCEC85 /* Frameworks */,
+				B6BD891A8E0D1D4BF551F679 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD5B1A661C7B02920018ABC3 /* PBXTargetDependency */,
+			);
+			name = MyCircleWatch;
+			productName = MyCircleWatch;
+			productReference = AD5B1A571C7B02920018ABC3 /* MyCircleWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		AD5B1A621C7B02920018ABC3 /* MyCircleWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD5B1A791C7B02930018ABC3 /* Build configuration list for PBXNativeTarget "MyCircleWatch Extension" */;
+			buildPhases = (
+				0B688712CEE48854FCD0BB59 /* Check Pods Manifest.lock */,
+				AD5B1A5F1C7B02920018ABC3 /* Sources */,
+				AD5B1A601C7B02920018ABC3 /* Frameworks */,
+				AD5B1A611C7B02920018ABC3 /* Resources */,
+				551914949BC13C65B7137FD0 /* Embed Pods Frameworks */,
+				C2EC24792AB3C4FF66CD5BD3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MyCircleWatch Extension";
+			productName = "MyCircleWatch Extension";
+			productReference = AD5B1A631C7B02920018ABC3 /* MyCircleWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -1838,9 +2233,41 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = and;
 				TargetAttributes = {
+					AD169F951C76A7B2005FE335 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = D2Q4969J32;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					AD318BB51C1C15E300138E2A = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = D2Q4969J32;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					AD5B1A561C7B02920018ABC3 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = D2Q4969J32;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					AD5B1A621C7B02920018ABC3 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = D2Q4969J32;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1859,11 +2286,21 @@
 			projectRoot = "";
 			targets = (
 				AD318BB51C1C15E300138E2A /* MyCircle */,
+				AD169F951C76A7B2005FE335 /* MyCircleToday */,
+				AD5B1A561C7B02920018ABC3 /* MyCircleWatch */,
+				AD5B1A621C7B02920018ABC3 /* MyCircleWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AD169F941C76A7B2005FE335 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD318BB41C1C15E300138E2A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1872,6 +2309,7 @@
 				AD1B064B1C3B702C00D0F1A4 /* tabbar_compose_lbs@3x.png in Resources */,
 				AD318CB81C1C194900138E2A /* login_head portrait@2x.png in Resources */,
 				AD4C6C651C337E830008A6FB /* MoreSetting@3x.png in Resources */,
+				AD991D541C7C42380027A325 /* WMPlayer.bundle in Resources */,
 				AD318C9F1C1C171800138E2A /* circle_no@3x.png in Resources */,
 				AD318C971C1C171800138E2A /* logo 1024.png in Resources */,
 				ADE8BD221C259E9F00168B04 /* operationbox_fail_web@2x.png in Resources */,
@@ -1948,10 +2386,102 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AD5B1A551C7B02920018ABC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD5B1A5D1C7B02920018ABC3 /* Assets.xcassets in Resources */,
+				AD5B1A5B1C7B02920018ABC3 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD5B1A611C7B02920018ABC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD5B1A741C7B02920018ABC3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B688712CEE48854FCD0BB59 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0E39592BB29BE0E6A9FBD435 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2D6871B239080B3F8ABDDDAC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCircleToday/Pods-MyCircleToday-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		32D0D174DCE2E65AB9C44B0F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		551914949BC13C65B7137FD0 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCircleWatch Extension/Pods-MyCircleWatch Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5765FE21907CD87CFDEE7BEF /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1978,7 +2508,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCircle/Pods-MyCircle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6BD891A8E0D1D4BF551F679 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCircleWatch/Pods-MyCircleWatch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2EC24792AB3C4FF66CD5BD3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCircleWatch Extension/Pods-MyCircleWatch Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC85ECDE40F7581975EA5B2F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCircleToday/Pods-MyCircleToday-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D5FEC6EC7BB5A2B2DA472383 /* Copy Pods Resources */ = {
@@ -1993,12 +2568,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCircle/Pods-MyCircle-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AD169F921C76A7B2005FE335 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD169FAC1C76F0F9005FE335 /* XFAPI.m in Sources */,
+				AD169F9C1C76A7B2005FE335 /* TodayViewController.m in Sources */,
+				AD169FC71C7AA7FE005FE335 /* TodayModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD318BB21C1C15E300138E2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2066,7 +2651,9 @@
 				ADF523911C58C1E200C6E49F /* LKViewUtils.m in Sources */,
 				AD31B6571C2244AB007BBCC8 /* XFHomeView.m in Sources */,
 				AD318D131C1C199400138E2A /* SFHFActivityIndicatingCell.m in Sources */,
+				AD991D4B1C7BFDB40027A325 /* iToast.m in Sources */,
 				AD07488E1C5F2D620092652F /* RSA.m in Sources */,
+				AD991D581C7C45A20027A325 /* CircleDetailVC.m in Sources */,
 				AD318D171C1C199400138E2A /* MMDrawerBarButtonItem.m in Sources */,
 				AD318D5C1C1C8BD400138E2A /* NYXImagesHelper.m in Sources */,
 				AD07B42A1C1EB71F00BC630D /* VideoDownloaderVC.m in Sources */,
@@ -2094,6 +2681,7 @@
 				AD1C82611C1F1614009A6C09 /* CollectView.m in Sources */,
 				AD4C6C6D1C33A0390008A6FB /* WeatherModel.m in Sources */,
 				AD1B06631C3BC16600D0F1A4 /* DoAlbumCell.m in Sources */,
+				AD991D551C7C42380027A325 /* WMPlayer.m in Sources */,
 				AD318CAD1C1C171800138E2A /* UIImage+ImageEffects.m in Sources */,
 				AD4C6C851C3520FB0008A6FB /* FriendCell.m in Sources */,
 				AD4C6C791C34D08E0008A6FB /* ChatVC.m in Sources */,
@@ -2143,6 +2731,7 @@
 				ADF523941C58C2FF00C6E49F /* HYPageControl.m in Sources */,
 				AD318CB11C1C171800138E2A /* FactoryMethod.m in Sources */,
 				AD1B06651C3BC16600D0F1A4 /* DoImagePickerController.m in Sources */,
+				AD099F981C71730C0011DAEF /* UIScrollView+XFRefresh.m in Sources */,
 				AD1B069A1C3D073600D0F1A4 /* ALAsset+AGIPC.m in Sources */,
 				AD318D5F1C1CADC300138E2A /* LeftHeaderView.m in Sources */,
 				ADE8BD251C259F3800168B04 /* CircleDetailModel.m in Sources */,
@@ -2154,7 +2743,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AD5B1A5F1C7B02920018ABC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD5B1A6F1C7B02920018ABC3 /* ExtensionDelegate.m in Sources */,
+				AD5B1A6C1C7B02920018ABC3 /* InterfaceController.m in Sources */,
+				AD5B1A721C7B02920018ABC3 /* NotificationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD169FA21C76A7B2005FE335 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD169F951C76A7B2005FE335 /* MyCircleToday */;
+			targetProxy = AD169FA11C76A7B2005FE335 /* PBXContainerItemProxy */;
+		};
+		AD5B1A661C7B02920018ABC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD5B1A621C7B02920018ABC3 /* MyCircleWatch Extension */;
+			targetProxy = AD5B1A651C7B02920018ABC3 /* PBXContainerItemProxy */;
+		};
+		AD5B1A771C7B02930018ABC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD5B1A561C7B02920018ABC3 /* MyCircleWatch */;
+			targetProxy = AD5B1A761C7B02930018ABC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AD318BC51C1C15E300138E2A /* Main.storyboard */ = {
@@ -2171,6 +2788,14 @@
 				AD318BCB1C1C15E300138E2A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AD5B1A591C7B02920018ABC3 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD5B1A5A1C7B02920018ABC3 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 		AD7C466B1C59FD9300B125D6 /* InfoPlist.strings */ = {
@@ -2212,6 +2837,81 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AD169FA41C76A7B2005FE335 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB93E61D36F479D5D8617662 /* Pods-MyCircleToday.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MyCircleToday/MyCircleToday.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: li shuai (47RX25XT64)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: li shuai (47RX25XT64)";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MyCircleToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				New_Setting = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle.MyCircleToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AD169FA51C76A7B2005FE335 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74CB07F8616594CE28613396 /* Pods-MyCircleToday.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MyCircleToday/MyCircleToday.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: li shuai (D2Q4969J32)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MyCircleToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				New_Setting = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle.MyCircleToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AD169FA61C76A7B2005FE335 /* adhoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3F1A1FE18BB3A7AC8B8E764 /* Pods-MyCircleToday.adhoc.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MyCircleToday/MyCircleToday.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: li shuai (D2Q4969J32)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MyCircleToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				New_Setting = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle.MyCircleToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = adhoc;
+		};
 		AD318BCE1C1C15E300138E2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2302,15 +3002,18 @@
 		};
 		AD318BD11C1C15E300138E2A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33D84F9EC5CE9D5B07766DD0 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 81F494A8FFDCB0C5B69D85BD /* Pods-MyCircle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyCircle/MyCircle.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: li shuai (47RX25XT64)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: li shuai (47RX25XT64)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyCircle/3rd/SMS_SDK",
 				);
+				GCC_PREFIX_HEADER = MyCircle/PrefixHeader.pch;
 				INFOPLIST_FILE = MyCircle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2318,23 +3021,28 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyCircle/3rd/XGPush",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 			};
 			name = Debug;
 		};
 		AD318BD21C1C15E300138E2A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F7AC2F26583A5812043C681 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 4B16B17899253A19378ECF91 /* Pods-MyCircle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyCircle/MyCircle.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: li shuai (D2Q4969J32)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyCircle/3rd/SMS_SDK",
 				);
+				GCC_PREFIX_HEADER = MyCircle/PrefixHeader.pch;
 				INFOPLIST_FILE = MyCircle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2342,8 +3050,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyCircle/3rd/XGPush",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 			};
 			name = Release;
@@ -2392,15 +3102,18 @@
 		};
 		AD4C6C951C36009A0008A6FB /* adhoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F7AC2F26583A5812043C681 /* Pods.release.xcconfig */;
+			baseConfigurationReference = C7C1333E197356C131ADAAF1 /* Pods-MyCircle.adhoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyCircle/MyCircle.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: li shuai (D2Q4969J32)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyCircle/3rd/SMS_SDK",
 				);
+				GCC_PREFIX_HEADER = MyCircle/PrefixHeader.pch;
 				INFOPLIST_FILE = MyCircle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2408,15 +3121,153 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyCircle/3rd/XGPush",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
+			};
+			name = adhoc;
+		};
+		AD5B1A7A1C7B02930018ABC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB21523BB46F183194B16795 /* Pods-MyCircleWatch Extension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "MyCircleWatch Extension/MyCircleWatch Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = "MyCircleWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		AD5B1A7B1C7B02930018ABC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A96F6F0F5B880930C8EECC3 /* Pods-MyCircleWatch Extension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "MyCircleWatch Extension/MyCircleWatch Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = "MyCircleWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		AD5B1A7C1C7B02930018ABC3 /* adhoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19644058EA2D431068A78D7B /* Pods-MyCircleWatch Extension.adhoc.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "MyCircleWatch Extension/MyCircleWatch Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = "MyCircleWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = adhoc;
+		};
+		AD5B1A7F1C7B02930018ABC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AF3F2F08BFB739F40DEF904 /* Pods-MyCircleWatch.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyCircleWatch/MyCircleWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: li shuai (47RX25XT64)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer: li shuai (47RX25XT64)";
+				ENABLE_BITCODE = YES;
+				IBSC_MODULE = MyCircleWatch_Extension;
+				INFOPLIST_FILE = MyCircleWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		AD5B1A801C7B02930018ABC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 919BC0FBAB4CBF2FD1ACC5E7 /* Pods-MyCircleWatch.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyCircleWatch/MyCircleWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: li shuai (D2Q4969J32)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
+				ENABLE_BITCODE = YES;
+				IBSC_MODULE = MyCircleWatch_Extension;
+				INFOPLIST_FILE = MyCircleWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		AD5B1A811C7B02930018ABC3 /* adhoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8316425EFCD3F3DB2410445F /* Pods-MyCircleWatch.adhoc.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyCircleWatch/MyCircleWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: li shuai (D2Q4969J32)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
+				ENABLE_BITCODE = YES;
+				IBSC_MODULE = MyCircleWatch_Extension;
+				INFOPLIST_FILE = MyCircleWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = adhoc;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AD169FA71C76A7B2005FE335 /* Build configuration list for PBXNativeTarget "MyCircleToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD169FA41C76A7B2005FE335 /* Debug */,
+				AD169FA51C76A7B2005FE335 /* Release */,
+				AD169FA61C76A7B2005FE335 /* adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		AD318BB11C1C15E300138E2A /* Build configuration list for PBXProject "MyCircle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2433,6 +3284,26 @@
 				AD318BD11C1C15E300138E2A /* Debug */,
 				AD318BD21C1C15E300138E2A /* Release */,
 				AD4C6C951C36009A0008A6FB /* adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AD5B1A791C7B02930018ABC3 /* Build configuration list for PBXNativeTarget "MyCircleWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD5B1A7A1C7B02930018ABC3 /* Debug */,
+				AD5B1A7B1C7B02930018ABC3 /* Release */,
+				AD5B1A7C1C7B02930018ABC3 /* adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AD5B1A7E1C7B02930018ABC3 /* Build configuration list for PBXNativeTarget "MyCircleWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD5B1A7F1C7B02930018ABC3 /* Debug */,
+				AD5B1A801C7B02930018ABC3 /* Release */,
+				AD5B1A811C7B02930018ABC3 /* adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

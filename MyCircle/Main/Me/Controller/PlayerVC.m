@@ -8,9 +8,7 @@
 
 #import "PlayerVC.h"
 #import "PlayerView.h"
-#import "UIView+Ext.h"
 
-#import "XFAPI.h"
 @interface PlayerVC ()
 
 @property (strong, nonatomic) PlayerView *pv;

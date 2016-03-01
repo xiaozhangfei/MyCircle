@@ -12,18 +12,13 @@
 #import "MMDrawerController.h"
 #import "LeftHeaderView.h"
 #import "LeftFooterView.h"
-#import "AppMacro.h"
-#import "UIView+Ext.h"
 #import "EditPersonViewController.h"
 #import <UIImageView+WebCache.h>
 
-#import "XFAPI.h"
-#import "XFAppContext.h"
 //图片上传
 #import "AFManagerHandle.h"
 //md5加密
 #import <CommonCrypto/CommonDigest.h>
-#import "UtilsMacro.h"
 
 #import <SDImageCache.h>
 

@@ -1,0 +1,44 @@
+//
+//  PrefixHeader.pch
+//  MyCircle
+//
+//  Created by and on 16/2/15.
+//  Copyright © 2016年 and. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "AppMacro.h"
+#import "UIView+Ext.h"
+//网络请求
+#import "AFHTTPRequestOperationManager+URLData.h"
+#import "BaseModel.h"
+#import "XFAPI.h"
+#import "XFAppContext.h"
+#import "AppMacro.h"
+
+#import "UtilsMacro.h"
+
+//Mob.com短信验证码
+#define mobAppKey @"bc9163d636e0"
+#define mobAppSecret @"a1f6f9c2167465427458babc40c540ee"
+
+//xg push
+#define xgAppKey 2200160518
+#define xgAppSecret @"IL2AX694V5VZ"
+
+//融云
+#define RCKey @"pwe86ga5e0gw6"
+
+#define aesKey @"wodetian123"
+
+#define rsa_public_key @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDdg086h7CIhMPG0EdzE/RacFc3rfpBkKYSQhX2OgObuICugbolSqiaUa6CZc4Ock988ubc6MKUqiLjGfNdOJ3Iod7ryqDb7z4cI08uphhyR6CmhgZZyu6DFzpoudMFQPKr3/vpGZ8Z/Vu7TGJwnuhkpEAUuSoMrYaSKj2qnGmNXQIDAQAB"
+
+#define UmengAppKey @"56cec875e0f55a5f62000d91"
+
+
+#endif /* PrefixHeader_pch */
