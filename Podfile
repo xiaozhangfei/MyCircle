@@ -1,4 +1,4 @@
-platform :ios,'7.0'
+platform :ios,'8.0'
 
 target 'MyCircle' do
 
@@ -24,8 +24,10 @@ pod 'RongCloudIMKitWithVoip'
 pod 'SWTableViewCell'
 pod 'JSPatch'
 pod 'VEVerbalExpressions'
-pod 'CTAssetsPickerController'
 pod 'UMengAnalytics-NO-IDFA'
+pod 'CocoaAsyncSocket'
+pod 'RFKeyboardToolbar'
+
 end
 
 target 'MyCircleToday' do
@@ -40,7 +42,4 @@ target 'MyCircleWatch' do
 
 end
 
-target 'MyCircleWatch Extension' do
-    
-end
 

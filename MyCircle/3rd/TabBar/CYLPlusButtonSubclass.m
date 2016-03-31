@@ -103,7 +103,8 @@
     
     if (ISEMPTY([XFAppContext sharedContext].uid)) {
         LoginViewController *login = [[LoginViewController alloc] init];
-        [viewController presentViewController:login animated:YES completion:nil];
+        UINavigationController *loginNC = [[UINavigationController alloc] initWithRootViewController:login];
+        [viewController presentViewController:loginNC animated:YES completion:nil];
         return;
     }
     

@@ -34,6 +34,10 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [((AppDelegate *)([UIApplication sharedApplication].delegate)) setOpenDrawerController];
+    //[self setUpVc:2];
+    //self.contentScrollView.contentOffset = CGPointMake(2 * [UIScreen mainScreen].bounds.size.width, 0);
+    //[self jumpToPage:2];
+    //UITapGestureRecognizer *tap = [UITapGestureRecognizer alloc] initWithTarget:self. action:<#(nullable SEL)#>;
     
 }
 
@@ -95,6 +99,7 @@
     self.selColor = HexColor(0x51B9C7);//选中颜色
     self.norColor = [UIColor blackColor];
     self.titleScrollViewColor = [UIColor whiteColor];
+    self.isSampTitleWidth = NO;
     // 推荐方式（设置下标）
     [self setUpUnderLineEffect:^(BOOL *isShowUnderLine, BOOL *isDelayScroll, CGFloat *underLineH, UIColor *__autoreleasing *underLineColor) {
         // 是否显示标签
@@ -123,6 +128,7 @@
     CircleAllPageViewController *c3 = [[CircleAllPageViewController alloc] init];
     c3.title = NSLocalizedString(@"circle_all", @"tab_");
     [self addChildViewController:c3];
+
 }
 
 - (void)leftBarButtonAction:(UIBarButtonItem *)sender {
@@ -130,12 +136,6 @@
 }
 
 - (void)rightBarAction:(UIGestureRecognizer *)sender {
-    
-    if (_item) {
-        [KxMenu dismissMenu];
-        _item = nil;
-        return;
-    }
     
     _item = [KxMenuItem menuItem:@"第一个" image:[UIImage imageNamed:@"pc_edit_big"] target:self action:@selector(rightBarMenuAction:)];
     NSArray *arr = @[_item,
@@ -157,7 +157,7 @@
     //optionCon.menuBackgroundColor = [UIColor whiteColor];  //菜单的底色
     CGRect rect = sender.view.frame;
     rect.origin.y += 25;
-    [KxMenu showMenuInView:self.view fromRect:rect menuItems:arr withOptions:optionCon];
+    [KxMenu showMenuInView:APP_WINDOW fromRect:rect menuItems:arr withOptions:optionCon];
 }
 
 - (void)rightBarMenuAction:(KxMenuItem *)sender {
@@ -171,8 +171,10 @@
 - (void)rotation_icon:(float)n {
     if (n == 0) {
         //[self refreshDisplay];
+        
     }
 }
+
 
 
 @end

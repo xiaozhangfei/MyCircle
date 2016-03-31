@@ -8,6 +8,13 @@
 
 #import "UIScrollView+XFRefresh.h"
 
+//@interface UIScrollView ()
+//{
+//    UIView *_head;
+//    BOOL _refreshing;
+//}
+//@end
+
 @implementation UIScrollView (XFRefresh)
 
 - (UIView *)xfHeader {
@@ -17,15 +24,24 @@
     label.text = @"xfRefresh 刷新";
     [head addSubview:label];
     //label.center = head.center;
+    //_refreshing = NO;
     return head;
 }
 
-- (void)addXFRefreshHeader {
-    [self addSubview:[self xfHeader]];
+- (void)addXFRefreshHeader{
+    //if (!head) {
+        [self addSubview:[self xfHeader]];
+    //}
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
+//    if (scrollView.contentOffset.y > 100 && _head && !_refreshing) {
+//        [self getData];
+//    }
+}
+
+- (void)getData {
+    NSLog(@"xf getData");
 }
 
 @end

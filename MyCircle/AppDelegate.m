@@ -45,6 +45,8 @@
 #import "AppDelegate+ZXFJSPatch.h"
 
 #import <MobClick.h>
+#import "MiscTool.h"
+
 
 #define kTime 5
 
@@ -68,44 +70,43 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
 
-    
+    //设置navi
     [self setUpNavigationBarAppearance];    
     
+    //首先进入Launch页面
     LaunchVC *launch = [[LaunchVC alloc] init];
     UINavigationController *launchNC = [[UINavigationController alloc] initWithRootViewController:launch];
     self.window.rootViewController = launchNC;
 
     //self.window.rootViewController = self.drawerController;
-    
-    [self.window makeKeyAndVisible];
-    
     //[MiscTool deviceIPAdress];//本地ip
     
+    //测试，Today
     NSUserDefaults *userDefault=[[NSUserDefaults alloc] initWithSuiteName:@"group.MyCircleContainer"];
     [userDefault setObject:@"侠之大者，为国为民" forKey:@"xia"];
     [userDefault synchronize];
-
+    
     NSLog(@"sss %@",[userDefault valueForKey:@"xia"]);
     XFAppContext *context = [XFAppContext sharedContext];
     NSLog(@"uid = %@",context.uid);
     NSLog(@"token  = %@",context.token);
+    
     
     //初始化key
     [self initKeyAndSecretWithOptions:(NSDictionary *)launchOptions];
     
     [MobClick startWithAppkey:UmengAppKey reportPolicy:BATCH channelId:@"Ceshi"];
 
-    
+    //初始化push
     [self initPush];
-    
-    //[self showTouchVC];
     
 //    //初始化自定义小圆点
 //    xfHomeView = [XFHomeView defaultSetHomeTouchViewWithTitleArray:@[@"主屏幕",@"111",@"222",@"333",@"444"] iconArray:@[@"Action_Moments",@"cancel",@"find",@"circle",@"man"]];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(xfHomeViewTapAction:) name:@"xfHomeViewTapNoti" object:nil];
     
-    //修改JS
+    //jsPatch
     //[self getUpJS];
     
     return YES;
@@ -190,7 +191,6 @@
              block(drawerController, drawerSide, percentVisible);
          }
      }];
-    
 }
 
 - (void)setWindowRootVC {
@@ -465,22 +465,7 @@
 
 #pragma mark -- 弹出验证指纹框
 - (void)showTouchVC {
-//    if (_touchNC && [_touchNC viewControllers].count > 0) {
-//        return;
-//    }
-//    if (_time > kTime) {
-//        return;
-//    }
-//    //进入页面弹出验证指纹框
-//    TouchIDViewController *touch = [[TouchIDViewController alloc] init];
-//    _touchNC = [[UINavigationController alloc] initWithRootViewController:touch];
-//    _touchNC.navigationBarHidden = YES;
-//    //将token，id等存储到钥匙串
-//    //BOOL ss = [SFHFKeychainUtils storeUsername:@"哈哈" andPassword:@"123" forServiceName:@"abc" updateExisting:YES error:nil];
-//    //ss == YES ? NSLog(@"已存储") : NSLog(@"存储失败");
-//    [self.window.rootViewController presentViewController:_touchNC animated:YES completion:^{
-//        
-//    }];
+    
 }
 
 
@@ -539,9 +524,7 @@
         if (ISEMPTY([XFAppContext sharedContext].uid)) {//模态出登录界面
             LoginViewController *login = [[LoginViewController alloc] init];
             UINavigationController *loginNC = [[UINavigationController alloc] initWithRootViewController:login];
-            [self.window.rootViewController presentViewController:loginNC animated:YES completion:^{
-                
-            }];
+            [self.window.rootViewController presentViewController:loginNC animated:YES completion:nil];
             return NO;
         }
         

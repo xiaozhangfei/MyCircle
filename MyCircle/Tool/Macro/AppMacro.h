@@ -30,9 +30,8 @@
 
 //获取app版本号
 //#define APP_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
-#define APP_VERSION @"1.0"
-#define APP_DELEGATE  ((SaiKuAppDelegate *)[UIApplication sharedApplication].delegate)
-#define CachesPath ([NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0])
+//#define APP_VERSION @"1.0"
+
 
 
 #endif

@@ -27,8 +27,6 @@
 /** 标题滚动视图 */
 @property (nonatomic, weak) UIScrollView *titleScrollView;
 
-/** 内容滚动视图 */
-@property (nonatomic, weak) UICollectionView *contentScrollView;
 
 @property (nonatomic, strong) NSMutableArray *titleLabels;
 
@@ -54,6 +52,8 @@
 @property (nonatomic, assign) CGFloat titleMargin;
 
 
+@property (nonatomic, assign) CGFloat titleUnderlineMaxWidth;
+@property (nonatomic, assign) BOOL firstViewLoad;//第一次加载本页面时
 
 @end
 
@@ -77,6 +77,8 @@
 {
     // 初始化标题高度
      _titleHeight = YZTitleScrollViewH;
+    _firstViewLoad = YES;
+
 }
 
 - (NSMutableArray *)titleWidths
@@ -366,9 +368,12 @@
 {
     [super viewWillAppear:animated];
     
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+    if (_firstViewLoad) {//将只加载一次，改为每次进入重新初始化本页面，即重新加载一次
         
+        _firstViewLoad = NO;
         // 注册cell
         [self.contentScrollView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:ID];
         
@@ -383,8 +388,8 @@
         [self setUpTitleWidth];
         
         [self setUpAllTitle];
-        
-    });
+    }
+//    });
     
     
     
@@ -554,6 +559,10 @@
     // 标题宽度差值
     CGFloat widthDelta = [self widthDeltaWithRightLabel:rightLabel leftLabel:leftLabel];
     
+    if (_isSampTitleWidth) {//设置最大宽度时，将宽度差值直接设为0
+        widthDelta = 0;
+    }
+    
     // 获取移动距离
     CGFloat offsetDelta = offsetX - _lastOffsetX;
     
@@ -694,9 +703,14 @@
     self.underLine.height = underLineH;
 
     
+    CGFloat underLineWidth = titleBounds.size.width;
+    if (_isSampTitleWidth) {//如果设置为显示最大标题长度
+        underLineWidth = _titleUnderlineMaxWidth;
+    }
+    
     // 最开始不需要动画
     if (self.underLine.x == 0) {
-        self.underLine.width = titleBounds.size.width;
+        self.underLine.width = underLineWidth;
         
         self.underLine.x = label.x;
         return;
@@ -704,7 +718,7 @@
     
     // 点击时候需要动画
     [UIView animateWithDuration:0.25 animations:^{
-        self.underLine.width = titleBounds.size.width;
+        self.underLine.width = underLineWidth;
         self.underLine.x = label.x;
     }];
     
@@ -741,12 +755,15 @@
 // 计算所有标题宽度
 - (void)setUpTitleWidth
 {
+
     // 判断是否能占据整个屏幕
     NSUInteger count = self.childViewControllers.count;
     
     NSArray *titles = [self.childViewControllers valueForKeyPath:@"title"];
     
     CGFloat totalWidth = 0;
+    
+    CGFloat maxWidth = 0;//最长标题
     
     // 计算所有标题的宽度
     for (NSString *title in titles) {
@@ -762,18 +779,33 @@
         
         CGFloat width = titleBounds.size.width;
         
+        if (width > maxWidth) {
+            maxWidth = width;
+        }
+        
         [self.titleWidths addObject:@(width)];
         
         totalWidth += width;
     }
+    _titleUnderlineMaxWidth = maxWidth;//获取下划线最大长度
     
+    if (_isSampTitleWidth) {
+        //设置以最长宽度为准
+        for (int i = 0; i < self.titleWidths.count; i ++) {
+            self.titleWidths[i] = [NSNumber numberWithFloat:maxWidth];
+        }
+        totalWidth = maxWidth * self.titleWidths.count;
+        _titleMargin = margin;
+        
+        return;
+    }
     if (totalWidth > YZScreenW) {
         
         _titleMargin = margin;
         
         return;
     }
-    
+    //总宽度小于屏幕
     CGFloat titleMargin = (YZScreenW - totalWidth) / (count + 1);
     _titleMargin = titleMargin < margin? margin: titleMargin;
 }
@@ -912,7 +944,6 @@
     
     // 记录上一次偏移量,因为点击的时候不会调用scrollView代理记录，因此需要主动记录
     _lastOffsetX = offsetX;
-    
 
     // 点击事件处理完成
     _isClickTitle = NO;
@@ -921,6 +952,7 @@
 
 - (void)setUpVc:(NSInteger)i
 {
+
     UIViewController *vc = self.childViewControllers[i];
     
     vc.view.frame = self.contentView.bounds;
@@ -971,6 +1003,31 @@
     
 }
 
+- (void)jumpToPage:(NSInteger )jumpPage {
+    // 记录是否点击标题
+    _isClickTitle = YES;
+    
+    // 获取对应标题label
+    UILabel *label = (UILabel *)self.titleLabels[jumpPage];
+    
+    // 获取当前角标
+    NSInteger i = label.tag;
+    
+    // 选中label
+    [self selectLabel:label];
+    
+    // 内容滚动视图滚动到对应位置
+    CGFloat offsetX = i * YZScreenW;
+    
+    self.contentScrollView.contentOffset = CGPointMake(offsetX, 0);
+    
+    // 记录上一次偏移量,因为点击的时候不会调用scrollView代理记录，因此需要主动记录
+    _lastOffsetX = offsetX;
+    
+    
+    // 点击事件处理完成
+    _isClickTitle = NO;
+}
 
 
 @end

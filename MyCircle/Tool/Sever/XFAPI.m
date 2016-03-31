@@ -12,7 +12,7 @@
 //#define DeBaseU @"http://localhost/"
 @implementation XFAPI : NSObject
 
-static NSString * const baseURL = @"http://www.u22t.com/home/";
+static NSString * const baseURL = @"http://zxfserver.sinaapp.com/home/";
 static NSString * const baseImageURL = @"http://7xo6u7.com1.z0.glb.clouddn.com/";
 static NSString * const baseVideoURL = @"http://zxfserver.sinaapp.com/Public/video/";
 

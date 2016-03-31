@@ -21,6 +21,8 @@
 #import <POP.h>
 #import "BtnExt.h"
 
+#import "WriteAtrVC.h"
+
 @interface SendViewController ()
 
 @end
@@ -157,6 +159,9 @@
     
     if (sender.tag == 1210) {
         WriteCircleController *vc = [[WriteCircleController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (sender.tag == 1212) {
+        WriteAtrVC *vc = [[WriteAtrVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

@@ -36,10 +36,10 @@ static AFManagerHandle *_manager = nil;
         NSLog(@"ids = %@",[XFAppContext sharedContext].uid);
         NSLog(@"tokens = %@",[XFAppContext sharedContext].token);
         NSLog(@"version = %@",APP_VERSION);
-        
+        NSLog(@"uuid = %@",APP_UUID);
         [serializer setValue:uid forHTTPHeaderField:@"UID"];
         [serializer setValue:token forHTTPHeaderField:@"TOKEN"];
-        [serializer setValue:@"iOS" forHTTPHeaderField:@"DEVICE"];
+        [serializer setValue:APP_UUID forHTTPHeaderField:@"DEVICE"];
         [serializer setValue:APP_VERSION forHTTPHeaderField:@"VERSION"];
         _manager.requestSerializer = serializer;
         _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -62,7 +62,7 @@ static AFManagerHandle *_manager = nil;
     AFHTTPRequestSerializer *serializer = _manager.requestSerializer;
     [serializer setValue:@"111" forHTTPHeaderField:@"UID"];
     [serializer setValue:@"222" forHTTPHeaderField:@"TOKEN"];
-    [serializer setValue:@"iOS" forHTTPHeaderField:@"DEVICE"];
+    [serializer setValue:APP_UUID forHTTPHeaderField:@"DEVICE"];
     [serializer setValue:APP_VERSION forHTTPHeaderField:@"VERSION"];
     _manager.requestSerializer = serializer;
 }
@@ -73,7 +73,7 @@ static AFManagerHandle *_manager = nil;
     AFHTTPRequestSerializer *serializer = _manager.requestSerializer;
     [serializer setValue:[XFAppContext sharedContext].uid forHTTPHeaderField:@"UID"];
     [serializer setValue:[XFAppContext sharedContext].token forHTTPHeaderField:@"TOKEN"];
-    [serializer setValue:@"iOS" forHTTPHeaderField:@"DEVICE"];
+    [serializer setValue:APP_UUID forHTTPHeaderField:@"DEVICE"];
     [serializer setValue:APP_VERSION forHTTPHeaderField:@"VERSION"];
     _manager.requestSerializer = serializer;
 }

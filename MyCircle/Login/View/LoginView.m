@@ -27,39 +27,46 @@
 
 - (void)initView {
     
+    _loginTypeSegment = [[UISegmentedControl alloc] initWithItems:@[LocalString(@"login_loginWithCode"),LocalString(@"login_loginWithPwd")]];
+    [self addSubview:_loginTypeSegment];
+    
     _phoneTF = [[XFTextField alloc] init];
-    _phoneTF.placeholder = @"手机号";
+    _phoneTF.placeholder = LocalString(@"login_phone");
     [self addSubview:_phoneTF];
     
     _authCodeTF = [[XFTextField alloc] init];
-    _authCodeTF.placeholder = @"验证码";
+    _authCodeTF.placeholder = LocalString(@"login_authCode");
     _authCodeTF.borderStyle = UITextBorderStyleLine;
     [self addSubview:_authCodeTF];
     
     _sendAuthCodeButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    [_sendAuthCodeButton setTitle:@"发送验证码" forState:(UIControlStateNormal)];
+    [_sendAuthCodeButton setTitle:LocalString(@"login_sendAuthCode") forState:(UIControlStateNormal)];
     [self addSubview:_sendAuthCodeButton];
     
     _passwordTF = [[XFTextField alloc] init];
-    _passwordTF.placeholder = @"密码";
+    _passwordTF.placeholder = LocalString(@"login_pwd");
     _passwordTF.borderStyle = UITextBorderStyleLine;
     [self addSubview:_passwordTF];
     
     _registerBtn = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    [_registerBtn setTitle:@"没有账号？去注册" forState:(UIControlStateNormal)];
+    [_registerBtn setTitle:LocalString(@"login_noID") forState:(UIControlStateNormal)];
     [self addSubview:_registerBtn];
     
     
     _loginBtn = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    [_loginBtn setTitle:@"登录" forState:(UIControlStateNormal)];
+    [_loginBtn setTitle:LocalString(@"login_login") forState:(UIControlStateNormal)];
     [self addSubview:_loginBtn];
     
     _cancelBtn = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    [_cancelBtn setTitle:@"取消" forState:(UIControlStateNormal)];
+    [_cancelBtn setTitle:LocalString(@"login_cancel") forState:(UIControlStateNormal)];
     [self addSubview:_cancelBtn];
     
     //添加震动
     _viewShaker = [[AFViewShaker alloc] initWithViewsArray:@[_phoneTF,_authCodeTF,_passwordTF]];
+    
+    _loginTypeSegment.tintColor = [UIColor whiteColor];
+    _loginTypeSegment.selectedSegmentIndex = 0;
+    _loginTypeSegment.backgroundColor = HexColor(0x51B9c7);
     
     //键盘样式
     _phoneTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -100,8 +107,16 @@
 
 - (void)initFrames {
     __weak typeof (self) weakSelf = self;
+    
+    [_loginTypeSegment mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo (weakSelf.mas_top).with.offset (60);
+        make.width.offset (300);
+        make.centerX.equalTo (weakSelf.mas_centerX).with.offset (0);
+        make.height.offset (30);
+    }];
+    
     [_phoneTF mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo (weakSelf.mas_top).with.offset (140);
+        make.top.equalTo (weakSelf.loginTypeSegment.mas_top).with.offset (60);
         make.left.equalTo (weakSelf.mas_left).with.offset (40);
         make.right.equalTo (weakSelf.mas_right).with.offset (-40);
         make.height.offset (40);

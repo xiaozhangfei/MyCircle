@@ -22,6 +22,7 @@
 #import "RegisterViewController.h"
 #import <LJWKeyboardHandlerHeaders.h>
 #import "PersonModel.h"
+#import "MiscTool.h"
 
 @interface LoginViewController ()
 
@@ -33,7 +34,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"登录";
+    self.title = LocalString(@"login_login");
+    self.navigationController.navigationBarHidden = YES;
     self.lv = [[LoginView alloc] initWithFrame:self.view.frame];
     
     [self.view addSubview:self.lv];
@@ -45,7 +47,49 @@
 
     [self.lv.cancelBtn addTarget:self action:@selector(cancelBtnAction:) forControlEvents:(UIControlEventTouchUpInside)];
 
+    [self.lv.loginTypeSegment addTarget:self action:@selector(loginTypeChangeAction:) forControlEvents:(UIControlEventValueChanged)];
+    
+    //初始化时设置密码框不能点击
+    _lv.passwordTF.enabled = NO;
+    _lv.passwordTF.boColor = [UIColor lightGrayColor];
+    [_lv.passwordTF setNeedsDisplay];
+    
+    
     [self registerLJWKeyboardHandler];
+}
+
+- (void)loginTypeChangeAction:(UISegmentedControl *)sender {
+    UIColor *ligthColor = [UIColor lightGrayColor];//不能点击时的颜色
+
+    UIColor *normalColor = [UIColor whiteColor];//正常时的颜色
+    
+    if (sender.selectedSegmentIndex == 0) {
+        _lv.authCodeTF.enabled = YES;
+        _lv.sendAuthCodeButton.enabled = YES;
+        
+        _lv.authCodeTF.boColor = normalColor;
+        [_lv.authCodeTF setNeedsDisplay];//调用drawRect方法
+        _lv.sendAuthCodeButton.layer.borderColor = normalColor.CGColor;
+        [_lv.sendAuthCodeButton setTitleColor:normalColor forState:(UIControlStateNormal)];
+        
+        _lv.passwordTF.boColor = ligthColor;
+        [_lv.passwordTF setNeedsDisplay];
+        
+        _lv.passwordTF.enabled = NO;
+    }else {
+        _lv.authCodeTF.enabled = NO;
+        _lv.sendAuthCodeButton.enabled = NO;
+        
+        _lv.authCodeTF.boColor = ligthColor;
+        [_lv.authCodeTF setNeedsDisplay];
+        _lv.sendAuthCodeButton.layer.borderColor = ligthColor.CGColor;
+        [_lv.sendAuthCodeButton setTitleColor:ligthColor forState:(UIControlStateNormal)];
+        
+        _lv.passwordTF.boColor = normalColor;
+        [_lv.passwordTF setNeedsDisplay];
+        
+        _lv.passwordTF.enabled = YES;
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -55,41 +99,11 @@
 
 - (void)registerBtnAction:(UIButton *)sender {
     RegisterViewController *registerVC = [[RegisterViewController alloc] init];
-    [self.navigationController pushViewController:registerVC animated:YES];
-    //重写navigationBar按钮方法时，开启iOS7的滑动返回效果
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
-    }
+    [self pushVC:registerVC animated:YES];
 }
 
 - (void)cancelBtnAction:(UIButton *)sender {
-    
-//    // 1.根据网址初始化OC字符串对象
-//    NSString *urlStr = [NSString stringWithFormat:@"%@", @"http://zxfserver.sinaapp.com/home/account/logincode"];
-//    // 2.创建NSURL对象
-//    NSURL *url = [NSURL URLWithString:urlStr];
-//    // 3.创建请求
-//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-//    // 4.创建参数字符串对象
-//    NSString *parmStr = @"mobile=12345&code=123&zone=86";
-//    // 5.将字符串转为NSData对象
-//    NSData *pramData = [parmStr dataUsingEncoding:NSUTF8StringEncoding];
-//    // 6.设置请求体
-//    [request setHTTPBody:pramData];
-//    // 7.设置请求方式
-//    [request setHTTPMethod:@"POST"];
-//    
-//
-//    // 创建同步链接
-//    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-//    NSDictionary *di = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-//    NSLog(@"ressss = %@",di);
-//    
-//    return;
-
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)sendAuthCodeButtonAction:(UIButton *)sender {
@@ -122,7 +136,7 @@
     if (![self checkTextFields]) {
         return;
     }
-    
+
     __weak typeof (self) weakSelf = self;
     [weakSelf loginPostSever:sender];
     return;
@@ -144,13 +158,17 @@
         [self.lv onShakeOneWithView:self.lv.phoneTF];
         return false;
     }
-    if ([self.lv.authCodeTF.text isEqualToString:@""]) {
-        [self.lv onShakeOneWithView:self.lv.authCodeTF];
-        return false;
-    }
-    if ([self.lv.passwordTF.text isEqualToString:@""]) {
-        [self.lv onShakeOneWithView:self.lv.passwordTF];
-        return false;
+    
+    if (_lv.loginTypeSegment.selectedSegmentIndex == 0) {
+        if ([self.lv.authCodeTF.text isEqualToString:@""]) {
+            [self.lv onShakeOneWithView:self.lv.authCodeTF];
+            return false;
+        }
+    }else {
+        if ([self.lv.passwordTF.text isEqualToString:@""]) {
+            [self.lv onShakeOneWithView:self.lv.passwordTF];
+            return false;
+        }
     }
     return true;
 }
@@ -160,9 +178,17 @@
     NSDictionary *dict = @{@"mobile":self.lv.phoneTF.text,
                            @"code":self.lv.authCodeTF.text,
                            @"zone":@"86"};
+    NSString *url = [XFAPI loginWithAuthcode];//使用验证码登录
     
+    //使用密码登录
+    if (_lv.loginTypeSegment.selectedSegmentIndex == 1) {
+        dict = @{@"mobile":self.lv.phoneTF.text,
+                 @"password":[MiscTool encryptPwdForTrans:self.lv.passwordTF.text],
+                 @"zone":@"86"};
+        url = [XFAPI login];
+    }
     
-    [AFHTTPRequestOperationManager postWithURLString:[XFAPI loginWithAuthcode] parameters:dict success:^(AFHTTPRequestOperation *operation, NSDictionary *responseDict, BaseModel *baseModel) {
+    [AFHTTPRequestOperationManager postWithURLString:url parameters:dict success:^(AFHTTPRequestOperation *operation, NSDictionary *responseDict, BaseModel *baseModel) {
         if (![baseModel.code isEqual:@"200"]) {
             [weakSelf showToast:baseModel.s_description];
             return ;
@@ -187,7 +213,7 @@
         context.portrait = pm.portrait;
         context.sex = pm.sex;
         context.mobile = pm.mobile;
-        context.token = pm.token;
+        context.token = pm.token;//修改本地token
         //不保存device , version
         [context save];
         
@@ -209,9 +235,7 @@
 }
 
 - (void)didPresentControllerButtonTouchSuccess {
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didPresentControllerButtonTouchFail {

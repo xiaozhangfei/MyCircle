@@ -35,7 +35,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"注册";
+    self.title = LocalString(@"login_register");
+    self.navigationController.navigationBarHidden = YES;
+    
     self.rv = [[RegisterView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.rv];
     
@@ -150,7 +152,7 @@
     __weak typeof (self) weakSelf = self;
     NSDictionary *dict = @{
                            @"mobile":self.rv.phoneTF.text,
-                           @"password":[MiscTool md5:self.rv.passwordTF.text],
+                           @"password":[MiscTool encryptPwdForTrans:self.rv.passwordTF.text],
                            @"nickname":self.rv.nicknameTF.text,
                            @"zone":@"86",
                            @"code":self.rv.authCodeTF.text

@@ -63,4 +63,13 @@
 #pragma mark -- 通过当前时间戳和userid，再计算md5来获取新的视频和图片的名称，视频和缩略图，同一个名称，后缀不同，所以不返回后缀
 + (NSString *)videoNameFromTime;
 
+/**
+ *  对密码进行加密，方便传输
+ *
+ *  @param pwd 密码明文
+ *
+ *  @return 经过md5 -> RSA公钥加密 后的字符串
+ */
++ (NSString *)encryptPwdForTrans:(NSString *)pwd;
+
 @end

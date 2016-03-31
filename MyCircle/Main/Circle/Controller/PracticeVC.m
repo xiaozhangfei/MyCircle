@@ -63,12 +63,7 @@
 #pragma mark -- RxLabel代理
 -(void)RxLabel:(RxLabel *)label didDetectedTapLinkWithUrlStr:(NSString *)urlStr{
     RxWebViewController* webViewController = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:urlStr]];
-    [self.navigationController pushViewController:webViewController animated:YES];
-    
-    //重写navigationBar按钮方法时，开启iOS7的滑动返回效果
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
-    }
+    [self pushVC:webViewController animated:YES];
     
 }
 
@@ -76,13 +71,7 @@
 - (void)btnAction:(UIButton *)sender {
     
     RxWebViewController *webVC = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"http://www.baidu.com"]];
-    webVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:webVC animated:YES];
-    
-    //重写navigationBar按钮方法时，开启iOS7的滑动返回效果
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
-    }
+    [self pushVC:webVC animated:YES];
     
 }
 

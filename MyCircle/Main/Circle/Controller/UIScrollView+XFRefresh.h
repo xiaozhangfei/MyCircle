@@ -12,4 +12,6 @@
 
 - (void)addXFRefreshHeader;
 
+- (void)getData;
+
 @end

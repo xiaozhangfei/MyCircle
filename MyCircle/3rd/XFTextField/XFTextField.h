@@ -10,4 +10,6 @@
 
 @interface XFTextField : UITextField
 
+@property (strong, nonatomic) UIColor *boColor;
+
 @end

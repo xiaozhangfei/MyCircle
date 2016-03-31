@@ -82,10 +82,10 @@
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "adhoc">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "adhoc"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

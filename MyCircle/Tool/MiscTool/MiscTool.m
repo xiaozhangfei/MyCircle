@@ -18,6 +18,9 @@
 //md5加密
 #import <CommonCrypto/CommonDigest.h>
 #import "XFAppContext.h"
+//RSA加密
+#import "RSA.h"
+#import "SecurityUtil.h"//aes加密
 
 @implementation MiscTool
 
@@ -352,6 +355,13 @@
     NSString *paramName = [NSString stringWithFormat:@"%ld%@", ini, [XFAppContext sharedContext].uid];
     paramName = [MiscTool md5:paramName];
     return paramName;
+}
+
+//对密码加密
++ (NSString *)encryptPwdForTrans:(NSString *)pwd {
+    NSString *md5 = [self md5:pwd];
+    NSString *s = [RSA encryptString:md5 publicKey:rsa_public_key];
+    return s;
 }
 
 

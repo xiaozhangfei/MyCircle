@@ -25,6 +25,8 @@ typedef enum : NSUInteger {
  */
 
 @interface YZDisplayViewController : BaseViewController
+/** 内容滚动视图 */
+@property (nonatomic, weak) UICollectionView *contentScrollView;
 
 /**************************************内容************************************/
 /*
@@ -199,6 +201,12 @@ typedef enum : NSUInteger {
     刷新标题和整个界面，在调用之前，必须先确定所有的子控制器。
  */
 - (void)refreshDisplay;
+- (void)setUpVc:(NSInteger)i;
 
+
+@property (nonatomic, assign) BOOL isSampTitleWidth;//使用标题等宽
+
+
+- (void)jumpToPage:(NSInteger )jumpPage;
 
 @end

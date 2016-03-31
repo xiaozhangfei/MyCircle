@@ -5,26 +5,51 @@
   Created by and on 16/1/28.
   Copyright © 2016年 and. All rights reserved.
 */
-"projectName" = "Circle";
+"projectName"               = "Circle";
 //tabBar
-"tab_circle"        = "Circle";
-"tab_message"       = "Message";
-"tab_find"          = "Find";
-"tab_me"            = "Me";
+"tab_circle"                = "Circle";
+"tab_message"               = "Message";
+"tab_find"                  = "Find";
+"tab_me"                    = "Me";
 
 //ad
-"ad_skip"           = "Skip";
-"ad_shake"          = "Shake it off";
+"ad_skip"                   = "Skip";
+"ad_shake"                  = "Shake it off";
 
 //circle
-"circle_hot"        = "Hot";
-"circle_new"        = "New";
-"circle_all"        = "All";
+"circle_hot"                = "Hot";
+"circle_new"                = "New";
+"circle_all"                = "All";
 
 //message
-"mes_friends"        = "Friends";
+"mes_friends"               = "Friends";
 
 
 //set
-"set_setting"       = "Setting";
-"set_night"         = "Night";
+"set_setting"               = "Setting";
+"set_night"                 = "Night";
+
+//login
+"login_loginWithCode"       = "Login with authCode";
+"login_loginWithPwd"        = "Login with password";
+"login_phone"               = "phone number";
+"login_authCode"            = "authcode";
+"login_sendAuthCode"        = "Get authcode";
+"login_pwd"                 = "password";
+"login_noID"                = "No ID? Go register";
+"login_login"               = "Login";
+"login_cancel"              = "Cancel";
+
+"login_register"            = "register";
+"login_nick"                = "nickname";
+"login_verifyNick"          = "Verify Nickname";
+
+
+
+
+
+
+
+
+
+

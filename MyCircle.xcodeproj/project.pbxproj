@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		79A3158194B0D4A23E1B2318 /* libPods-MyCircleWatch Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A39F23416AFE4C7792781585 /* libPods-MyCircleWatch Extension.a */; };
 		97CDC9B9AA0C45DC1EFAF31D /* libPods-MyCircleWatch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D69F8B431B002834920AE6 /* libPods-MyCircleWatch.a */; };
 		983F67A8C7823E6BF8833CC4 /* libPods-MyCircleToday.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D48BD82DB2C71EB596AD4D8C /* libPods-MyCircleToday.a */; };
 		AD07487C1C5B41090092652F /* SecurityUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AD07487B1C5B41090092652F /* SecurityUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -232,9 +231,33 @@
 		AD991D541C7C42380027A325 /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD991D511C7C42380027A325 /* WMPlayer.bundle */; };
 		AD991D551C7C42380027A325 /* WMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD991D531C7C42380027A325 /* WMPlayer.m */; };
 		AD991D581C7C45A20027A325 /* CircleDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD991D571C7C45A20027A325 /* CircleDetailVC.m */; };
+		AD9F625D1C9B8E0500F2D612 /* WriteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F625C1C9B8E0500F2D612 /* WriteVC.m */; };
+		AD9F62601C9B918900F2D612 /* WriteAtrVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F625F1C9B918900F2D612 /* WriteAtrVC.m */; };
+		AD9F62631C9B928800F2D612 /* ArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F62621C9B928800F2D612 /* ArtView.m */; };
+		AD9F62661C9BC6AA00F2D612 /* ToolBarToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F62651C9BC6AA00F2D612 /* ToolBarToastView.m */; };
+		AD9F62691C9BF50600F2D612 /* XFToolBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F62681C9BF50600F2D612 /* XFToolBarButton.m */; };
+		AD9F626C1C9C018500F2D612 /* XFKeyboardBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F626B1C9C018500F2D612 /* XFKeyboardBar.m */; };
+		AD9F62821C9CFDE300F2D612 /* MMDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F62701C9CFDE300F2D612 /* MMDocument.m */; };
+		AD9F62831C9CFDE300F2D612 /* MMElement.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F62731C9CFDE300F2D612 /* MMElement.m */; };
+		AD9F62841C9CFDE300F2D612 /* MMGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F62751C9CFDE300F2D612 /* MMGenerator.m */; };
+		AD9F62851C9CFDE300F2D612 /* MMHTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F62771C9CFDE300F2D612 /* MMHTMLParser.m */; };
+		AD9F62861C9CFDE300F2D612 /* MMMarkdown.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F627A1C9CFDE300F2D612 /* MMMarkdown.m */; };
+		AD9F62871C9CFDE300F2D612 /* MMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F627C1C9CFDE300F2D612 /* MMParser.m */; };
+		AD9F62881C9CFDE300F2D612 /* MMScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F627E1C9CFDE300F2D612 /* MMScanner.m */; };
+		AD9F62891C9CFDE300F2D612 /* MMSpanParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F62801C9CFDE300F2D612 /* MMSpanParser.m */; };
 		ADA4227C1C301E7300D9877D /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA422771C301E7300D9877D /* SMS_SDKLocalizable.strings */; };
 		ADA4227D1C301E7300D9877D /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA422791C301E7300D9877D /* MOBFoundation.framework */; };
 		ADA4227E1C301E7300D9877D /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4227A1C301E7300D9877D /* SMS_SDK.framework */; };
+		ADCC9D8F1CAA518000F48B44 /* iPhone_Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCC9D8E1CAA518000F48B44 /* iPhone_Main.storyboard */; };
+		ADCC9D911CAA518A00F48B44 /* iPad_Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCC9D901CAA518A00F48B44 /* iPad_Main.storyboard */; };
+		ADCD19501C880EA00050727D /* FindOneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCD194F1C880EA00050727D /* FindOneModel.m */; };
+		ADDB8B0B1C8D5169005788D3 /* WebvvVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDB8B0A1C8D5169005788D3 /* WebvvVC.m */; };
+		ADDB8B191C8D525C005788D3 /* D3Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDB8B0E1C8D525C005788D3 /* D3Generator.m */; };
+		ADDB8B1A1C8D525C005788D3 /* NSObject+D3.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDB8B101C8D525C005788D3 /* NSObject+D3.m */; };
+		ADDB8B1B1C8D525C005788D3 /* WebViewJavascriptBridge.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = ADDB8B131C8D525C005788D3 /* WebViewJavascriptBridge.js.txt */; };
+		ADDB8B1C1C8D525C005788D3 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDB8B141C8D525C005788D3 /* WebViewJavascriptBridge.m */; };
+		ADDB8B1D1C8D525C005788D3 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDB8B161C8D525C005788D3 /* WebViewJavascriptBridgeBase.m */; };
+		ADDB8B1E1C8D525C005788D3 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDB8B181C8D525C005788D3 /* WKWebViewJavascriptBridge.m */; };
 		ADE8BD111C25641200168B04 /* AdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE8BD0C1C25641200168B04 /* AdVC.m */; };
 		ADE8BD121C25641200168B04 /* LaunchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE8BD0E1C25641200168B04 /* LaunchVC.m */; };
 		ADE8BD151C25643200168B04 /* AdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE8BD141C25643200168B04 /* AdModel.m */; };
@@ -324,7 +347,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		19644058EA2D431068A78D7B /* Pods-MyCircleWatch Extension.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleWatch Extension.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleWatch Extension/Pods-MyCircleWatch Extension.adhoc.xcconfig"; sourceTree = "<group>"; };
 		1BABAE3642608C609518D365 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B16B17899253A19378ECF91 /* Pods-MyCircle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircle.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircle/Pods-MyCircle.release.xcconfig"; sourceTree = "<group>"; };
 		74CB07F8616594CE28613396 /* Pods-MyCircleToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleToday/Pods-MyCircleToday.release.xcconfig"; sourceTree = "<group>"; };
@@ -333,7 +355,6 @@
 		8AF3F2F08BFB739F40DEF904 /* Pods-MyCircleWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleWatch/Pods-MyCircleWatch.debug.xcconfig"; sourceTree = "<group>"; };
 		919BC0FBAB4CBF2FD1ACC5E7 /* Pods-MyCircleWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleWatch/Pods-MyCircleWatch.release.xcconfig"; sourceTree = "<group>"; };
 		98CC154890CC02C61D5FC94F /* libPods-MyCircle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCircle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A96F6F0F5B880930C8EECC3 /* Pods-MyCircleWatch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleWatch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleWatch Extension/Pods-MyCircleWatch Extension.release.xcconfig"; sourceTree = "<group>"; };
 		A39F23416AFE4C7792781585 /* libPods-MyCircleWatch Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCircleWatch Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD07487A1C5B41090092652F /* SecurityUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityUtil.h; sourceTree = "<group>"; };
 		AD07487B1C5B41090092652F /* SecurityUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityUtil.m; sourceTree = "<group>"; };
@@ -754,10 +775,59 @@
 		AD991D531C7C42380027A325 /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
 		AD991D561C7C45A20027A325 /* CircleDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleDetailVC.h; sourceTree = "<group>"; };
 		AD991D571C7C45A20027A325 /* CircleDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleDetailVC.m; sourceTree = "<group>"; };
+		AD9F62591C9A4B0B00F2D612 /* XFMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMacro.h; sourceTree = "<group>"; };
+		AD9F625A1C9AA8F300F2D612 /* XFUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUrl.h; sourceTree = "<group>"; };
+		AD9F625B1C9B8E0500F2D612 /* WriteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteVC.h; sourceTree = "<group>"; };
+		AD9F625C1C9B8E0500F2D612 /* WriteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteVC.m; sourceTree = "<group>"; };
+		AD9F625E1C9B918900F2D612 /* WriteAtrVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteAtrVC.h; sourceTree = "<group>"; };
+		AD9F625F1C9B918900F2D612 /* WriteAtrVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteAtrVC.m; sourceTree = "<group>"; };
+		AD9F62611C9B928800F2D612 /* ArtView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtView.h; sourceTree = "<group>"; };
+		AD9F62621C9B928800F2D612 /* ArtView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtView.m; sourceTree = "<group>"; };
+		AD9F62641C9BC6AA00F2D612 /* ToolBarToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolBarToastView.h; sourceTree = "<group>"; };
+		AD9F62651C9BC6AA00F2D612 /* ToolBarToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolBarToastView.m; sourceTree = "<group>"; };
+		AD9F62671C9BF50600F2D612 /* XFToolBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFToolBarButton.h; sourceTree = "<group>"; };
+		AD9F62681C9BF50600F2D612 /* XFToolBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFToolBarButton.m; sourceTree = "<group>"; };
+		AD9F626A1C9C018500F2D612 /* XFKeyboardBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFKeyboardBar.h; sourceTree = "<group>"; };
+		AD9F626B1C9C018500F2D612 /* XFKeyboardBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFKeyboardBar.m; sourceTree = "<group>"; };
+		AD9F626F1C9CFDE300F2D612 /* MMDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDocument.h; sourceTree = "<group>"; };
+		AD9F62701C9CFDE300F2D612 /* MMDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDocument.m; sourceTree = "<group>"; };
+		AD9F62711C9CFDE300F2D612 /* MMDocument_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDocument_Private.h; sourceTree = "<group>"; };
+		AD9F62721C9CFDE300F2D612 /* MMElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMElement.h; sourceTree = "<group>"; };
+		AD9F62731C9CFDE300F2D612 /* MMElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMElement.m; sourceTree = "<group>"; };
+		AD9F62741C9CFDE300F2D612 /* MMGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMGenerator.h; sourceTree = "<group>"; };
+		AD9F62751C9CFDE300F2D612 /* MMGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMGenerator.m; sourceTree = "<group>"; };
+		AD9F62761C9CFDE300F2D612 /* MMHTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHTMLParser.h; sourceTree = "<group>"; };
+		AD9F62771C9CFDE300F2D612 /* MMHTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHTMLParser.m; sourceTree = "<group>"; };
+		AD9F62781C9CFDE300F2D612 /* MMMarkdown-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMMarkdown-Prefix.pch"; sourceTree = "<group>"; };
+		AD9F62791C9CFDE300F2D612 /* MMMarkdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMarkdown.h; sourceTree = "<group>"; };
+		AD9F627A1C9CFDE300F2D612 /* MMMarkdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMarkdown.m; sourceTree = "<group>"; };
+		AD9F627B1C9CFDE300F2D612 /* MMParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMParser.h; sourceTree = "<group>"; };
+		AD9F627C1C9CFDE300F2D612 /* MMParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMParser.m; sourceTree = "<group>"; };
+		AD9F627D1C9CFDE300F2D612 /* MMScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMScanner.h; sourceTree = "<group>"; };
+		AD9F627E1C9CFDE300F2D612 /* MMScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMScanner.m; sourceTree = "<group>"; };
+		AD9F627F1C9CFDE300F2D612 /* MMSpanParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSpanParser.h; sourceTree = "<group>"; };
+		AD9F62801C9CFDE300F2D612 /* MMSpanParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSpanParser.m; sourceTree = "<group>"; };
 		ADA422781C301E7300D9877D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
 		ADA422791C301E7300D9877D /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		ADA4227A1C301E7300D9877D /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		ADA4227B1C301E7300D9877D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
+		ADCC9D8E1CAA518000F48B44 /* iPhone_Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone_Main.storyboard; sourceTree = "<group>"; };
+		ADCC9D901CAA518A00F48B44 /* iPad_Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad_Main.storyboard; sourceTree = "<group>"; };
+		ADCD194E1C880EA00050727D /* FindOneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindOneModel.h; sourceTree = "<group>"; };
+		ADCD194F1C880EA00050727D /* FindOneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindOneModel.m; sourceTree = "<group>"; };
+		ADDB8B091C8D5169005788D3 /* WebvvVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebvvVC.h; sourceTree = "<group>"; };
+		ADDB8B0A1C8D5169005788D3 /* WebvvVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebvvVC.m; sourceTree = "<group>"; };
+		ADDB8B0D1C8D525C005788D3 /* D3Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D3Generator.h; sourceTree = "<group>"; };
+		ADDB8B0E1C8D525C005788D3 /* D3Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = D3Generator.m; sourceTree = "<group>"; };
+		ADDB8B0F1C8D525C005788D3 /* NSObject+D3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+D3.h"; sourceTree = "<group>"; };
+		ADDB8B101C8D525C005788D3 /* NSObject+D3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+D3.m"; sourceTree = "<group>"; };
+		ADDB8B121C8D525C005788D3 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		ADDB8B131C8D525C005788D3 /* WebViewJavascriptBridge.js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebViewJavascriptBridge.js.txt; sourceTree = "<group>"; };
+		ADDB8B141C8D525C005788D3 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		ADDB8B151C8D525C005788D3 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		ADDB8B161C8D525C005788D3 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		ADDB8B171C8D525C005788D3 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		ADDB8B181C8D525C005788D3 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		ADE8BD0B1C25641200168B04 /* AdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdVC.h; sourceTree = "<group>"; };
 		ADE8BD0C1C25641200168B04 /* AdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdVC.m; sourceTree = "<group>"; };
 		ADE8BD0D1C25641200168B04 /* LaunchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchVC.h; sourceTree = "<group>"; };
@@ -802,7 +872,6 @@
 		ADF523961C58C8BE00C6E49F /* XFPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFPageView.m; sourceTree = "<group>"; };
 		C7C1333E197356C131ADAAF1 /* Pods-MyCircle.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircle.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircle/Pods-MyCircle.adhoc.xcconfig"; sourceTree = "<group>"; };
 		D48BD82DB2C71EB596AD4D8C /* libPods-MyCircleToday.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCircleToday.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB21523BB46F183194B16795 /* Pods-MyCircleWatch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleWatch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleWatch Extension/Pods-MyCircleWatch Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		E3D69F8B431B002834920AE6 /* libPods-MyCircleWatch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCircleWatch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F1A1FE18BB3A7AC8B8E764 /* Pods-MyCircleToday.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleToday.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleToday/Pods-MyCircleToday.adhoc.xcconfig"; sourceTree = "<group>"; };
 		FB93E61D36F479D5D8617662 /* Pods-MyCircleToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCircleToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCircleToday/Pods-MyCircleToday.debug.xcconfig"; sourceTree = "<group>"; };
@@ -837,7 +906,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79A3158194B0D4A23E1B2318 /* libPods-MyCircleWatch Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,9 +932,6 @@
 				8AF3F2F08BFB739F40DEF904 /* Pods-MyCircleWatch.debug.xcconfig */,
 				919BC0FBAB4CBF2FD1ACC5E7 /* Pods-MyCircleWatch.release.xcconfig */,
 				8316425EFCD3F3DB2410445F /* Pods-MyCircleWatch.adhoc.xcconfig */,
-				DB21523BB46F183194B16795 /* Pods-MyCircleWatch Extension.debug.xcconfig */,
-				9A96F6F0F5B880930C8EECC3 /* Pods-MyCircleWatch Extension.release.xcconfig */,
-				19644058EA2D431068A78D7B /* Pods-MyCircleWatch Extension.adhoc.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1059,6 +1124,8 @@
 				AD27F0751C715CA900FAD9E7 /* AppDelegate+ZXFJSPatch.h */,
 				AD27F0761C715CA900FAD9E7 /* AppDelegate+ZXFJSPatch.m */,
 				AD318BC51C1C15E300138E2A /* Main.storyboard */,
+				ADCC9D8E1CAA518000F48B44 /* iPhone_Main.storyboard */,
+				ADCC9D901CAA518A00F48B44 /* iPad_Main.storyboard */,
 				AD318BC81C1C15E300138E2A /* Assets.xcassets */,
 				AD318BCA1C1C15E300138E2A /* LaunchScreen.storyboard */,
 				AD318BB91C1C15E300138E2A /* Supporting Files */,
@@ -1093,6 +1160,8 @@
 				AD31B64A1C2106AB007BBCC8 /* HomeIconTitleView.m */,
 				AD25DF521C23D2060009715E /* XFTopToast.h */,
 				AD25DF531C23D2060009715E /* XFTopToast.m */,
+				ADDB8B091C8D5169005788D3 /* WebvvVC.h */,
+				ADDB8B0A1C8D5169005788D3 /* WebvvVC.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1243,6 +1312,8 @@
 		AD318C071C1C171700138E2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ADCD194E1C880EA00050727D /* FindOneModel.h */,
+				ADCD194F1C880EA00050727D /* FindOneModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1451,6 +1522,10 @@
 				AD318C2C1C1C171700138E2A /* SendViewController.m */,
 				AD318C2D1C1C171700138E2A /* WriteCircleController.h */,
 				AD318C2E1C1C171700138E2A /* WriteCircleController.m */,
+				AD9F625B1C9B8E0500F2D612 /* WriteVC.h */,
+				AD9F625C1C9B8E0500F2D612 /* WriteVC.m */,
+				AD9F625E1C9B918900F2D612 /* WriteAtrVC.h */,
+				AD9F625F1C9B918900F2D612 /* WriteAtrVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1467,6 +1542,14 @@
 			children = (
 				AD318C311C1C171700138E2A /* WriteView.h */,
 				AD318C321C1C171700138E2A /* WriteView.m */,
+				AD9F62611C9B928800F2D612 /* ArtView.h */,
+				AD9F62621C9B928800F2D612 /* ArtView.m */,
+				AD9F62641C9BC6AA00F2D612 /* ToolBarToastView.h */,
+				AD9F62651C9BC6AA00F2D612 /* ToolBarToastView.m */,
+				AD9F626A1C9C018500F2D612 /* XFKeyboardBar.h */,
+				AD9F626B1C9C018500F2D612 /* XFKeyboardBar.m */,
+				AD9F62671C9BF50600F2D612 /* XFToolBarButton.h */,
+				AD9F62681C9BF50600F2D612 /* XFToolBarButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1643,6 +1726,8 @@
 				AD318C641C1C171800138E2A /* LibMacro.h */,
 				AD318C651C1C171800138E2A /* UtilsMacro.h */,
 				AD318C661C1C171800138E2A /* VersionMacro.h */,
+				AD9F62591C9A4B0B00F2D612 /* XFMacro.h */,
+				AD9F625A1C9AA8F300F2D612 /* XFUrl.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -1678,6 +1763,8 @@
 		AD318CB91C1C199400138E2A /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				AD9F626D1C9CFDE300F2D612 /* Markdown */,
+				ADDB8B0C1C8D525C005788D3 /* D3Generator */,
 				AD991D501C7C42380027A325 /* WMPlayer */,
 				AD991D481C7BFDB40027A325 /* iToast */,
 				AD07488B1C5F2D620092652F /* RSA */,
@@ -2052,6 +2139,31 @@
 			path = WMPlayer;
 			sourceTree = "<group>";
 		};
+		AD9F626D1C9CFDE300F2D612 /* Markdown */ = {
+			isa = PBXGroup;
+			children = (
+				AD9F626F1C9CFDE300F2D612 /* MMDocument.h */,
+				AD9F62701C9CFDE300F2D612 /* MMDocument.m */,
+				AD9F62711C9CFDE300F2D612 /* MMDocument_Private.h */,
+				AD9F62721C9CFDE300F2D612 /* MMElement.h */,
+				AD9F62731C9CFDE300F2D612 /* MMElement.m */,
+				AD9F62741C9CFDE300F2D612 /* MMGenerator.h */,
+				AD9F62751C9CFDE300F2D612 /* MMGenerator.m */,
+				AD9F62761C9CFDE300F2D612 /* MMHTMLParser.h */,
+				AD9F62771C9CFDE300F2D612 /* MMHTMLParser.m */,
+				AD9F62781C9CFDE300F2D612 /* MMMarkdown-Prefix.pch */,
+				AD9F62791C9CFDE300F2D612 /* MMMarkdown.h */,
+				AD9F627A1C9CFDE300F2D612 /* MMMarkdown.m */,
+				AD9F627B1C9CFDE300F2D612 /* MMParser.h */,
+				AD9F627C1C9CFDE300F2D612 /* MMParser.m */,
+				AD9F627D1C9CFDE300F2D612 /* MMScanner.h */,
+				AD9F627E1C9CFDE300F2D612 /* MMScanner.m */,
+				AD9F627F1C9CFDE300F2D612 /* MMSpanParser.h */,
+				AD9F62801C9CFDE300F2D612 /* MMSpanParser.m */,
+			);
+			path = Markdown;
+			sourceTree = "<group>";
+		};
 		ADA422761C301E7300D9877D /* SMS_SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -2060,6 +2172,32 @@
 				ADA4227A1C301E7300D9877D /* SMS_SDK.framework */,
 			);
 			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
+		ADDB8B0C1C8D525C005788D3 /* D3Generator */ = {
+			isa = PBXGroup;
+			children = (
+				ADDB8B0D1C8D525C005788D3 /* D3Generator.h */,
+				ADDB8B0E1C8D525C005788D3 /* D3Generator.m */,
+				ADDB8B0F1C8D525C005788D3 /* NSObject+D3.h */,
+				ADDB8B101C8D525C005788D3 /* NSObject+D3.m */,
+				ADDB8B111C8D525C005788D3 /* WebViewJavascriptBridge */,
+			);
+			path = D3Generator;
+			sourceTree = "<group>";
+		};
+		ADDB8B111C8D525C005788D3 /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				ADDB8B121C8D525C005788D3 /* WebViewJavascriptBridge.h */,
+				ADDB8B131C8D525C005788D3 /* WebViewJavascriptBridge.js.txt */,
+				ADDB8B141C8D525C005788D3 /* WebViewJavascriptBridge.m */,
+				ADDB8B151C8D525C005788D3 /* WebViewJavascriptBridgeBase.h */,
+				ADDB8B161C8D525C005788D3 /* WebViewJavascriptBridgeBase.m */,
+				ADDB8B171C8D525C005788D3 /* WKWebViewJavascriptBridge.h */,
+				ADDB8B181C8D525C005788D3 /* WKWebViewJavascriptBridge.m */,
+			);
+			path = WebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
 		ADE8BD091C25641200168B04 /* Ad */ = {
@@ -2208,12 +2346,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD5B1A791C7B02930018ABC3 /* Build configuration list for PBXNativeTarget "MyCircleWatch Extension" */;
 			buildPhases = (
-				0B688712CEE48854FCD0BB59 /* Check Pods Manifest.lock */,
 				AD5B1A5F1C7B02920018ABC3 /* Sources */,
 				AD5B1A601C7B02920018ABC3 /* Frameworks */,
 				AD5B1A611C7B02920018ABC3 /* Resources */,
-				551914949BC13C65B7137FD0 /* Embed Pods Frameworks */,
-				C2EC24792AB3C4FF66CD5BD3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2330,9 +2465,11 @@
 				ADE8BD191C25963B00168B04 /* pay_open_touchID_success@2x.png in Resources */,
 				AD318CA51C1C171800138E2A /* message_no@3x.png in Resources */,
 				AD7C46661C59FD5300B125D6 /* Info.plist in Resources */,
+				ADDB8B1B1C8D525C005788D3 /* WebViewJavascriptBridge.js.txt in Resources */,
 				AD7C466F1C5A021A00B125D6 /* Localizable.strings in Resources */,
 				AD318C951C1C171800138E2A /* return_black@2x.png in Resources */,
 				AD318BC91C1C15E300138E2A /* Assets.xcassets in Resources */,
+				ADCC9D911CAA518A00F48B44 /* iPad_Main.storyboard in Resources */,
 				ADE8BD6E1C26798800168B04 /* publish_purse@2x.png in Resources */,
 				AD1B06791C3BC9E000D0F1A4 /* down@2x.png in Resources */,
 				AD1B06151C3932F400D0F1A4 /* btn_release@2x.png in Resources */,
@@ -2372,6 +2509,7 @@
 				AD318C9E1C1C171800138E2A /* circle@3x.png in Resources */,
 				AD318BC71C1C15E300138E2A /* Main.storyboard in Resources */,
 				AD1B06501C3B90B000D0F1A4 /* Default_splashscreen_slogan@3x.png in Resources */,
+				ADCC9D8F1CAA518000F48B44 /* iPhone_Main.storyboard in Resources */,
 				AD1B06751C3BC9E000D0F1A4 /* check@2x.png in Resources */,
 				AD1B067A1C3BC9E000D0F1A4 /* line@2x.png in Resources */,
 				AD1B067E1C3BC9E000D0F1A4 /* up@2x.png in Resources */,
@@ -2406,21 +2544,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B688712CEE48854FCD0BB59 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		0E39592BB29BE0E6A9FBD435 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2466,21 +2589,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		551914949BC13C65B7137FD0 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCircleWatch Extension/Pods-MyCircleWatch Extension-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5765FE21907CD87CFDEE7BEF /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2524,21 +2632,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCircleWatch/Pods-MyCircleWatch-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C2EC24792AB3C4FF66CD5BD3 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCircleWatch Extension/Pods-MyCircleWatch Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC85ECDE40F7581975EA5B2F /* Copy Pods Resources */ = {
@@ -2593,13 +2686,16 @@
 				AD318D141C1C199400138E2A /* SFHFEditableCell.m in Sources */,
 				AD07B42E1C1EB75A00BC630D /* MQLResumeManager.m in Sources */,
 				AD318D111C1C199400138E2A /* SpinerLayer.m in Sources */,
+				AD9F62691C9BF50600F2D612 /* XFToolBarButton.m in Sources */,
 				AD4C6C531C3227260008A6FB /* AFViewShaker.m in Sources */,
 				AD318D251C1C199400138E2A /* CYLPlusButtonSubclass.m in Sources */,
 				AD318C751C1C171800138E2A /* BaseModel.m in Sources */,
 				ADF5238A1C58C12C00C6E49F /* FindSVC.m in Sources */,
 				AD318C7A1C1C171800138E2A /* TouchIDViewController.m in Sources */,
+				ADDB8B1A1C8D525C005788D3 /* NSObject+D3.m in Sources */,
 				AD4C6C911C3580A30008A6FB /* WebVC.m in Sources */,
 				AD318C881C1C171800138E2A /* FindViewController.m in Sources */,
+				AD9F62661C9BC6AA00F2D612 /* ToolBarToastView.m in Sources */,
 				AD318C771C1C171800138E2A /* BaseViewController.m in Sources */,
 				AD318CAB1C1C171800138E2A /* NSString+URLEncoding.m in Sources */,
 				AD318D531C1C8BD400138E2A /* UIImage+Filtering.m in Sources */,
@@ -2608,14 +2704,17 @@
 				AD318D1A1C1C199400138E2A /* UIViewController+MMDrawerController.m in Sources */,
 				AD318D331C1C8A4200138E2A /* XFPicVideoPicker.m in Sources */,
 				AD318D161C1C199400138E2A /* UIWebView+SFHFStringMetrics.m in Sources */,
+				AD9F62891C9CFDE300F2D612 /* MMSpanParser.m in Sources */,
 				AD318D121C1C199400138E2A /* SFHFKeychainUtils.m in Sources */,
 				ADE8BD151C25643200168B04 /* AdModel.m in Sources */,
+				ADDB8B191C8D525C005788D3 /* D3Generator.m in Sources */,
 				AD318D1B1C1C199400138E2A /* RxLabel.m in Sources */,
 				AD1C825E1C1F11D1009A6C09 /* CollectViewVC.m in Sources */,
 				AD4C6C741C33C06A0008A6FB /* UpFileManager.m in Sources */,
 				AD318D201C1C199400138E2A /* NJKWebViewProgressView.m in Sources */,
 				ADE8BD841C27E27100168B04 /* NirKxMenu.m in Sources */,
 				AD318CAC1C1C171800138E2A /* UIColor+Utils.m in Sources */,
+				AD9F62821C9CFDE300F2D612 /* MMDocument.m in Sources */,
 				AD318C8C1C1C171800138E2A /* Mes3ViewController.m in Sources */,
 				AD318C911C1C171800138E2A /* SendViewController.m in Sources */,
 				AD1B06941C3D073600D0F1A4 /* AGImagePickerController.m in Sources */,
@@ -2624,8 +2723,10 @@
 				AD318CB01C1C171800138E2A /* UIViewController+BackButtonHandler.m in Sources */,
 				AD318D181C1C199400138E2A /* MMDrawerController.m in Sources */,
 				AD1C82641C1F1CA0009A6C09 /* VideoModel.m in Sources */,
+				AD9F62851C9CFDE300F2D612 /* MMHTMLParser.m in Sources */,
 				AD318D511C1C8BD400138E2A /* UIImage+Blurring.m in Sources */,
 				AD1B06961C3D073600D0F1A4 /* AGIPCAssetsController.m in Sources */,
+				AD9F625D1C9B8E0500F2D612 /* WriteVC.m in Sources */,
 				AD318C8A1C1C171800138E2A /* MeViewController.m in Sources */,
 				AD318CAA1C1C171800138E2A /* NSDate+TimeAgo.m in Sources */,
 				AD318C7F1C1C171800138E2A /* CircleAllPageViewController.m in Sources */,
@@ -2655,12 +2756,15 @@
 				AD07488E1C5F2D620092652F /* RSA.m in Sources */,
 				AD991D581C7C45A20027A325 /* CircleDetailVC.m in Sources */,
 				AD318D171C1C199400138E2A /* MMDrawerBarButtonItem.m in Sources */,
+				AD9F62861C9CFDE300F2D612 /* MMMarkdown.m in Sources */,
 				AD318D5C1C1C8BD400138E2A /* NYXImagesHelper.m in Sources */,
 				AD07B42A1C1EB71F00BC630D /* VideoDownloaderVC.m in Sources */,
 				AD318C871C1C171800138E2A /* FindTwoViewController.m in Sources */,
 				AD1B06921C3D073600D0F1A4 /* AGImagePickerController+Helper.m in Sources */,
 				AD318D541C1C8BD400138E2A /* UIImage+Masking.m in Sources */,
+				AD9F62871C9CFDE300F2D612 /* MMParser.m in Sources */,
 				AD1B06951C3D073600D0F1A4 /* AGIPCAlbumsController.m in Sources */,
+				AD9F62881C9CFDE300F2D612 /* MMScanner.m in Sources */,
 				AD318C891C1C171800138E2A /* LeftViewController.m in Sources */,
 				AD318C8F1C1C171800138E2A /* RightViewController.m in Sources */,
 				AD318D5A1C1C8BD400138E2A /* UIView+Screenshot.m in Sources */,
@@ -2668,17 +2772,21 @@
 				AD318D091C1C199400138E2A /* CorePagesViewConfig.m in Sources */,
 				AD4C6C7C1C34D1410008A6FB /* ChatListVC.m in Sources */,
 				AD318D561C1C8BD400138E2A /* UIImage+Resizing.m in Sources */,
+				ADDB8B1C1C8D525C005788D3 /* WebViewJavascriptBridge.m in Sources */,
 				ADE8BD7D1C27AF4700168B04 /* YZDisplayViewController.m in Sources */,
 				AD27F0771C715CA900FAD9E7 /* AppDelegate+ZXFJSPatch.m in Sources */,
+				AD9F62841C9CFDE300F2D612 /* MMGenerator.m in Sources */,
 				AD318D2B1C1C1C3E00138E2A /* MyControl.m in Sources */,
 				AD31B6451C20175B007BBCC8 /* PlayerView.m in Sources */,
 				AD318D1F1C1C199400138E2A /* NJKWebViewProgress.m in Sources */,
 				AD318C8B1C1C171800138E2A /* Mes1ViewController.m in Sources */,
+				ADDB8B1E1C8D525C005788D3 /* WKWebViewJavascriptBridge.m in Sources */,
 				ADE8BD121C25641200168B04 /* LaunchVC.m in Sources */,
 				AD318D6A1C1D48C000138E2A /* XFAPI.m in Sources */,
 				AD4C6C631C337AB50008A6FB /* LeftFooterView.m in Sources */,
 				AD318BBE1C1C15E300138E2A /* AppDelegate.m in Sources */,
 				AD1C82611C1F1614009A6C09 /* CollectView.m in Sources */,
+				AD9F62601C9B918900F2D612 /* WriteAtrVC.m in Sources */,
 				AD4C6C6D1C33A0390008A6FB /* WeatherModel.m in Sources */,
 				AD1B06631C3BC16600D0F1A4 /* DoAlbumCell.m in Sources */,
 				AD991D551C7C42380027A325 /* WMPlayer.m in Sources */,
@@ -2689,13 +2797,17 @@
 				AD318D5B1C1C8BD400138E2A /* NYXProgressiveImageView.m in Sources */,
 				AD4C6C7F1C3513950008A6FB /* FriendVC.m in Sources */,
 				AD318C811C1C171800138E2A /* CircleHotPageViewController.m in Sources */,
+				ADDB8B0B1C8D5169005788D3 /* WebvvVC.m in Sources */,
 				AD318C861C1C171800138E2A /* FindOneViewController.m in Sources */,
 				AD1B06981C3D073600D0F1A4 /* AGIPCGridItem.m in Sources */,
+				ADCD19501C880EA00050727D /* FindOneModel.m in Sources */,
 				AD318D151C1C199400138E2A /* SFHFHUDView.m in Sources */,
+				AD9F62831C9CFDE300F2D612 /* MMElement.m in Sources */,
 				AD318D301C1C77CF00138E2A /* EditPersonViewController.m in Sources */,
 				AD318D101C1C199400138E2A /* HyTransitions.m in Sources */,
 				ADE8BD7C1C27AF4700168B04 /* YZDisplayTitleLabel.m in Sources */,
 				AD318C791C1C171800138E2A /* RegisterViewController.m in Sources */,
+				AD9F626C1C9C018500F2D612 /* XFKeyboardBar.m in Sources */,
 				AD318C7B1C1C171800138E2A /* PersonModel.m in Sources */,
 				AD4C6C821C3518B00008A6FB /* FriendModel.m in Sources */,
 				AD318C8E1C1C171800138E2A /* MMExampleDrawerVisualStateManager.m in Sources */,
@@ -2721,10 +2833,12 @@
 				AD1B06621C3BC16600D0F1A4 /* AssetHelper.m in Sources */,
 				AD4C6C5E1C3234EE0008A6FB /* XFTextField.m in Sources */,
 				AD4C6C591C322F120008A6FB /* InputText.m in Sources */,
+				ADDB8B1D1C8D525C005788D3 /* WebViewJavascriptBridgeBase.m in Sources */,
 				ADE8BD7E1C27AF4700168B04 /* YZFlowLayout.m in Sources */,
 				AD318D0A1C1C199400138E2A /* CorePagesView.m in Sources */,
 				AD318D211C1C199400138E2A /* RxWebViewController.m in Sources */,
 				AD318C7C1C1C171800138E2A /* LoginView.m in Sources */,
+				AD9F62631C9B928800F2D612 /* ArtView.m in Sources */,
 				AD318D521C1C8BD400138E2A /* UIImage+Enhancing.m in Sources */,
 				AD318CAE1C1C171800138E2A /* UIView+Ext.m in Sources */,
 				AD318CB21C1C171800138E2A /* MiscTool.m in Sources */,
@@ -2842,8 +2956,8 @@
 			baseConfigurationReference = FB93E61D36F479D5D8617662 /* Pods-MyCircleToday.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MyCircleToday/MyCircleToday.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: li shuai (47RX25XT64)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: li shuai (47RX25XT64)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -2867,8 +2981,8 @@
 			baseConfigurationReference = 74CB07F8616594CE28613396 /* Pods-MyCircleToday.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MyCircleToday/MyCircleToday.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: li shuai (D2Q4969J32)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -2892,8 +3006,8 @@
 			baseConfigurationReference = E3F1A1FE18BB3A7AC8B8E764 /* Pods-MyCircleToday.adhoc.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MyCircleToday/MyCircleToday.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: li shuai (D2Q4969J32)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -2994,6 +3108,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3006,8 +3121,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MyCircle/MyCircle.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: li shuai (47RX25XT64)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: li shuai (47RX25XT64)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3015,12 +3130,13 @@
 				);
 				GCC_PREFIX_HEADER = MyCircle/PrefixHeader.pch;
 				INFOPLIST_FILE = MyCircle/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyCircle/3rd/XGPush",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3035,8 +3151,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MyCircle/MyCircle.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: li shuai (D2Q4969J32)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3044,12 +3160,13 @@
 				);
 				GCC_PREFIX_HEADER = MyCircle/PrefixHeader.pch;
 				INFOPLIST_FILE = MyCircle/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyCircle/3rd/XGPush",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3093,7 +3210,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3106,8 +3223,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MyCircle/MyCircle.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: li shuai (D2Q4969J32)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3115,12 +3232,13 @@
 				);
 				GCC_PREFIX_HEADER = MyCircle/PrefixHeader.pch;
 				INFOPLIST_FILE = MyCircle/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyCircle/3rd/XGPush",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.and.MyCircle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3131,7 +3249,6 @@
 		};
 		AD5B1A7A1C7B02930018ABC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB21523BB46F183194B16795 /* Pods-MyCircleWatch Extension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MyCircleWatch Extension/MyCircleWatch Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -3151,7 +3268,6 @@
 		};
 		AD5B1A7B1C7B02930018ABC3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A96F6F0F5B880930C8EECC3 /* Pods-MyCircleWatch Extension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MyCircleWatch Extension/MyCircleWatch Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -3171,7 +3287,6 @@
 		};
 		AD5B1A7C1C7B02930018ABC3 /* adhoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19644058EA2D431068A78D7B /* Pods-MyCircleWatch Extension.adhoc.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MyCircleWatch Extension/MyCircleWatch Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -3197,7 +3312,7 @@
 				CODE_SIGN_ENTITLEMENTS = MyCircleWatch/MyCircleWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: li shuai (47RX25XT64)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer: li shuai (47RX25XT64)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				IBSC_MODULE = MyCircleWatch_Extension;
 				INFOPLIST_FILE = MyCircleWatch/Info.plist;
@@ -3217,9 +3332,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MyCircleWatch/MyCircleWatch.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: li shuai (D2Q4969J32)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				IBSC_MODULE = MyCircleWatch_Extension;
 				INFOPLIST_FILE = MyCircleWatch/Info.plist;
@@ -3239,9 +3354,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MyCircleWatch/MyCircleWatch.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: li shuai (D2Q4969J32)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution: li shuai (D2Q4969J32)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				IBSC_MODULE = MyCircleWatch_Extension;
 				INFOPLIST_FILE = MyCircleWatch/Info.plist;

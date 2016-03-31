@@ -26,35 +26,35 @@
 - (void)initView {
     
     _phoneTF = [[XFTextField alloc] init];
-    _phoneTF.placeholder = @"手机号";
+    _phoneTF.placeholder = LocalString(@"login_phone");
     [self addSubview:_phoneTF];
     
     _authCodeTF = [[XFTextField alloc] init];
-    _authCodeTF.placeholder = @"验证码";
+    _authCodeTF.placeholder = LocalString(@"login_authCode");
     [self addSubview:_authCodeTF];
     
     _sendAuthCodeButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    [_sendAuthCodeButton setTitle:@"发送验证码" forState:(UIControlStateNormal)];
+    [_sendAuthCodeButton setTitle:LocalString(@"login_sendAuthCode") forState:(UIControlStateNormal)];
     [self addSubview:_sendAuthCodeButton];
     
     _passwordTF = [[XFTextField alloc] init];
-    _passwordTF.placeholder = @"密码";
+    _passwordTF.placeholder = LocalString(@"login_pwd");
     [self addSubview:_passwordTF];
     
     _nicknameTF = [[XFTextField alloc] init];
-    _nicknameTF.placeholder = @"昵称";
+    _nicknameTF.placeholder = LocalString(@"login_nick");
     [self addSubview:_nicknameTF];
     
     _testNickBtn = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    [_testNickBtn setTitle:@"验证昵称" forState:(UIControlStateNormal)];
+    [_testNickBtn setTitle:LocalString(@"login_verifyNick") forState:(UIControlStateNormal)];
     [self addSubview:_testNickBtn];
     
     _registerBtn = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    [_registerBtn setTitle:@"注册" forState:(UIControlStateNormal)];
+    [_registerBtn setTitle:LocalString(@"login_register") forState:(UIControlStateNormal)];
     [self addSubview:_registerBtn];
     
     _cancelBtn = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    [_cancelBtn setTitle:@"取消" forState:(UIControlStateNormal)];
+    [_cancelBtn setTitle:LocalString(@"login_cancel") forState:(UIControlStateNormal)];
     [self addSubview:_cancelBtn];
     
     //添加震动
@@ -64,7 +64,6 @@
     _phoneTF.keyboardType = UIKeyboardTypeNumberPad;
     _authCodeTF.keyboardType = UIKeyboardTypeNumberPad;
     _passwordTF.keyboardType = UIKeyboardTypeASCIICapable;
-    
     
     _phoneTF.textColor = [UIColor whiteColor];
     _authCodeTF.textColor = [UIColor whiteColor];

@@ -20,6 +20,7 @@
 #import "XFAPI.h"
 #import "XFAppContext.h"
 #import "AppMacro.h"
+#import "XFMacro.h"
 
 #import "UtilsMacro.h"
 
@@ -39,6 +40,29 @@
 #define rsa_public_key @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDdg086h7CIhMPG0EdzE/RacFc3rfpBkKYSQhX2OgObuICugbolSqiaUa6CZc4Ock988ubc6MKUqiLjGfNdOJ3Iod7ryqDb7z4cI08uphhyR6CmhgZZyu6DFzpoudMFQPKr3/vpGZ8Z/Vu7TGJwnuhkpEAUuSoMrYaSKj2qnGmNXQIDAQAB"
 
 #define UmengAppKey @"56cec875e0f55a5f62000d91"
+
+// RSA 公钥
+#define rsa_public_key @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDdg086h7CIhMPG0EdzE/RacFc3rfpBkKYSQhX2OgObuICugbolSqiaUa6CZc4Ock988ubc6MKUqiLjGfNdOJ3Iod7ryqDb7z4cI08uphhyR6CmhgZZyu6DFzpoudMFQPKr3/vpGZ8Z/Vu7TGJwnuhkpEAUuSoMrYaSKj2qnGmNXQIDAQAB"
+
+#define aesKey @"wodetian123"
+
+#define loginAesKey @"wodetian87654321"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #endif /* PrefixHeader_pch */

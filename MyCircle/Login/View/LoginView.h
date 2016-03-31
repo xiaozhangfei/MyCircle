@@ -11,6 +11,9 @@
 #import "XFTextField.h"
 @interface LoginView : UIView
 
+@property (strong, nonatomic) UISegmentedControl *loginTypeSegment;
+
+
 @property (strong, nonatomic) XFTextField *phoneTF;
 @property (strong, nonatomic) XFTextField *authCodeTF;
 @property (strong, nonatomic) UIButton *sendAuthCodeButton;

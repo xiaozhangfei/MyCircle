@@ -79,8 +79,12 @@
 - (void)showHUDWithLabel:(NSString *)msg
 {
     [self hideHUD];
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    self.hud = [MBProgressHUD showHUDAddedTo:window animated:YES];
+    //UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    
+    UIView *view = [[UIView alloc] initWithFrame:self.view.frame];
+    view.tag = 39999;
+    [self.view insertSubview:view atIndex:10];
+    self.hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     self.hud.labelText = msg;
     [self.hud show:YES];
 }
@@ -89,6 +93,7 @@
 {
     if (self.hud) {
         [self.hud hide:YES afterDelay:0];
+        [[self.view viewWithTag:39999] removeFromSuperview];
         self.hud = nil;
     }
 }
@@ -96,6 +101,7 @@
 {
     if (self.hud) {
         [self.hud hide:YES afterDelay:delay];
+        [[self.view viewWithTag:39999] removeFromSuperview];
         self.hud = nil;
     }
 }

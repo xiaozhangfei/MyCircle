@@ -28,11 +28,11 @@
 //#import "AGImagePickerController.h"
 //#import "AGIPCToolbarItem.h"
 
-#import <CTAssetsPickerController/CTAssetsPickerController.h>
-#import <CTAssetsPickerController/CTAssetsPageViewController.h>
 #import <Photos/Photos.h>
 
-@interface WriteCircleController () <XFPicVideoPickerProtocol, UIAlertViewDelegate, CTAssetsPickerControllerDelegate>
+#import "ALAsset+AGIPC.h"
+
+@interface WriteCircleController () <XFPicVideoPickerProtocol, UIAlertViewDelegate>
 {
     UIScrollView *_scroll;
     UIImage *_upImage;//图片
@@ -297,7 +297,7 @@
         //上传图片到服务器
         [self pushImageToServerWithName:imageName image:_upImage];
     }
-    return;
+    //return;
     if (_videoUrl) {
         NSString *vid = [MiscTool imageNameFromTime];
         //添加视频和图片地址到param
@@ -369,62 +369,62 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)pickAssets:(id)sender
-{
-    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status){
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            // init picker
-            CTAssetsPickerController *picker = [[CTAssetsPickerController alloc] init];
-            
-            // set delegate
-            picker.delegate = self;
-            
-            // to present picker as a form sheet in iPad
-            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-                picker.modalPresentationStyle = UIModalPresentationFormSheet;
-            
-            // present picker
-            [self presentViewController:picker animated:YES completion:nil];
-            
-        });
-    }];
-}
-
-// implement should select asset delegate
-- (BOOL)assetsPickerController:(CTAssetsPickerController *)picker shouldSelectAsset:(PHAsset *)asset
-{
-    NSInteger max = 3;
-    
-    // show alert gracefully
-    if (picker.selectedAssets.count >= max)
-    {
-        UIAlertController *alert =
-        [UIAlertController alertControllerWithTitle:@"Attention"
-                                            message:[NSString stringWithFormat:@"Please select not more than %ld assets", (long)max]
-                                     preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction *action =
-        [UIAlertAction actionWithTitle:@"OK"
-                                 style:UIAlertActionStyleDefault
-                               handler:nil];
-        
-        [alert addAction:action];
-        
-        [picker presentViewController:alert animated:YES completion:nil];
-    }
-    
-    // limit selection to max
-    return (picker.selectedAssets.count < max);
-}
-
-#pragma mark - Assets Picker Delegate
-
-- (void)assetsPickerController:(CTAssetsPickerController *)picker didFinishPickingAssets:(NSArray *)assets
-{
-    [picker dismissViewControllerAnimated:YES completion:nil];
-    
-//    self.assets = [NSMutableArray arrayWithArray:assets];
-}
+//- (void)pickAssets:(id)sender
+//{
+//    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status){
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            
+//            // init picker
+//            CTAssetsPickerController *picker = [[CTAssetsPickerController alloc] init];
+//            
+//            // set delegate
+//            picker.delegate = self;
+//            
+//            // to present picker as a form sheet in iPad
+//            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+//                picker.modalPresentationStyle = UIModalPresentationFormSheet;
+//            
+//            // present picker
+//            [self presentViewController:picker animated:YES completion:nil];
+//            
+//        });
+//    }];
+//}
+//
+//// implement should select asset delegate
+//- (BOOL)assetsPickerController:(CTAssetsPickerController *)picker shouldSelectAsset:(PHAsset *)asset
+//{
+//    NSInteger max = 3;
+//    
+//    // show alert gracefully
+//    if (picker.selectedAssets.count >= max)
+//    {
+//        UIAlertController *alert =
+//        [UIAlertController alertControllerWithTitle:@"Attention"
+//                                            message:[NSString stringWithFormat:@"Please select not more than %ld assets", (long)max]
+//                                     preferredStyle:UIAlertControllerStyleAlert];
+//        
+//        UIAlertAction *action =
+//        [UIAlertAction actionWithTitle:@"OK"
+//                                 style:UIAlertActionStyleDefault
+//                               handler:nil];
+//        
+//        [alert addAction:action];
+//        
+//        [picker presentViewController:alert animated:YES completion:nil];
+//    }
+//    
+//    // limit selection to max
+//    return (picker.selectedAssets.count < max);
+//}
+//
+//#pragma mark - Assets Picker Delegate
+//
+//- (void)assetsPickerController:(CTAssetsPickerController *)picker didFinishPickingAssets:(NSArray *)assets
+//{
+//    [picker dismissViewControllerAnimated:YES completion:nil];
+//    
+////    self.assets = [NSMutableArray arrayWithArray:assets];
+//}
 
 @end

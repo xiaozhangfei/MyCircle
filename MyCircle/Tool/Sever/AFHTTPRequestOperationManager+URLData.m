@@ -73,7 +73,8 @@
     //状态栏菊花打开
     [self showNetworkActivityIndicator];
     
-    [manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSString *stringCleanPath = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [manager GET:stringCleanPath parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSData *JSONData = [operation.responseString dataUsingEncoding:NSUTF8StringEncoding];
         NSDictionary *di = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableLeaves error:nil];

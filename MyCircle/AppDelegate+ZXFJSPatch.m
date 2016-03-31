@@ -19,10 +19,6 @@
 
 #import "MiscTool.h"
 
-// RSA 公钥
-#define rsa_public_key @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDdg086h7CIhMPG0EdzE/RacFc3rfpBkKYSQhX2OgObuICugbolSqiaUa6CZc4Ock988ubc6MKUqiLjGfNdOJ3Iod7ryqDb7z4cI08uphhyR6CmhgZZyu6DFzpoudMFQPKr3/vpGZ8Z/Vu7TGJwnuhkpEAUuSoMrYaSKj2qnGmNXQIDAQAB"
-
-#define aesKey @"wodetian123"
 
 @implementation AppDelegate (ZXFJSPatch)
 

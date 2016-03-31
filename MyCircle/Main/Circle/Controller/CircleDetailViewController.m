@@ -139,12 +139,7 @@
 
     RxWebViewController *webVC = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"http://www.baidu.com"]];
     webVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:webVC animated:YES];
-    
-    //重写navigationBar按钮方法时，开启iOS7的滑动返回效果
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
-    }
+    [self pushVC:webVC animated:YES];
 
 }
 

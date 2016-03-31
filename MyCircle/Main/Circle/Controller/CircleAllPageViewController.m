@@ -42,7 +42,9 @@
     
 }
 
-
+- (void)getData {
+    NSLog(@"All getData");
+}
 
 #pragma mark -- tableView delegate dataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -71,6 +73,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
+
+
 
 
 @end
