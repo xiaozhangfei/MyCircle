@@ -5,48 +5,65 @@
   Created by and on 16/1/28.
   Copyright © 2016年 and. All rights reserved.
 */
-"projectName"           = "圈子";
+
+"projectName"               = "圈子";
 //tabBar
-"tab_circle"            = "圈子";
-"tab_message"           = "消息";
-"tab_find"              = "发现";
-"tab_me"                = "我";
+"tab_circle"                = "圈子";
+"tab_message"               = "消息";
+"tab_find"                  = "发现";
+"tab_me"                    = "我";
 
 //ad
-"ad_skip"               = "跳过";
-"ad_shake"              = "试试摇一摇";
+"ad_skip"                   = "跳过";
+"ad_shake"                  = "试试摇一摇";
 
 //circle
-"circle_hot"            = "最热圈子消息";
-"circle_new"            = "最新";
-"circle_all"            = "全部";
+"circle_hot"                = "最热圈子消息";
+"circle_new"                = "最新";
+"circle_all"                = "全部";
+
+"circle_empty"              = "无数据";
+"circle_see"                = "浏览数";
+
 
 //message
-"mes_friends"           = "朋友";
+"mes_friends"               = "朋友";
 
 //set
-"set_setting"           = "设置";
-"set_night"             = "夜间";
+"set_setting"               = "设置";
+"set_night"                 = "夜间";
 
 //login
 
-"login_loginWithCode"   = "验证码登录";
-"login_loginWithPwd"    = "密码登录";
-"login_phone"           = "手机号";
-"login_authCode"        = "验证码";
-"login_sendAuthCode"    = "获取验证码";
-"login_pwd"             = "密码";
-"login_noID"            = "没有账号？去注册";
-"login_login"           = "登录";
-"login_cancel"          = "取消";
+"login_loginWithCode"       = "验证码登录";
+"login_loginWithPwd"        = "密码登录";
+"login_phone"               = "手机号";
+"login_authCode"            = "验证码";
+"login_sendAuthCode"        = "获取验证码";
+"login_pwd"                 = "密码";
+"login_noID"                = "没有账号？去注册";
+"login_login"               = "登录";
+"login_cancel"              = "取消";
 
-"login_register"        = "注册";
-"login_nick"            = "昵称";
-"login_verifyNick"      = "验证昵称";
-
-
+"login_register"            = "注册";
+"login_nick"                = "昵称";
+"login_verifyNick"          = "验证昵称";
 
 
+//提示 alert
+"alert_fill"                = "请填写全部信息";
+"alert_ok"                  = "好的":
+
+//toast
+"toast_netError"            = "网络错误";
+"toast_loginFail"           = "登录失败";
+"toast_nickExist"           = "昵称已存在";
+"toast_nickCanUse"          = "昵称可使用";
+"toast_registerSuccess"     = "注册成功";
+"toast_registerFail"        = "注册失败";
+
+"toast_empty"               = "此时无数据";
+"toast_noMoreData"          = "无更多数据";
 
 
 

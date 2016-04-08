@@ -100,8 +100,8 @@
     if (page == 0) {//如果刷新到第一页，没有拿到新数据，则不移除数据
         if (((NSArray *)responseDict).count == 0) {//没有拿到新数据
             if (self.hotDataArray.count == 0) {
-                [self showInfoView:@"" withInfoText:@"无数据" withText:@"哈哈" superView: self.hotTableView];
-                [self showXFToastWithText:@"此时无数据" image:[UIImage imageNamed:@"circle"]];
+                [self showInfoView:@"" withInfoText:LocalString(@"circle_empty") withText:@"哈哈" superView: self.hotTableView];
+                [self showXFToastWithText:LocalString(@"toast_empty") image:[UIImage imageNamed:@"circle"]];
             }
         }else {
             [self.hotDataArray removeAllObjects];
@@ -115,7 +115,7 @@
         }
     }else {
         if (((NSArray *)responseDict).count == 0) {//
-            [self showToast:@"无更多数据"];
+            [self showToast:LocalString(@"toast_noMoreData")];
             self.nowPage --;//由于没有加载到数据，把页数还原
         }else { //上拉加载，取到数据
             self.nowPage ++;
@@ -136,7 +136,7 @@
 
 - (void)getDataFailWithError:(NSError *)error {
     [self hideRefresh];
-    [self showToast:@"网络错误"];
+    [self showToast:LocalString(@"toast_netError")];
 }
 
 - (void)hideRefresh {

@@ -11,7 +11,9 @@
 #import "AFViewShaker.h"
 
 @interface RegisterView : UIView
-
+{
+    int _count;
+}
 @property (strong, nonatomic) XFTextField *phoneTF;
 @property (strong, nonatomic) XFTextField *authCodeTF;
 @property (strong, nonatomic) UIButton *sendAuthCodeButton;

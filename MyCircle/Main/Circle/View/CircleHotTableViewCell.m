@@ -139,7 +139,7 @@
         self.titleLabel.text = _hotModel.title;
         self.introLabel.text = _hotModel.intro;
         self.timeLabel.text = _hotModel.time;
-        self.seeLabel.text = [NSString stringWithFormat:@"浏览数：%ld",_hotModel.see];
+        self.seeLabel.text = [NSString stringWithFormat:@"%@：%ld",LocalString(@"circle_see"),_hotModel.see];
         self.nickLabel.text = _hotModel.nickname;
         self.locationLabel.text = _hotModel.location;
         [self.photoImv sd_setImageWithURL:[NSURL URLWithString:[XFAPI image_url:_hotModel.portrait]] placeholderImage:[UIImage imageNamed:@"man"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {

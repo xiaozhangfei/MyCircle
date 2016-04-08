@@ -9,6 +9,12 @@
 #import "RegisterView.h"
 #import <Masonry.h>
 #import "UtilsMacro.h"
+
+#import <SMS_SDK/SMSSDK.h>
+#import <SMS_SDK/SMSSDKCountryAndAreaCode.h>
+#import <SMS_SDK/SMSSDK+DeprecatedMethods.h>
+#import <SMS_SDK/SMSSDK+ExtexdMethods.h>
+
 @implementation RegisterView
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -36,6 +42,7 @@
     _sendAuthCodeButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
     [_sendAuthCodeButton setTitle:LocalString(@"login_sendAuthCode") forState:(UIControlStateNormal)];
     [self addSubview:_sendAuthCodeButton];
+    [_sendAuthCodeButton addTarget:self action:@selector(sendAuthCodeButtonAction:) forControlEvents:(UIControlEventTouchUpInside)];
     
     _passwordTF = [[XFTextField alloc] init];
     _passwordTF.placeholder = LocalString(@"login_pwd");
@@ -157,6 +164,47 @@
     }];
 }
 
+//只获取验证码，验证验证码是否正确由服务器来进行
+- (void)sendAuthCodeButtonAction:(UIButton *)sender {
+    if ([_phoneTF.text isEqualToString:@""]) {
+        [self onShakeOneWithView:_phoneTF];
+        return;
+    }
+    
+    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:_phoneTF.text
+                                   zone:@"86"
+                       customIdentifier:nil
+                                 result:^(NSError *error) {
+                                     if (!error) {
+                                         NSLog(@"验证码发送成功");
+                                         [self uptimeAction];
+
+                                     } else {
+                                         NSLog(@"错误吗：%zi,错误描述：%@",error.code, error.userInfo);
+                                     }
+                                 }];
+}
+
+- (void)uptimeAction {
+    _count = 60;
+    [_sendAuthCodeButton setTitle:[NSString stringWithFormat:@"%ds",_count] forState:(UIControlStateNormal)];
+    _sendAuthCodeButton.enabled = NO;
+    NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerCount:) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+    
+}
+- (void)timerCount:(NSTimer *)sender {
+    if (_count != 0) {
+        _count --;
+        [_sendAuthCodeButton setTitle:[NSString stringWithFormat:@"%ds",_count] forState:(UIControlStateNormal)];
+    }else {
+        [sender invalidate];
+        [_sendAuthCodeButton setTitle:LocalString(@"login_sendAuthCode") forState:(UIControlStateNormal)];
+        _sendAuthCodeButton.enabled = YES;
+    }
+}
+
+
 #pragma -- shake
 - (void)onShakeOneWithView:(UIView *)sender {
     [[[AFViewShaker alloc] initWithView:sender] shake];
@@ -169,9 +217,9 @@
 - (void)onShakeAllWithBlockAction:(UIButton *)sender {
     [self.viewShaker shakeWithDuration:0.6 completion:^{
         [[[UIAlertView alloc] initWithTitle:nil
-                                    message:@"请填写全部信息"
+                                    message:LocalString(@"alert_fill")
                                    delegate:self
-                          cancelButtonTitle:@"OK"
+                          cancelButtonTitle:LocalString(@"alert_ok")
                           otherButtonTitles:nil] show];
     }];
 }

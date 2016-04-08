@@ -9,6 +9,11 @@
 #import "LoginView.h"
 #import <Masonry.h>
 #import "UtilsMacro.h"
+#import <SMS_SDK/SMSSDK.h>
+#import <SMS_SDK/SMSSDKCountryAndAreaCode.h>
+#import <SMS_SDK/SMSSDK+DeprecatedMethods.h>
+#import <SMS_SDK/SMSSDK+ExtexdMethods.h>
+
 @interface LoginView ()<UITextFieldDelegate>
 
 @end
@@ -29,6 +34,7 @@
     
     _loginTypeSegment = [[UISegmentedControl alloc] initWithItems:@[LocalString(@"login_loginWithCode"),LocalString(@"login_loginWithPwd")]];
     [self addSubview:_loginTypeSegment];
+    [_loginTypeSegment addTarget:self action:@selector(loginTypeChangeAction:) forControlEvents:(UIControlEventValueChanged)];
     
     _phoneTF = [[XFTextField alloc] init];
     _phoneTF.placeholder = LocalString(@"login_phone");
@@ -83,6 +89,7 @@
     _sendAuthCodeButton.layer.borderWidth = 1;
     [_sendAuthCodeButton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
     _sendAuthCodeButton.layer.borderColor = [[UIColor whiteColor] CGColor];
+    [_sendAuthCodeButton addTarget:self action:@selector(sendAuthCodeButtonAction:) forControlEvents:(UIControlEventTouchUpInside)];
     
     _registerBtn.layer.masksToBounds = YES;
     _registerBtn.layer.cornerRadius = 20;
@@ -165,6 +172,76 @@
     }];
 }
 
+- (void)loginTypeChangeAction:(UISegmentedControl *)sender {
+    UIColor *ligthColor = [UIColor lightGrayColor];//不能点击时的颜色
+    
+    UIColor *normalColor = [UIColor whiteColor];//正常时的颜色
+    
+    if (sender.selectedSegmentIndex == 0) {
+        _authCodeTF.enabled = YES;
+        _sendAuthCodeButton.enabled = YES;
+        
+        _authCodeTF.boColor = normalColor;
+        [_authCodeTF setNeedsDisplay];//调用drawRect方法
+        _sendAuthCodeButton.layer.borderColor = normalColor.CGColor;
+        [_sendAuthCodeButton setTitleColor:normalColor forState:(UIControlStateNormal)];
+        
+        _passwordTF.boColor = ligthColor;
+        [_passwordTF setNeedsDisplay];
+        
+        _passwordTF.enabled = NO;
+    }else {
+        _authCodeTF.enabled = NO;
+        _sendAuthCodeButton.enabled = NO;
+        
+        _authCodeTF.boColor = ligthColor;
+        [_authCodeTF setNeedsDisplay];
+        _sendAuthCodeButton.layer.borderColor = ligthColor.CGColor;
+        [_sendAuthCodeButton setTitleColor:ligthColor forState:(UIControlStateNormal)];
+        
+        _passwordTF.boColor = normalColor;
+        [_passwordTF setNeedsDisplay];
+        
+        _passwordTF.enabled = YES;
+    }
+}
+
+
+- (void)sendAuthCodeButtonAction:(UIButton *)sender {
+    if ([_phoneTF.text isEqualToString:@""]) {
+        [self onShakeOneWithView:_phoneTF];
+        return;
+    }
+    NSLog(@"发送验证码");
+    
+    [SMSSDK getVerificationCodeByMethod:(SMSGetCodeMethodSMS) phoneNumber:_phoneTF.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
+        if (!error) {
+            NSLog(@"验证码发送成功");
+            [self uptimeAction];
+        } else {
+            NSLog(@"错误吗：%zi,错误描述：%@",error.code, error.userInfo);
+        }
+    }];
+}
+
+- (void)uptimeAction {
+    _count = 60;
+    [_sendAuthCodeButton setTitle:[NSString stringWithFormat:@"%ds",_count] forState:(UIControlStateNormal)];
+    _sendAuthCodeButton.enabled = NO;
+    NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerCount:) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+    
+}
+- (void)timerCount:(NSTimer *)sender {
+    if (_count != 0) {
+        _count --;
+        [_sendAuthCodeButton setTitle:[NSString stringWithFormat:@"%ds",_count] forState:(UIControlStateNormal)];
+    }else {
+        [sender invalidate];
+        [_sendAuthCodeButton setTitle:LocalString(@"login_sendAuthCode") forState:(UIControlStateNormal)];
+        _sendAuthCodeButton.enabled = YES;
+    }
+}
 
 #pragma -- InputText
 
@@ -191,9 +268,9 @@
 - (void)onShakeAllWithBlockAction:(UIButton *)sender {
     [self.viewShaker shakeWithDuration:0.6 completion:^{
         [[[UIAlertView alloc] initWithTitle:nil
-                                    message:@"请填写全部信息"
+                                    message:LocalString(@"alert_fill")
                                    delegate:self
-                          cancelButtonTitle:@"OK"
+                          cancelButtonTitle:LocalString(@"alert_ok")
                           otherButtonTitles:nil] show];
     }];
 }

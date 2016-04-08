@@ -10,7 +10,9 @@
 #import "AFViewShaker.h"
 #import "XFTextField.h"
 @interface LoginView : UIView
-
+{
+    int _count;
+}
 @property (strong, nonatomic) UISegmentedControl *loginTypeSegment;
 
 

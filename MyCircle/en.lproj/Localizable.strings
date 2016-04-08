@@ -21,6 +21,10 @@
 "circle_new"                = "New";
 "circle_all"                = "All";
 
+"circle_empty"              = "Empty data";
+"circle_see"                = "Saw num";
+
+
 //message
 "mes_friends"               = "Friends";
 
@@ -43,6 +47,43 @@
 "login_register"            = "register";
 "login_nick"                = "nickname";
 "login_verifyNick"          = "Verify Nickname";
+
+
+//提示 alert
+"alert_fill"                = "Please fill in all information";
+"alert_ok"                  = "OK":
+
+
+//toast
+"toast_netError"            = "Network error";
+"toast_loginFail"           = "Login failed";
+"toast_nickExist"           = "Nick existing";
+"toast_nickCanUse"          = "Nickname can use";
+"toast_registerSuccess"     = "Register success";
+"toast_registerFail"        = "Register failed";
+
+"toast_empty"               = "Empty data now";
+"toast_noMoreData"          = "No more data";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -39,15 +39,11 @@
     self.lv = [[LoginView alloc] initWithFrame:self.view.frame];
     
     [self.view addSubview:self.lv];
-    
-    [self.lv.sendAuthCodeButton addTarget:self action:@selector(sendAuthCodeButtonAction:) forControlEvents:(UIControlEventTouchUpInside)];
-    
+        
     [self.lv.registerBtn addTarget:self action:@selector(registerBtnAction:) forControlEvents:(UIControlEventTouchUpInside)];
     [self.lv.loginBtn addTarget:self action:@selector(loginBtnAction:) forControlEvents:(UIControlEventTouchUpInside)];
 
     [self.lv.cancelBtn addTarget:self action:@selector(cancelBtnAction:) forControlEvents:(UIControlEventTouchUpInside)];
-
-    [self.lv.loginTypeSegment addTarget:self action:@selector(loginTypeChangeAction:) forControlEvents:(UIControlEventValueChanged)];
     
     //初始化时设置密码框不能点击
     _lv.passwordTF.enabled = NO;
@@ -58,39 +54,7 @@
     [self registerLJWKeyboardHandler];
 }
 
-- (void)loginTypeChangeAction:(UISegmentedControl *)sender {
-    UIColor *ligthColor = [UIColor lightGrayColor];//不能点击时的颜色
 
-    UIColor *normalColor = [UIColor whiteColor];//正常时的颜色
-    
-    if (sender.selectedSegmentIndex == 0) {
-        _lv.authCodeTF.enabled = YES;
-        _lv.sendAuthCodeButton.enabled = YES;
-        
-        _lv.authCodeTF.boColor = normalColor;
-        [_lv.authCodeTF setNeedsDisplay];//调用drawRect方法
-        _lv.sendAuthCodeButton.layer.borderColor = normalColor.CGColor;
-        [_lv.sendAuthCodeButton setTitleColor:normalColor forState:(UIControlStateNormal)];
-        
-        _lv.passwordTF.boColor = ligthColor;
-        [_lv.passwordTF setNeedsDisplay];
-        
-        _lv.passwordTF.enabled = NO;
-    }else {
-        _lv.authCodeTF.enabled = NO;
-        _lv.sendAuthCodeButton.enabled = NO;
-        
-        _lv.authCodeTF.boColor = ligthColor;
-        [_lv.authCodeTF setNeedsDisplay];
-        _lv.sendAuthCodeButton.layer.borderColor = ligthColor.CGColor;
-        [_lv.sendAuthCodeButton setTitleColor:ligthColor forState:(UIControlStateNormal)];
-        
-        _lv.passwordTF.boColor = normalColor;
-        [_lv.passwordTF setNeedsDisplay];
-        
-        _lv.passwordTF.enabled = YES;
-    }
-}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -106,21 +70,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)sendAuthCodeButtonAction:(UIButton *)sender {
-    if (![self checkAuthField]) {
-        return;
-    }
-    NSLog(@"发送验证码");
-    
-    [SMSSDK getVerificationCodeByMethod:(SMSGetCodeMethodSMS) phoneNumber:self.lv.phoneTF.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
-        if (!error) {
-            NSLog(@"验证码发送成功");
-        } else {
-            NSLog(@"错误吗：%zi,错误描述：%@",error.code, error.userInfo);
-        }
 
-    }];
-}
 
 - (BOOL)checkAuthField {
     
@@ -139,17 +89,19 @@
 
     __weak typeof (self) weakSelf = self;
     [weakSelf loginPostSever:sender];
-    return;
-    //先验证验证码是否发送成功，系统使用，无需服务器
-    [SMSSDK commitVerificationCode:self.lv.authCodeTF.text phoneNumber:self.lv.phoneTF.text zone:@"86" result:^(NSError *error) {
-        if (error) {
-            NSLog(@"验证成功");
-            [weakSelf loginPostSever:sender];
-        } else {
-            NSLog(@"验证失败");
-            [weakSelf showToast:@"登录失败"];
-        }
-    }];
+//    return;
+//    if (_lv.loginTypeSegment.selectedSegmentIndex == 0) {
+//
+//    //先验证验证码是否发送成功，系统使用，无需服务器
+//    [SMSSDK commitVerificationCode:self.lv.authCodeTF.text phoneNumber:self.lv.phoneTF.text zone:@"86" result:^(NSError *error) {
+//        if (error) {
+//            NSLog(@"验证成功");
+//            [weakSelf loginPostSever:sender];
+//        } else {
+//            NSLog(@"验证失败");
+//            [weakSelf showToast:@"登录失败"];
+//        }
+//    }];
 
 }
 //返回true，全部符合条件
@@ -239,7 +191,7 @@
 }
 
 - (void)didPresentControllerButtonTouchFail {
-    [self showToast:@"登录失败"];
+    [self showToast:LocalString(@"toast_loginFail")];
 }
 
 

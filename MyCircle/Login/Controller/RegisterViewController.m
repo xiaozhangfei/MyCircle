@@ -41,7 +41,6 @@
     self.rv = [[RegisterView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.rv];
     
-    [self.rv.sendAuthCodeButton addTarget:self action:@selector(sendAuthCodeButtonAction:) forControlEvents:(UIControlEventTouchUpInside)];
     
     //设置对应的导航条的返回
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"return_black"] style:(UIBarButtonItemStyleDone) target:self action:@selector(leftBarButtonAction1:)];
@@ -74,12 +73,12 @@
             return ;
         }
         if ([responseDict[@"exist"] isEqualToString:@"1"]) {
-            [weakSelf showToast:@"昵称已存在"];
+            [weakSelf showToast:LocalString(@"toast_nickExist")];
         }else {
-            [weakSelf showToast:@"昵称可用"];
+            [weakSelf showToast:LocalString(@"toast_nickCanUse")];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error, BaseModel *baseModel) {
-        [weakSelf showToast:@"网络错误"];
+        [weakSelf showToast:LocalString(@"toast_netError")];
     }];
 }
 
@@ -89,24 +88,6 @@
         return false;
     }
     return true;
-}
-
-//只获取验证码，验证验证码是否正确由服务器来进行
-- (void)sendAuthCodeButtonAction:(UIButton *)sender {
-    if (![self checkAuthField]) {
-        return;
-    }
-    
-    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.rv.phoneTF.text
-                                   zone:@"86"
-                       customIdentifier:nil
-                                 result:^(NSError *error) {
-                                     if (!error) {
-                                         NSLog(@"验证码发送成功");
-                                     } else {
-                                         NSLog(@"错误吗：%zi,错误描述：%@",error.code, error.userInfo);
-                                     }
-                                 }];
 }
 
 - (BOOL)checkAuthField {
@@ -195,7 +176,7 @@
         [((AppDelegate *)[UIApplication sharedApplication].delegate) connectRC];
         
         //成功，跳转
-        [weakSelf showToast:@"注册成功"];
+        [weakSelf showToast:LocalString(@"toast_registerSuccess")];
         [weakSelf didPresentControllerButtonTouchSuccess];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error, BaseModel *baseModel) {
         NSLog(@"error = %@",error);
@@ -212,7 +193,7 @@
 }
 
 - (void)didPresentControllerButtonTouchFail {
-    [self showToast:@"注册失败"];
+    [self showToast:LocalString(@"toast_registerFail")];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

@@ -251,6 +251,7 @@
 		ADCC9D8F1CAA518000F48B44 /* iPhone_Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCC9D8E1CAA518000F48B44 /* iPhone_Main.storyboard */; };
 		ADCC9D911CAA518A00F48B44 /* iPad_Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCC9D901CAA518A00F48B44 /* iPad_Main.storyboard */; };
 		ADCD19501C880EA00050727D /* FindOneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCD194F1C880EA00050727D /* FindOneModel.m */; };
+		ADD444591CAE4EF600D5194F /* WcView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD444581CAE4EF600D5194F /* WcView.m */; };
 		ADDB8B0B1C8D5169005788D3 /* WebvvVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDB8B0A1C8D5169005788D3 /* WebvvVC.m */; };
 		ADDB8B191C8D525C005788D3 /* D3Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDB8B0E1C8D525C005788D3 /* D3Generator.m */; };
 		ADDB8B1A1C8D525C005788D3 /* NSObject+D3.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDB8B101C8D525C005788D3 /* NSObject+D3.m */; };
@@ -815,6 +816,8 @@
 		ADCC9D901CAA518A00F48B44 /* iPad_Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad_Main.storyboard; sourceTree = "<group>"; };
 		ADCD194E1C880EA00050727D /* FindOneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindOneModel.h; sourceTree = "<group>"; };
 		ADCD194F1C880EA00050727D /* FindOneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindOneModel.m; sourceTree = "<group>"; };
+		ADD444571CAE4EF600D5194F /* WcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WcView.h; sourceTree = "<group>"; };
+		ADD444581CAE4EF600D5194F /* WcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WcView.m; sourceTree = "<group>"; };
 		ADDB8B091C8D5169005788D3 /* WebvvVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebvvVC.h; sourceTree = "<group>"; };
 		ADDB8B0A1C8D5169005788D3 /* WebvvVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebvvVC.m; sourceTree = "<group>"; };
 		ADDB8B0D1C8D525C005788D3 /* D3Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D3Generator.h; sourceTree = "<group>"; };
@@ -1542,6 +1545,8 @@
 			children = (
 				AD318C311C1C171700138E2A /* WriteView.h */,
 				AD318C321C1C171700138E2A /* WriteView.m */,
+				ADD444571CAE4EF600D5194F /* WcView.h */,
+				ADD444581CAE4EF600D5194F /* WcView.m */,
 				AD9F62611C9B928800F2D612 /* ArtView.h */,
 				AD9F62621C9B928800F2D612 /* ArtView.m */,
 				AD9F62641C9BC6AA00F2D612 /* ToolBarToastView.h */,
@@ -2731,6 +2736,7 @@
 				AD318CAA1C1C171800138E2A /* NSDate+TimeAgo.m in Sources */,
 				AD318C7F1C1C171800138E2A /* CircleAllPageViewController.m in Sources */,
 				ADE8BD7B1C27AF4700168B04 /* UIView+Frame.m in Sources */,
+				ADD444591CAE4EF600D5194F /* WcView.m in Sources */,
 				AD0748801C5B42190092652F /* GTMBase64.m in Sources */,
 				ADE8BD281C25AC3300168B04 /* CircleDetailView.m in Sources */,
 				AD1B06991C3D073600D0F1A4 /* AGIPCToolbarItem.m in Sources */,
