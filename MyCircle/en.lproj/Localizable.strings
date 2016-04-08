@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   MyCircle
 
@@ -50,6 +50,8 @@
 
 
 //提示 alert
+"alert_warning"             = "Warning";
+"alert_offline"              = "Your account login on other devices, you were forced to offline!";
 "alert_fill"                = "Please fill in all information";
 "alert_ok"                  = "OK":
 

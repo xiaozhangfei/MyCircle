@@ -598,10 +598,10 @@
 - (void)onRCIMConnectionStatusChanged:(RCConnectionStatus)status {
     if (status == ConnectionStatus_KICKED_OFFLINE_BY_OTHER_CLIENT) {
         UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:@"提示"
-                              message:@"您的帐号在别的设备上登录，您被迫下线！"
+                              initWithTitle:LocalString(@"alert_warning")
+                              message:LocalString(@"alert_offline")
                               delegate:nil
-                              cancelButtonTitle:@"知道了"
+                              cancelButtonTitle:LocalString(@"alert_ok")
                               otherButtonTitles:nil, nil];
         [alert show];
         //操作
