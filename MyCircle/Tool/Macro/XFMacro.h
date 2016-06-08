@@ -109,6 +109,16 @@
 #define APP_VERSION         [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"]
 #define APP_UUID            [[[UIDevice currentDevice] identifierForVendor] UUIDString]
 
+// i
+#define ios5  (([[[UIDevice currentDevice] systemVersion] floatValue] >= 5.0) ? (YES) : (NO))
+
+#define ios6  (([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) ? (YES) : (NO))
+
+#define ios7  (([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) ? (YES) : (NO))
+
+#define ios8  (([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) ? (YES) : (NO))
+
+
 //判断字符串是否为空
 #define ISEMPTY(_v) (_v == nil || _v.length == 0)
 //AppDelegate

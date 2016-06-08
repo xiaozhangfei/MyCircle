@@ -53,7 +53,7 @@
 "alert_warning"             = "Warning";
 "alert_offline"              = "Your account login on other devices, you were forced to offline!";
 "alert_fill"                = "Please fill in all information";
-"alert_ok"                  = "OK":
+"alert_ok"                  = "OK";
 
 
 //toast

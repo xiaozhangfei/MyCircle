@@ -32,7 +32,7 @@
 }
 
 #pragma mark -- post数据请求
-+ (void)postWithURLString:(NSString *)urlStr parameters:(id )dict success:(SuccessBlock)success failure:(failureBlock)failure
++ (void)postWithURLStrintg:(NSString *)urlStr parameters:(id)dict success:(SuccessBlock)success failure:(failureBlock)failure
 {
     AFHTTPRequestOperationManager *manager = [AFManagerHandle shareHandle].manager;
     __weak typeof (self)weakSelf = self;
@@ -56,6 +56,7 @@
         [weakSelf hideNetworkActivityIndicatorVisible];
     }];
 }
+
 
 + (BaseModel *)initBaseModelWithDictionary:(NSDictionary *)di {
     BaseModel *baseModel = [[BaseModel alloc] init];

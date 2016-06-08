@@ -31,6 +31,7 @@
 #import <Photos/Photos.h>
 
 #import "ALAsset+AGIPC.h"
+#import "AFHTTPRequestOperationManager+URLData.h"
 
 @interface WriteCircleController () <XFPicVideoPickerProtocol, UIAlertViewDelegate>
 {
@@ -306,8 +307,10 @@
         //上传视频到服务器
         [self pushVideoToServerWithVideoUrl:_videoUrl vid:vid videoName:@"视频上传" thumbImage:_thumbImage];
     }
+    
     __weak typeof (self) weakSelf = self;
     [AFHTTPRequestOperationManager postWithURLString:[XFAPI createCircle] parameters:mDict success:^(AFHTTPRequestOperation *operation, NSDictionary *responseDict, BaseModel *baseModel) {
+        
         if (![baseModel.code isEqual:@"200"]) {
             [weakSelf showToast:@"发送失败"];
             NSLog(@"发布失败");
@@ -316,6 +319,7 @@
         [weakSelf showToast:@"发送成功"];
         NSLog(@"发布成功");
         [weakSelf dismissViewController];
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error, BaseModel *baseModel) {
         [weakSelf showToast:@"发布失败"];
     }];

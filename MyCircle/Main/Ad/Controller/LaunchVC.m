@@ -52,9 +52,9 @@
     [self becomeFirstResponder];
     
     //5s内如果数据请求不到，则跳过
-    //if (!_timer) {
+    if (!_timer) {
         _timer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(delayMethod) userInfo:nil repeats:NO];
-    //}
+    }
 }
 
 - (void)initView {
