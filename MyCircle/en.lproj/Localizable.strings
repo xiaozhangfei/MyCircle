@@ -51,7 +51,7 @@
 
 //提示 alert
 "alert_fill"                = "Please fill in all information";
-"alert_ok"                  = "OK":
+"alert_ok"                  = "OK";
 
 
 //toast

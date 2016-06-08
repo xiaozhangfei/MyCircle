@@ -137,9 +137,6 @@
 		AD318D0C1C1C199400138E2A /* CorePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD318CC71C1C199400138E2A /* CorePageModel.m */; };
 		AD318D0D1C1C199400138E2A /* CorePagesBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = AD318CCA1C1C199400138E2A /* CorePagesBarBtn.m */; };
 		AD318D0E1C1C199400138E2A /* CorePagesBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD318CCC1C1C199400138E2A /* CorePagesBarView.m */; };
-		AD318D0F1C1C199400138E2A /* HyLoglnButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD318CCF1C1C199400138E2A /* HyLoglnButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		AD318D101C1C199400138E2A /* HyTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = AD318CD11C1C199400138E2A /* HyTransitions.m */; };
-		AD318D111C1C199400138E2A /* SpinerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD318CD31C1C199400138E2A /* SpinerLayer.m */; };
 		AD318D121C1C199400138E2A /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD318CD71C1C199400138E2A /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AD318D131C1C199400138E2A /* SFHFActivityIndicatingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD318CDA1C1C199400138E2A /* SFHFActivityIndicatingCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AD318D141C1C199400138E2A /* SFHFEditableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD318CDC1C1C199400138E2A /* SFHFEditableCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -531,12 +528,6 @@
 		AD318CCA1C1C199400138E2A /* CorePagesBarBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePagesBarBtn.m; sourceTree = "<group>"; };
 		AD318CCB1C1C199400138E2A /* CorePagesBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePagesBarView.h; sourceTree = "<group>"; };
 		AD318CCC1C1C199400138E2A /* CorePagesBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePagesBarView.m; sourceTree = "<group>"; };
-		AD318CCE1C1C199400138E2A /* HyLoglnButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyLoglnButton.h; sourceTree = "<group>"; };
-		AD318CCF1C1C199400138E2A /* HyLoglnButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyLoglnButton.m; sourceTree = "<group>"; };
-		AD318CD01C1C199400138E2A /* HyTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyTransitions.h; sourceTree = "<group>"; };
-		AD318CD11C1C199400138E2A /* HyTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyTransitions.m; sourceTree = "<group>"; };
-		AD318CD21C1C199400138E2A /* SpinerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinerLayer.h; sourceTree = "<group>"; };
-		AD318CD31C1C199400138E2A /* SpinerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinerLayer.m; sourceTree = "<group>"; };
 		AD318CD61C1C199400138E2A /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
 		AD318CD71C1C199400138E2A /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
 		AD318CD91C1C199400138E2A /* SFHFActivityIndicatingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFActivityIndicatingCell.h; sourceTree = "<group>"; };
@@ -1669,7 +1660,6 @@
 				AD318D341C1C8BD400138E2A /* NYXImagesKit */,
 				AD318D281C1C1C3E00138E2A /* MyControl工厂 */,
 				AD318CBA1C1C199400138E2A /* CorePagesView */,
-				AD318CCD1C1C199400138E2A /* HYSubmitTransition */,
 				AD318CD41C1C199400138E2A /* KeyChina */,
 				AD318CE11C1C199400138E2A /* MMDrawerController */,
 				AD318CEB1C1C199400138E2A /* RxLabel */,
@@ -1739,19 +1729,6 @@
 				AD318CCC1C1C199400138E2A /* CorePagesBarView.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		AD318CCD1C1C199400138E2A /* HYSubmitTransition */ = {
-			isa = PBXGroup;
-			children = (
-				AD318CCE1C1C199400138E2A /* HyLoglnButton.h */,
-				AD318CCF1C1C199400138E2A /* HyLoglnButton.m */,
-				AD318CD01C1C199400138E2A /* HyTransitions.h */,
-				AD318CD11C1C199400138E2A /* HyTransitions.m */,
-				AD318CD21C1C199400138E2A /* SpinerLayer.h */,
-				AD318CD31C1C199400138E2A /* SpinerLayer.m */,
-			);
-			path = HYSubmitTransition;
 			sourceTree = "<group>";
 		};
 		AD318CD41C1C199400138E2A /* KeyChina */ = {
@@ -2338,7 +2315,6 @@
 				AD318C821C1C171800138E2A /* CircleNewPageViewController.m in Sources */,
 				AD318D141C1C199400138E2A /* SFHFEditableCell.m in Sources */,
 				AD07B42E1C1EB75A00BC630D /* MQLResumeManager.m in Sources */,
-				AD318D111C1C199400138E2A /* SpinerLayer.m in Sources */,
 				AD9F62691C9BF50600F2D612 /* XFToolBarButton.m in Sources */,
 				AD4C6C531C3227260008A6FB /* AFViewShaker.m in Sources */,
 				AD318D251C1C199400138E2A /* CYLPlusButtonSubclass.m in Sources */,
@@ -2353,7 +2329,6 @@
 				AD318CAB1C1C171800138E2A /* NSString+URLEncoding.m in Sources */,
 				AD318D531C1C8BD400138E2A /* UIImage+Filtering.m in Sources */,
 				AD318C7E1C1C171800138E2A /* TouchIDView.m in Sources */,
-				AD318D0F1C1C199400138E2A /* HyLoglnButton.m in Sources */,
 				AD318D1A1C1C199400138E2A /* UIViewController+MMDrawerController.m in Sources */,
 				AD318D331C1C8A4200138E2A /* XFPicVideoPicker.m in Sources */,
 				AD318D161C1C199400138E2A /* UIWebView+SFHFStringMetrics.m in Sources */,
@@ -2458,7 +2433,6 @@
 				AD318D151C1C199400138E2A /* SFHFHUDView.m in Sources */,
 				AD9F62831C9CFDE300F2D612 /* MMElement.m in Sources */,
 				AD318D301C1C77CF00138E2A /* EditPersonViewController.m in Sources */,
-				AD318D101C1C199400138E2A /* HyTransitions.m in Sources */,
 				ADE8BD7C1C27AF4700168B04 /* YZDisplayTitleLabel.m in Sources */,
 				AD318C791C1C171800138E2A /* RegisterViewController.m in Sources */,
 				AD9F626C1C9C018500F2D612 /* XFKeyboardBar.m in Sources */,

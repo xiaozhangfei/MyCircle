@@ -52,7 +52,7 @@
 
 //提示 alert
 "alert_fill"                = "请填写全部信息";
-"alert_ok"                  = "好的":
+"alert_ok"                  = "好的";
 
 //toast
 "toast_netError"            = "网络错误";
