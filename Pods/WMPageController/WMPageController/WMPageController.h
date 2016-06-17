@@ -26,6 +26,12 @@ typedef NS_ENUM(NSUInteger, WMPageControllerCachePolicy) {
     WMPageControllerCachePolicyHigh      = 5   // High
 };
 
+typedef NS_ENUM(NSUInteger, WMPageControllerPreloadPolicy) {
+    WMPageControllerPreloadPolicyNever     = 0, // Never pre-load controller.
+    WMPageControllerPreloadPolicyNeighbour = 1, // Pre-load the controller next to the current.
+    WMPageControllerPreloadPolicyNear      = 2  // Pre-load 2 controllers near the current.
+};
+
 @protocol WMPageControllerDataSource <NSObject>
 @optional
 
@@ -62,6 +68,15 @@ typedef NS_ENUM(NSUInteger, WMPageControllerCachePolicy) {
 
 @protocol WMPageControllerDelegate <NSObject>
 @optional
+
+/**
+ *  If the child controller is heavy, put some work in this method. This method will only be called when the controller is initialized and stop scrolling. (That means if the controller is cached and hasn't released will never call this method.)
+ *
+ *  @param pageController The parent controller (WMPageController)
+ *  @param viewController The viewController first show up when scroll stop.
+ *  @param info           A dictionary that includes some infos, such as: `index` / `title`
+ */
+- (void)pageController:(WMPageController *)pageController lazyLoadViewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info;
 
 /**
  *  Called when a viewController will be cached. You can clear some data if it's not reusable.
@@ -200,6 +215,10 @@ typedef NS_ENUM(NSUInteger, WMPageControllerCachePolicy) {
 @property (nonatomic, strong) UIColor *progressColor;
 
 /**
+ *  定制进度条在各个 item 下的宽度
+ */
+@property (nonatomic, strong) NSArray *progressViewWidths;
+/**
  *  是否发送在创建控制器或者视图完全展现在用户眼前时通知观察者，默认为不开启，如需利用通知请开启
  *  Whether notify observer when finish init or fully displayed to user, the default is NO.
  *  See `WMPageConst.h` for more information.
@@ -216,6 +235,9 @@ typedef NS_ENUM(NSUInteger, WMPageControllerCachePolicy) {
 /** 缓存的机制，默认为无限制 (如果收到内存警告, 会自动切换) */
 @property (nonatomic, assign) WMPageControllerCachePolicy cachePolicy;
 
+/** 预加载机制，在停止滑动的时候预加载 n 页 */
+@property (nonatomic, assign) WMPageControllerPreloadPolicy preloadPolicy;
+
 /** Whether ContentView bounces */
 @property (nonatomic, assign) BOOL bounces;
 
@@ -224,6 +246,12 @@ typedef NS_ENUM(NSUInteger, WMPageControllerCachePolicy) {
  *  Whether to show on navigation bar, the default value is `NO`
  */
 @property (assign, nonatomic) BOOL showOnNavigationBar;
+
+/**
+ *  用代码设置 contentView 的 contentOffset 之前，请设置 startDragging = YES
+ *  Set startDragging = YES before set contentView.contentOffset = xxx;
+ */
+@property (nonatomic, assign) BOOL startDragging;
 
 /** 下划线进度条的高度 */
 @property (nonatomic, assign) CGFloat progressHeight;
@@ -244,13 +272,19 @@ typedef NS_ENUM(NSUInteger, WMPageControllerCachePolicy) {
 @property (nonatomic, assign) CGFloat itemMargin;
 
 /** 顶部 menuView 和 scrollView 之间的间隙 */
-@property (nonatomic, assign) CGFloat menuViewBottom;
+@property (nonatomic, assign) CGFloat menuViewBottomSpace;
+
+/**  */
+@property (nonatomic, assign) CGFloat progressViewBottomSpace;
 
 /** 顶部导航栏 */
 @property (nonatomic, weak) WMMenuView *menuView;
 
 /** 内部容器 */
 @property (nonatomic, weak) WMScrollView *scrollView;
+
+/** MenuView 内部视图与左右的间距 */
+@property (nonatomic, assign) CGFloat menuViewContentMargin;
 
 /**
  *  左滑时同时启用其他手势，比如系统左滑、sidemenu左滑。默认 NO

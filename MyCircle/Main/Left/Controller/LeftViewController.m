@@ -59,12 +59,12 @@
 
 - (void)initView {
     
-    _leftHeaderView = [[LeftHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.width - SCREEN_CURRETWIDTH(150), SCREEN_CURRETWIDTH(300))];
+    _leftHeaderView = [[LeftHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.width - SCREEN_ORIGINWIDTH_5(150), SCREEN_ORIGINWIDTH_5(300))];
     [self.view addSubview:_leftHeaderView];
     
     [_leftHeaderView addTapCallBack:self sel:@selector(leftHeaderAction:)];
     
-    _leftTV = [[UITableView alloc] initWithFrame:CGRectMake(0, SCREEN_CURRETWIDTH(300), _leftHeaderView.width, self.view.height - _leftHeaderView.height - SCREEN_CURRETWIDTH(150)) style:(UITableViewStyleGrouped)];
+    _leftTV = [[UITableView alloc] initWithFrame:CGRectMake(0, SCREEN_ORIGINWIDTH_5(300), _leftHeaderView.width, self.view.height - _leftHeaderView.height - SCREEN_ORIGINWIDTH_5(150)) style:(UITableViewStyleGrouped)];
     _leftTV.delegate = self;
     _leftTV.dataSource = self;
     _leftTV.backgroundColor = HexColor(0x57C9F0);

@@ -20,6 +20,38 @@
 #define Main_Screen_Height      [[UIScreen mainScreen] bounds].size.height
 #define Main_Screen_Width       [[UIScreen mainScreen] bounds].size.width
 
+//iOS 系统版本
+#define ios5  (([[[UIDevice currentDevice] systemVersion] floatValue] >= 5.0) ? (YES) : (NO))
+
+#define ios6  (([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) ? (YES) : (NO))
+
+#define ios7  (([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) ? (YES) : (NO))
+
+#define ios8  (([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) ? (YES) : (NO))
+
+#define ios9  (([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0) ? (YES) : (NO))
+
+#define iosVersion [[[UIDevice currentDevice] systemVersion] floatValue]
+
+//IOS7以上状态栏高度
+#define   TOP_DICTANCE ((SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))?20:0)
+//去除状体栏的屏幕高度
+#define  SCREEN_HEIGHT_EXCEPTSTATUS (App_Frame_Height - 20.0f)
+//去除状体栏和顶部导航栏之后的屏幕高度
+#define  SCREEN_HEIGHT_EXCEPTNAV (App_Frame_Height - 64.0f)
+//去除状体栏,顶部导航栏和底部工具栏之后的屏幕高度
+#define  SCREEN_HEIGHT_EXCEPTNAVANDTAB (App_Frame_Height - 114.0f)
+
+
+//屏幕适配 根据屏幕比例计算出当前视图在当前设备上的宽度
+#define  SCREEN_ORIGINWIDTH_4(s) ((s * App_Frame_Width) / 320.0f)
+
+#define  SCREEN_ORIGINWIDTH_5(s) ((s * App_Frame_Width) / 640.0f)
+
+#define  SCREEN_ORIGINWIDTH_6(s) ((s * App_Frame_Width) / 750.0f)
+
+
+
 // View 坐标(x,y)和宽高(width,height)
 #define X(v)                    (v).frame.origin.x
 #define Y(v)                    (v).frame.origin.y

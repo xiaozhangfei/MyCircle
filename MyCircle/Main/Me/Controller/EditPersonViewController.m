@@ -144,13 +144,13 @@
         rect.size.width = self.view.frame.size.width;
         cell.contentView.frame = rect;
         if (indexPath.section == 0 && indexPath.row == 0) {
-            _photoImv = [[UIImageView alloc] initWithFrame:CGRectMake(cell.contentView.frame.size.width - SCREEN_CURRETWIDTH(150), SCREEN_CURRETWIDTH(20), SCREEN_CURRETWIDTH(90), SCREEN_CURRETWIDTH(90))];
+            _photoImv = [[UIImageView alloc] initWithFrame:CGRectMake(cell.contentView.frame.size.width - SCREEN_ORIGINWIDTH_5(150), SCREEN_ORIGINWIDTH_5(20), SCREEN_ORIGINWIDTH_5(90), SCREEN_ORIGINWIDTH_5(90))];
             _photoImv.layer.masksToBounds = YES;
-            _photoImv.layer.cornerRadius = SCREEN_CURRETWIDTH(10);
+            _photoImv.layer.cornerRadius = SCREEN_ORIGINWIDTH_5(10);
             [_photoImv addTapCallBack:self sel:@selector(photoZoneAction:)];
             [cell.contentView addSubview:_photoImv];
         }else {
-            UILabel *descLabel = [[UILabel alloc] initWithFrame:CGRectMake(cell.contentView.frame.size.width - SCREEN_CURRETWIDTH(400), 0, SCREEN_CURRETWIDTH(340), SCREEN_CURRETWIDTH(70))];
+            UILabel *descLabel = [[UILabel alloc] initWithFrame:CGRectMake(cell.contentView.frame.size.width - SCREEN_ORIGINWIDTH_5(400), 0, SCREEN_ORIGINWIDTH_5(340), SCREEN_ORIGINWIDTH_5(70))];
             descLabel.textAlignment = NSTextAlignmentRight;
             descLabel.tag = 1200 + indexPath.section * 10 + indexPath.row;
             descLabel.text = @"aaaaaa";
@@ -214,18 +214,18 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return SCREEN_CURRETWIDTH(20);
+    return SCREEN_ORIGINWIDTH_5(20);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return SCREEN_CURRETWIDTH(20);
+    return SCREEN_ORIGINWIDTH_5(20);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0 && indexPath.row == 0) {
-        return SCREEN_CURRETWIDTH(130);
+        return SCREEN_ORIGINWIDTH_5(130);
     }else {
-        return SCREEN_CURRETWIDTH(70);
+        return SCREEN_ORIGINWIDTH_5(70);
     }
 }
 

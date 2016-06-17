@@ -61,7 +61,7 @@
     self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = HexColor(0xECECEC);
     
-    _bottomImv = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_CURRETWIDTH(0), self.view.frame.size.height - 150, self.view.frame.size.width - SCREEN_CURRETWIDTH(0), 150)];
+    _bottomImv = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_ORIGINWIDTH_5(0), self.view.frame.size.height - 150, self.view.frame.size.width - SCREEN_ORIGINWIDTH_5(0), 150)];
     _bottomImv.image = [UIImage imageNamed:@"LaunchImage"];
     [self.view addSubview:_bottomImv];
 

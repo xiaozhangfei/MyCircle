@@ -44,7 +44,7 @@
 
 #import "AppDelegate+ZXFJSPatch.h"
 
-#import <MobClick.h>
+//#import <MobClick.h>
 #import "MiscTool.h"
 
 
@@ -97,7 +97,7 @@
     //初始化key
     [self initKeyAndSecretWithOptions:(NSDictionary *)launchOptions];
     
-    [MobClick startWithAppkey:UmengAppKey reportPolicy:BATCH channelId:@"Ceshi"];
+//    [MobClick startWithAppkey:UmengAppKey reportPolicy:BATCH channelId:@"Ceshi"];
 
     //初始化push
     [self initPush];
@@ -178,7 +178,7 @@
     [self.drawerController setRestorationIdentifier:@"MMDrawer"];
     //[self.drawerController setMaximumRightDrawerWidth:10.0];
     //leftVC宽度
-    [self.drawerController setMaximumLeftDrawerWidth:self.window.frame.size.width - SCREEN_CURRETWIDTH(150)];
+    [self.drawerController setMaximumLeftDrawerWidth:self.window.frame.size.width - SCREEN_ORIGINWIDTH_5(150)];
     
     [self setOpenDrawerController];
     //配置动画的回调函数

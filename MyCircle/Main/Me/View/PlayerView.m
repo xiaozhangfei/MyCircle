@@ -225,7 +225,7 @@
         //weakSelf.isPlaying = NO;
         [weakSelf.avPlayer pause];
 //        //切换视频
-//        UIImageView *imv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH_XF(75), SCREEN_WIDTH_XF(75))];
+//        UIImageView *imv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_ORIGINWIDTH_4(75), SCREEN_ORIGINWIDTH_4(75))];
 //        imv.image = [UIImage imageNamed:@"player_play"];
 //        imv.userInteractionEnabled = YES;
 //        imv.tag = 1200;

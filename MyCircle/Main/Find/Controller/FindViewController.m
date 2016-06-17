@@ -48,7 +48,7 @@
 
 - (void)initView {
     segment = [[UISegmentedControl alloc] initWithItems:@[@"left",@"right"]];
-    segment.frame = CGRectMake(SCREEN_CURRETWIDTH(20), 64 + SCREEN_CURRETWIDTH(10), self.view.frame.size.width - SCREEN_CURRETWIDTH(40), SCREEN_CURRETWIDTH(60));
+    segment.frame = CGRectMake(SCREEN_ORIGINWIDTH_5(20), 64 + SCREEN_ORIGINWIDTH_5(10), self.view.frame.size.width - SCREEN_ORIGINWIDTH_5(40), SCREEN_ORIGINWIDTH_5(60));
     segment.tintColor = [UIColor orangeColor];
     segment.backgroundColor = [UIColor whiteColor];
     [segment addTarget:self action:@selector(segmentAction:) forControlEvents:(UIControlEventValueChanged)];

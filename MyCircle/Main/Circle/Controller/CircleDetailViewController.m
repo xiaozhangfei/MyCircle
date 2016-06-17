@@ -154,7 +154,7 @@
         [self addProgressObserver];
         [self addNotification];
     }
-    [self setupUIWithFrame:CGRectMake(SCREEN_WIDTH_XF(0), 64, SCREEN_WIDTH - SCREEN_WIDTH_XF(0), SCREEN_WIDTH_XF(225))];
+    [self setupUIWithFrame:CGRectMake(SCREEN_ORIGINWIDTH_4(0), 64, App_Frame_Width - SCREEN_ORIGINWIDTH_4(0), SCREEN_ORIGINWIDTH_4(225))];
     [_avPlayer play];
     _isPlaying = YES;
 }
@@ -178,35 +178,35 @@
     [_container addTapCallBack:self sel:@selector(removeControlView:)];
     [_playView addSubview:_container];
     
-    _controlPlayView = [[UIView alloc] initWithFrame:CGRectMake(0, frame.size.height - SCREEN_WIDTH_XF(30), frame.size.width, SCREEN_WIDTH_XF(30))];
+    _controlPlayView = [[UIView alloc] initWithFrame:CGRectMake(0, frame.size.height - SCREEN_ORIGINWIDTH_4(30), frame.size.width, SCREEN_ORIGINWIDTH_4(30))];
     _controlPlayView.backgroundColor = [UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1];
     [_playView addSubview:_controlPlayView];
     
     _playOrPause = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    _playOrPause.frame = CGRectMake(SCREEN_WIDTH_XF(20), SCREEN_WIDTH_XF(4), SCREEN_WIDTH_XF(22), SCREEN_WIDTH_XF(22));
+    _playOrPause.frame = CGRectMake(SCREEN_ORIGINWIDTH_4(20), SCREEN_ORIGINWIDTH_4(4), SCREEN_ORIGINWIDTH_4(22), SCREEN_ORIGINWIDTH_4(22));
     _playOrPause.tintColor = [UIColor whiteColor];
     [_playOrPause setImage:[UIImage imageNamed:@"player_pause"] forState:(UIControlStateNormal)];
     [_playOrPause addTarget:self action:@selector(playClick:) forControlEvents:(UIControlEventTouchUpInside)];
     [_controlPlayView addSubview:_playOrPause];
     
     _progress = [[UIProgressView alloc] initWithProgressViewStyle:(UIProgressViewStyleDefault)];
-    _progress.frame = CGRectMake(SCREEN_WIDTH_XF(45), SCREEN_WIDTH_XF(14), frame.size.width - SCREEN_WIDTH_XF(188), SCREEN_WIDTH_XF(2));
+    _progress.frame = CGRectMake(SCREEN_ORIGINWIDTH_4(45), SCREEN_ORIGINWIDTH_4(14), frame.size.width - SCREEN_ORIGINWIDTH_4(188), SCREEN_ORIGINWIDTH_4(2));
     _progress.tintColor = [UIColor colorWithRed:248.0/255.0 green:195.0/255.0 blue:72.0/255.0 alpha:100];
     [_controlPlayView addSubview:_progress];
     
-    _cuTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width - SCREEN_WIDTH_XF(138), 0, SCREEN_WIDTH_XF(70), SCREEN_WIDTH_XF(30))];
+    _cuTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(frame.size.width - SCREEN_ORIGINWIDTH_4(138), 0, SCREEN_ORIGINWIDTH_4(70), SCREEN_ORIGINWIDTH_4(30))];
     _cuTimeLabel.text = @"00:00/00:00";
     _cuTimeLabel.font = [UIFont systemFontOfSize:12.0f];
     _cuTimeLabel.textColor = [UIColor colorWithRed:0.8 green:0.8 blue:0.8 alpha:1];
     [_controlPlayView addSubview:_cuTimeLabel];
     
-    _zoneImageButton = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width - SCREEN_WIDTH_XF(64), SCREEN_WIDTH_XF(4), SCREEN_WIDTH_XF(22), SCREEN_WIDTH_XF(22))];
+    _zoneImageButton = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width - SCREEN_ORIGINWIDTH_4(64), SCREEN_ORIGINWIDTH_4(4), SCREEN_ORIGINWIDTH_4(22), SCREEN_ORIGINWIDTH_4(22))];
     [_zoneImageButton setImage:[UIImage imageNamed:@"fullscreen"]];
     _zoneImageButton.userInteractionEnabled = YES;
     [_zoneImageButton addTapCallBack:self sel:@selector(zoneImageButtonAction:)];
     [_controlPlayView addSubview:_zoneImageButton];
     
-    _closePlayView = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width - SCREEN_WIDTH_XF(37), SCREEN_WIDTH_XF(4), SCREEN_WIDTH_XF(22), SCREEN_WIDTH_XF(22))];
+    _closePlayView = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width - SCREEN_ORIGINWIDTH_4(37), SCREEN_ORIGINWIDTH_4(4), SCREEN_ORIGINWIDTH_4(22), SCREEN_ORIGINWIDTH_4(22))];
     _closePlayView.image = [UIImage imageNamed:@"record_close_normal"];
     _closePlayView.userInteractionEnabled = YES;
     [_closePlayView addTapCallBack:self sel:@selector(closePlayViewAction:)];
@@ -244,14 +244,14 @@
         CGRect frame = _currentFrame;
         _playView.frame = frame;
         _container.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
-        _controlPlayView.frame = CGRectMake(0, frame.size.height - SCREEN_WIDTH_XF(30), frame.size.width, SCREEN_WIDTH_XF(30));
-        _playOrPause.frame = CGRectMake(SCREEN_WIDTH_XF(20), SCREEN_WIDTH_XF(4), SCREEN_WIDTH_XF(22), SCREEN_WIDTH_XF(22));
-        _progress.frame = CGRectMake(SCREEN_WIDTH_XF(45), SCREEN_WIDTH_XF(14), frame.size.width - SCREEN_WIDTH_XF(188), SCREEN_WIDTH_XF(2));
+        _controlPlayView.frame = CGRectMake(0, frame.size.height - SCREEN_ORIGINWIDTH_4(30), frame.size.width, SCREEN_ORIGINWIDTH_4(30));
+        _playOrPause.frame = CGRectMake(SCREEN_ORIGINWIDTH_4(20), SCREEN_ORIGINWIDTH_4(4), SCREEN_ORIGINWIDTH_4(22), SCREEN_ORIGINWIDTH_4(22));
+        _progress.frame = CGRectMake(SCREEN_ORIGINWIDTH_4(45), SCREEN_ORIGINWIDTH_4(14), frame.size.width - SCREEN_ORIGINWIDTH_4(188), SCREEN_ORIGINWIDTH_4(2));
         
-        _cuTimeLabel.frame = CGRectMake(frame.size.width - SCREEN_WIDTH_XF(138), 0, SCREEN_WIDTH_XF(70), SCREEN_WIDTH_XF(30));
-        _zoneImageButton.frame = CGRectMake(frame.size.width - SCREEN_WIDTH_XF(64), SCREEN_WIDTH_XF(4), SCREEN_WIDTH_XF(22), SCREEN_WIDTH_XF(22));
+        _cuTimeLabel.frame = CGRectMake(frame.size.width - SCREEN_ORIGINWIDTH_4(138), 0, SCREEN_ORIGINWIDTH_4(70), SCREEN_ORIGINWIDTH_4(30));
+        _zoneImageButton.frame = CGRectMake(frame.size.width - SCREEN_ORIGINWIDTH_4(64), SCREEN_ORIGINWIDTH_4(4), SCREEN_ORIGINWIDTH_4(22), SCREEN_ORIGINWIDTH_4(22));
         _zoneImageButton.image = [UIImage imageNamed:@"fullscreen"];
-        _closePlayView.frame = CGRectMake(frame.size.width - SCREEN_WIDTH_XF(37), SCREEN_WIDTH_XF(4), SCREEN_WIDTH_XF(22), SCREEN_WIDTH_XF(22));
+        _closePlayView.frame = CGRectMake(frame.size.width - SCREEN_ORIGINWIDTH_4(37), SCREEN_ORIGINWIDTH_4(4), SCREEN_ORIGINWIDTH_4(22), SCREEN_ORIGINWIDTH_4(22));
         _playerLayer.frame = _playerLayer.frame = CGRectMake(0, 0, _container.width, _container.height);
         [_playView viewWithTag:1200].center = CGPointMake(_playView.frame.size.width / 2, _playView.frame.size.height / 2);
         [self.view addSubview:_playView];
@@ -268,14 +268,14 @@
         //改变子View frame
         _container.frame = CGRectMake(0, 0, frame.size.height, frame.size.width);
         [_container removeAllSubviews];
-        _controlPlayView.frame = CGRectMake(0, SCREEN_WIDTH - SCREEN_WIDTH_XF(30), SCREEN_HEIGHT, SCREEN_WIDTH_XF(30));
-        _playOrPause.frame = CGRectMake(SCREEN_WIDTH_XF(20), SCREEN_WIDTH_XF(4), SCREEN_WIDTH_XF(22), SCREEN_WIDTH_XF(22));
-        _progress.frame = CGRectMake(SCREEN_WIDTH_XF(45), SCREEN_WIDTH_XF(14), frame.size.height - SCREEN_WIDTH_XF(188), SCREEN_WIDTH_XF(2));
+        _controlPlayView.frame = CGRectMake(0, App_Frame_Width - SCREEN_ORIGINWIDTH_4(30), App_Frame_Height, SCREEN_ORIGINWIDTH_4(30));
+        _playOrPause.frame = CGRectMake(SCREEN_ORIGINWIDTH_4(20), SCREEN_ORIGINWIDTH_4(4), SCREEN_ORIGINWIDTH_4(22), SCREEN_ORIGINWIDTH_4(22));
+        _progress.frame = CGRectMake(SCREEN_ORIGINWIDTH_4(45), SCREEN_ORIGINWIDTH_4(14), frame.size.height - SCREEN_ORIGINWIDTH_4(188), SCREEN_ORIGINWIDTH_4(2));
         
-        _cuTimeLabel.frame = CGRectMake(frame.size.height - SCREEN_WIDTH_XF(138), 0, SCREEN_WIDTH_XF(70), SCREEN_WIDTH_XF(30));
-        _zoneImageButton.frame = CGRectMake(frame.size.height - SCREEN_WIDTH_XF(64), SCREEN_WIDTH_XF(4), SCREEN_WIDTH_XF(22), SCREEN_WIDTH_XF(22));
+        _cuTimeLabel.frame = CGRectMake(frame.size.height - SCREEN_ORIGINWIDTH_4(138), 0, SCREEN_ORIGINWIDTH_4(70), SCREEN_ORIGINWIDTH_4(30));
+        _zoneImageButton.frame = CGRectMake(frame.size.height - SCREEN_ORIGINWIDTH_4(64), SCREEN_ORIGINWIDTH_4(4), SCREEN_ORIGINWIDTH_4(22), SCREEN_ORIGINWIDTH_4(22));
         _zoneImageButton.image = [UIImage imageNamed:@"videoMini"];
-        _closePlayView.frame = CGRectMake(frame.size.height - SCREEN_WIDTH_XF(37), SCREEN_WIDTH_XF(4), SCREEN_WIDTH_XF(22), SCREEN_WIDTH_XF(22));
+        _closePlayView.frame = CGRectMake(frame.size.height - SCREEN_ORIGINWIDTH_4(37), SCREEN_ORIGINWIDTH_4(4), SCREEN_ORIGINWIDTH_4(22), SCREEN_ORIGINWIDTH_4(22));
         _playerLayer.frame = _container.frame;
         [_playView viewWithTag:1200].center = CGPointMake(_playView.frame.size.height / 2, _playView.frame.size.width
                                                           / 2);
@@ -331,7 +331,7 @@
         [_avPlayer pause];
         //添加中央大的播放图标
         //切换视频
-        UIImageView *imv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH_XF(75), SCREEN_WIDTH_XF(75))];
+        UIImageView *imv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_ORIGINWIDTH_4(75), SCREEN_ORIGINWIDTH_4(75))];
         imv.image = [UIImage imageNamed:@"player_play"];
         imv.userInteractionEnabled = YES;
         imv.tag = 1200;

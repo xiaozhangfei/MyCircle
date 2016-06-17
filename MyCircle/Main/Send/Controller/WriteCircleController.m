@@ -102,10 +102,10 @@
     _scroll = [[UIScrollView alloc] initWithFrame:self.view.frame];
     //20 + 50 + 20 + 120 + 20 + 50 + 20 + width
     _scroll.backgroundColor = HexColor(0xFBF7ED);
-    _scroll.contentSize = CGSizeMake(_scroll.frame.size.width, SCREEN_CURRETWIDTH(1120));
+    _scroll.contentSize = CGSizeMake(_scroll.frame.size.width, SCREEN_ORIGINWIDTH_5(1120));
     [self.view addSubview:_scroll];
     
-    _writeView = [[WriteView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, SCREEN_CURRETWIDTH(1120))];
+    _writeView = [[WriteView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, SCREEN_ORIGINWIDTH_5(1120))];
     [_scroll addSubview:_writeView];
     
     _writeView.labelLocation.text = @"暂无定位";

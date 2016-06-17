@@ -72,4 +72,10 @@
  */
 + (NSString *)encryptPwdForTrans:(NSString *)pwd;
 
+
+//状态栏小菊花显示
++ (void)showNetworkActivityIndicator;
+//状态栏小菊花隐藏
++ (void)hideNetworkActivityIndicatorVisible;
+
 @end

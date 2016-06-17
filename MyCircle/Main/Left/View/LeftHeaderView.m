@@ -21,7 +21,7 @@
 - (void)initView {
     _portraitImv = [[UIImageView alloc] initWithFrame:CGRectZero];
     _portraitImv.layer.masksToBounds = YES;
-    _portraitImv.layer.cornerRadius = SCREEN_CURRETWIDTH(75);
+    _portraitImv.layer.cornerRadius = SCREEN_ORIGINWIDTH_5(75);
     [self addSubview:_portraitImv];
     
     _nickLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -32,24 +32,24 @@
     
     __weak typeof (self) weakSelf = self;
     [_portraitImv mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo (weakSelf.mas_left).with.offset (SCREEN_CURRETWIDTH(30));
-        make.top.equalTo (weakSelf.mas_top).with.offset (SCREEN_CURRETWIDTH(80));
-        make.width.offset (SCREEN_CURRETWIDTH(150));
-        make.height.offset (SCREEN_CURRETWIDTH(150));
+        make.left.equalTo (weakSelf.mas_left).with.offset (SCREEN_ORIGINWIDTH_5(30));
+        make.top.equalTo (weakSelf.mas_top).with.offset (SCREEN_ORIGINWIDTH_5(80));
+        make.width.offset (SCREEN_ORIGINWIDTH_5(150));
+        make.height.offset (SCREEN_ORIGINWIDTH_5(150));
     }];
     
     [_nickLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo (weakSelf.portraitImv.mas_right).with.offset (SCREEN_CURRETWIDTH(10));
+        make.left.equalTo (weakSelf.portraitImv.mas_right).with.offset (SCREEN_ORIGINWIDTH_5(10));
         make.top.equalTo (weakSelf.portraitImv.mas_top).with.offset (0);
-        make.right.equalTo (weakSelf.mas_right).with.offset (SCREEN_CURRETWIDTH(-10));
+        make.right.equalTo (weakSelf.mas_right).with.offset (SCREEN_ORIGINWIDTH_5(-10));
         make.height.equalTo (weakSelf.portraitImv.mas_height);
     }];
     
     [_introLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo (weakSelf.portraitImv.mas_left);
         make.right.equalTo (weakSelf.nickLabel.mas_right);
-        make.top.equalTo (weakSelf.portraitImv.mas_bottom).with.offset (SCREEN_CURRETWIDTH(10));
-        make.height.offset (SCREEN_CURRETWIDTH(50));
+        make.top.equalTo (weakSelf.portraitImv.mas_bottom).with.offset (SCREEN_ORIGINWIDTH_5(10));
+        make.height.offset (SCREEN_ORIGINWIDTH_5(50));
     }];
     
 }

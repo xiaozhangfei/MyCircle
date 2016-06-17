@@ -108,7 +108,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 The MIT License (MIT)
 
-Copyright (c) 2012-2015 qiniu.com
+Copyright (c) 2012-2016 qiniu.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -534,7 +534,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## SDWebImage
 
-Copyright (c) 2009 Olivier Poitrey <rs@dailymotion.com>
+Copyright (c) 2016 Olivier Poitrey rs@dailymotion.com
  
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -558,7 +558,7 @@ THE SOFTWARE.
 
 ## SSKeychain
 
-Copyright (c) 2010-2014 Sam Soffes, http://soff.es
+Copyright (c) 2010-2016 Sam Soffes, http://soff.es
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

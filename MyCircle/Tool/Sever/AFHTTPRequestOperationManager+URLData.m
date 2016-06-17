@@ -22,14 +22,7 @@
 
 #import "XFAPI.h"
 @implementation AFHTTPRequestOperationManager (URLData)
-//状态栏小菊花显示
-+ (void)showNetworkActivityIndicator {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-}
-//状态栏小菊花隐藏
-+ (void)hideNetworkActivityIndicatorVisible {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-}
+
 
 #pragma mark -- post数据请求
 + (void)postWithURLString:(NSString *)urlStr parameters:(id )dict success:(SuccessBlock)success failure:(failureBlock)failure
@@ -37,7 +30,7 @@
     AFHTTPRequestOperationManager *manager = [AFManagerHandle shareHandle].manager;
     __weak typeof (self)weakSelf = self;
     //状态栏菊花打开
-    [self showNetworkActivityIndicator];
+    [MiscTool showNetworkActivityIndicator];
     
     [manager POST:urlStr parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
@@ -45,7 +38,7 @@
         NSDictionary *di = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableLeaves error:nil];
         success(operation, (NSDictionary *)di[@"data"],[weakSelf initBaseModelWithDictionary:di]);
         //状态栏菊花关闭
-        [weakSelf hideNetworkActivityIndicatorVisible];
+        [MiscTool hideNetworkActivityIndicatorVisible];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -53,7 +46,7 @@
         failure(operation, error, nil);
         
         //状态栏菊花关闭
-        [weakSelf hideNetworkActivityIndicatorVisible];
+        [MiscTool hideNetworkActivityIndicatorVisible];
     }];
 }
 
@@ -71,7 +64,7 @@
     AFHTTPRequestOperationManager *manager = [AFManagerHandle shareHandle].manager;
     __weak typeof (self)weakSelf = self;
     //状态栏菊花打开
-    [self showNetworkActivityIndicator];
+    [MiscTool showNetworkActivityIndicator];
     
     NSString *stringCleanPath = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [manager GET:stringCleanPath parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -80,12 +73,12 @@
         NSDictionary *di = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableLeaves error:nil];
         success(operation, (NSDictionary *)di[@"data"],[weakSelf initBaseModelWithDictionary:di]);
         //状态栏菊花关闭
-        [weakSelf hideNetworkActivityIndicatorVisible];
+        [MiscTool hideNetworkActivityIndicatorVisible];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"error = %@",error);
         failure(operation, error, nil);
         //状态栏菊花关闭
-        [weakSelf hideNetworkActivityIndicatorVisible];
+        [MiscTool hideNetworkActivityIndicatorVisible];
     }];
 
 }
@@ -96,7 +89,7 @@
     AFHTTPRequestOperationManager *manager = [AFManagerHandle shareHandle].manager;
     __weak typeof (self)weakSelf = self;
     //状态栏菊花打开
-    [self showNetworkActivityIndicator];
+    [MiscTool showNetworkActivityIndicator];
     
     AFHTTPRequestOperation *option = [manager GET:urlStr parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
@@ -104,12 +97,12 @@
         NSDictionary *di = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableLeaves error:nil];
         success(operation, (NSDictionary *)di[@"data"],[weakSelf initBaseModelWithDictionary:di]);
         //状态栏菊花关闭
-        [weakSelf hideNetworkActivityIndicatorVisible];
+        [MiscTool hideNetworkActivityIndicatorVisible];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"error = %@",error);
         failure(operation, error, nil);
         //状态栏菊花关闭
-        [weakSelf hideNetworkActivityIndicatorVisible];
+        [MiscTool hideNetworkActivityIndicatorVisible];
     }];
     
     //进度条
@@ -123,19 +116,19 @@
     AFHTTPRequestOperationManager *manager = [AFManagerHandle shareHandle].manager;
     __weak typeof (self)weakSelf = self;
     //状态栏菊花打开
-    [self showNetworkActivityIndicator];
+    [MiscTool showNetworkActivityIndicator];
     [manager DELETE:urlStr parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSData *JSONData = [operation.responseString dataUsingEncoding:NSUTF8StringEncoding];
         NSDictionary *di = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableLeaves error:nil];
         success(operation, (NSDictionary *)di[@"data"],[weakSelf initBaseModelWithDictionary:di]);
         //状态栏菊花关闭
-        [weakSelf hideNetworkActivityIndicatorVisible];
+        [MiscTool hideNetworkActivityIndicatorVisible];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"error = %@",error);
         failure(operation, error, nil);
         //状态栏菊花关闭
-        [weakSelf hideNetworkActivityIndicatorVisible];
+        [MiscTool hideNetworkActivityIndicatorVisible];
     }];
 }
 #pragma mark -- put数据请求
@@ -144,19 +137,19 @@
     AFHTTPRequestOperationManager *manager = [AFManagerHandle shareHandle].manager;
     __weak typeof (self)weakSelf = self;
     //状态栏菊花打开
-    [self showNetworkActivityIndicator];
+    [MiscTool showNetworkActivityIndicator];
     [manager PUT:urlStr parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSData *JSONData = [operation.responseString dataUsingEncoding:NSUTF8StringEncoding];
         NSDictionary *di = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableLeaves error:nil];
         success(operation, (NSDictionary *)di[@"data"],[weakSelf initBaseModelWithDictionary:di]);
         //状态栏菊花关闭
-        [weakSelf hideNetworkActivityIndicatorVisible];
+        [MiscTool hideNetworkActivityIndicatorVisible];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"error = %@",error);
         failure(operation, error, nil);
         //状态栏菊花关闭
-        [weakSelf hideNetworkActivityIndicatorVisible];
+        [MiscTool hideNetworkActivityIndicatorVisible];
     }];
 }
 

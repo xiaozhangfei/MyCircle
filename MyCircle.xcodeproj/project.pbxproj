@@ -179,6 +179,8 @@
 		AD31B6451C20175B007BBCC8 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31B6441C20175B007BBCC8 /* PlayerView.m */; };
 		AD31B64B1C2106AB007BBCC8 /* HomeIconTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31B64A1C2106AB007BBCC8 /* HomeIconTitleView.m */; };
 		AD31B6571C2244AB007BBCC8 /* XFHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31B6561C2244AB007BBCC8 /* XFHomeView.m */; };
+		AD390DCA1D0CF11B00C26D6A /* XFWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD390DC91D0CF11B00C26D6A /* XFWebViewVC.m */; };
+		AD390DCC1D0CF25F00C26D6A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD390DCB1D0CF25F00C26D6A /* WebKit.framework */; };
 		AD4C6C531C3227260008A6FB /* AFViewShaker.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4C6C521C3227260008A6FB /* AFViewShaker.m */; };
 		AD4C6C591C322F120008A6FB /* InputText.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4C6C561C322F120008A6FB /* InputText.m */; };
 		AD4C6C5A1C322F120008A6FB /* UIView+XD.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4C6C581C322F120008A6FB /* UIView+XD.m */; };
@@ -611,6 +613,9 @@
 		AD31B64A1C2106AB007BBCC8 /* HomeIconTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeIconTitleView.m; sourceTree = "<group>"; };
 		AD31B6551C2244AB007BBCC8 /* XFHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFHomeView.h; sourceTree = "<group>"; };
 		AD31B6561C2244AB007BBCC8 /* XFHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFHomeView.m; sourceTree = "<group>"; };
+		AD390DC81D0CF11B00C26D6A /* XFWebViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFWebViewVC.h; sourceTree = "<group>"; };
+		AD390DC91D0CF11B00C26D6A /* XFWebViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFWebViewVC.m; sourceTree = "<group>"; };
+		AD390DCB1D0CF25F00C26D6A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		AD4C6C511C3227260008A6FB /* AFViewShaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFViewShaker.h; sourceTree = "<group>"; };
 		AD4C6C521C3227260008A6FB /* AFViewShaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFViewShaker.m; sourceTree = "<group>"; };
 		AD4C6C551C322F120008A6FB /* InputText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputText.h; sourceTree = "<group>"; };
@@ -801,6 +806,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD390DCC1D0CF25F00C26D6A /* WebKit.framework in Frameworks */,
 				AD86601C1C605EC200BDDE31 /* PhotosUI.framework in Frameworks */,
 				AD86601A1C605E9B00BDDE31 /* Photos.framework in Frameworks */,
 				AD0748851C5EFF6B0092652F /* Security.framework in Frameworks */,
@@ -834,6 +840,7 @@
 		80A20C7693C50CE343799DC7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD390DCB1D0CF25F00C26D6A /* WebKit.framework */,
 				AD991D421C7BED110027A325 /* libWMPageController.a */,
 				AD991D401C7BED0D0027A325 /* libVEVerbalExpressions.a */,
 				AD991D3E1C7BED090027A325 /* libTTTAttributedLabel.a */,
@@ -1935,6 +1942,8 @@
 			children = (
 				AD4C6C721C33C06A0008A6FB /* UpFileManager.h */,
 				AD4C6C731C33C06A0008A6FB /* UpFileManager.m */,
+				AD390DC81D0CF11B00C26D6A /* XFWebViewVC.h */,
+				AD390DC91D0CF11B00C26D6A /* XFWebViewVC.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -2110,12 +2119,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD318BD01C1C15E300138E2A /* Build configuration list for PBXNativeTarget "MyCircle" */;
 			buildPhases = (
-				32D0D174DCE2E65AB9C44B0F /* Check Pods Manifest.lock */,
+				32D0D174DCE2E65AB9C44B0F /* 📦 Check Pods Manifest.lock */,
 				AD318BB21C1C15E300138E2A /* Sources */,
 				AD318BB31C1C15E300138E2A /* Frameworks */,
 				AD318BB41C1C15E300138E2A /* Resources */,
-				9CBB01F7399C7191D1B24BDA /* Embed Pods Frameworks */,
-				D5FEC6EC7BB5A2B2DA472383 /* Copy Pods Resources */,
+				9CBB01F7399C7191D1B24BDA /* 📦 Embed Pods Frameworks */,
+				D5FEC6EC7BB5A2B2DA472383 /* 📦 Copy Pods Resources */,
 				AD169FA81C76A7B2005FE335 /* Embed App Extensions */,
 				AD5B1A821C7B02930018ABC3 /* Embed Watch Content */,
 			);
@@ -2259,14 +2268,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		32D0D174DCE2E65AB9C44B0F /* Check Pods Manifest.lock */ = {
+		32D0D174DCE2E65AB9C44B0F /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2274,14 +2283,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9CBB01F7399C7191D1B24BDA /* Embed Pods Frameworks */ = {
+		9CBB01F7399C7191D1B24BDA /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2289,14 +2298,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCircle/Pods-MyCircle-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D5FEC6EC7BB5A2B2DA472383 /* Copy Pods Resources */ = {
+		D5FEC6EC7BB5A2B2DA472383 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2452,6 +2461,7 @@
 				AD4C6C881C35315B0008A6FB /* CityVC.m in Sources */,
 				AD318D551C1C8BD400138E2A /* UIImage+Reflection.m in Sources */,
 				AD0748831C5B42AF0092652F /* NSData+AES.m in Sources */,
+				AD390DCA1D0CF11B00C26D6A /* XFWebViewVC.m in Sources */,
 				ADF523901C58C1E200C6E49F /* LKPageView.m in Sources */,
 				AD318CB31C1C171800138E2A /* AFHTTPRequestOperationManager+URLData.m in Sources */,
 				AD4C6C6A1C338AA60008A6FB /* SetVC.m in Sources */,

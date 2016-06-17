@@ -9,10 +9,7 @@
 #import "BaseViewController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "iToast.h"
-#import "AppMacro.h"
-#import "UtilsMacro.h"
 #import "XFTopToast.h"
-
 
 @interface BaseViewController ()<UIAlertViewDelegate>
 {
@@ -117,24 +114,24 @@
         _bgView = nil;
     }
     
-    _bgView = [[UIView alloc] initWithFrame:CGRectMake(0,SCREEN_WIDTH_XF(78), SCREEN_WIDTH, SCREEN_WIDTH_XF(140))];
+    _bgView = [[UIView alloc] initWithFrame:CGRectMake( 0, SCREEN_ORIGINWIDTH_4(78), Main_Screen_Width,SCREEN_ORIGINWIDTH_4(140) )];
     _bgView.backgroundColor = [UIColor clearColor];
     [view addSubview:_bgView];
     
     //    if ([info isEqualToString:@"暂无视频"] || [info isEqualToString:@"暂无评论"] || [info isEqualToString:@"你还没有粉丝,完善个人信息会让更"]) {
     //
-    //        _bgView.frame = CGRectMake(0,SCREEN_WIDTH_XF(118), SCREEN_WIDTH, SCREEN_WIDTH_XF(140));
+    //        _bgView.frame = CGRectMake(0,SCREEN_ORIGINWIDTH_4(118), SCREEN_WIDTH, SCREEN_ORIGINWIDTH_4(140));
     //    }
     
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-SCREEN_WIDTH_XF(75))/2.0f, 0, SCREEN_WIDTH_XF(75), SCREEN_WIDTH_XF(75))];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake((Main_Screen_Width - SCREEN_ORIGINWIDTH_4(75)) / 2.0f, 0, SCREEN_ORIGINWIDTH_4(75), SCREEN_ORIGINWIDTH_4(75))];
     imgView.image = [UIImage imageNamed:imgName];
-    UILabel *infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(imgView.frame)+SCREEN_WIDTH_XF(15), SCREEN_WIDTH, SCREEN_WIDTH_XF(15))];
+    UILabel *infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(imgView.frame) +SCREEN_ORIGINWIDTH_4(15), Main_Screen_Width, SCREEN_ORIGINWIDTH_4(15))];
     infoLabel.textAlignment = NSTextAlignmentCenter;
     infoLabel.textColor = UIColorFromRGB(170, 170, 170);
     infoLabel.font = UIFontOfSize(14);
     infoLabel.text = info;
     [_bgView addSubview:infoLabel];
-    UILabel *ifLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(infoLabel.frame)+SCREEN_WIDTH_XF(5), SCREEN_WIDTH, SCREEN_WIDTH_XF(15))];
+    UILabel *ifLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(infoLabel.frame)+SCREEN_ORIGINWIDTH_4(5), Main_Screen_Width, SCREEN_ORIGINWIDTH_4(15))];
     ifLabel.textAlignment = NSTextAlignmentCenter;
     ifLabel.textColor = UIColorFromRGB(170, 170, 170);
     ifLabel.font = UIFontOfSize(14);

@@ -50,7 +50,7 @@
     [self addSubview:_introLabel];
     
     _photoImg.layer.masksToBounds = YES;
-    _photoImg.layer.cornerRadius = SCREEN_CURRETWIDTH(40);
+    _photoImg.layer.cornerRadius = SCREEN_ORIGINWIDTH_5(40);
     
     _titleLabel.textColor = [UIColor whiteColor];
     _introLabel.numberOfLines = 3;
@@ -72,20 +72,20 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    _adScroll.frame = CGRectMake(0, 0, self.frame.size.width, SCREEN_CURRETWIDTH(450));
+    _adScroll.frame = CGRectMake(0, 0, self.frame.size.width, SCREEN_ORIGINWIDTH_5(450));
     if (!ISEMPTY(_detailModel.vpath)) {
         _adScroll.contentSize = CGSizeMake(self.frame.size.width * 2, _adScroll.frame.size.height);
         _firstImg.frame = CGRectMake(0, 0, _adScroll.frame.size.width, _adScroll.frame.size.height);
-        _playIcon.frame = CGRectMake(0, 0, SCREEN_CURRETWIDTH(100), SCREEN_CURRETWIDTH(100));
+        _playIcon.frame = CGRectMake(0, 0, SCREEN_ORIGINWIDTH_5(100), SCREEN_ORIGINWIDTH_5(100));
         _playIcon.center = _firstImg.center;
     }else {
         _adScroll.contentSize = CGSizeMake(self.frame.size.width, _adScroll.frame.size.height);
         _firstImg.frame = CGRectMake(0, 0, 0, 0);
     }
     _secondImg.frame = CGRectMake(CGRectGetMaxX(_firstImg.frame), 0, _adScroll.frame.size.width, _adScroll.frame.size.height);
-    _photoImg.frame = CGRectMake(SCREEN_CURRETWIDTH(30), _adScroll.frame.size.height - SCREEN_CURRETWIDTH(90), SCREEN_CURRETWIDTH(80), SCREEN_CURRETWIDTH(80));
+    _photoImg.frame = CGRectMake(SCREEN_ORIGINWIDTH_5(30), _adScroll.frame.size.height - SCREEN_ORIGINWIDTH_5(90), SCREEN_ORIGINWIDTH_5(80), SCREEN_ORIGINWIDTH_5(80));
     _titleLabel.frame = CGRectMake(CGRectGetMaxX(_photoImg.frame), CGRectGetMinY(_photoImg.frame), _adScroll.frame.size.width - CGRectGetMaxX(_photoImg.frame), _photoImg.frame.size.height);
-    _introLabel.frame = CGRectMake(SCREEN_CURRETWIDTH(20), CGRectGetMaxY(_adScroll.frame), _adScroll.frame.size.width - 2 * SCREEN_CURRETWIDTH(20), SCREEN_CURRETWIDTH(100));
+    _introLabel.frame = CGRectMake(SCREEN_ORIGINWIDTH_5(20), CGRectGetMaxY(_adScroll.frame), _adScroll.frame.size.width - 2 * SCREEN_ORIGINWIDTH_5(20), SCREEN_ORIGINWIDTH_5(100));
 }
 
 /*

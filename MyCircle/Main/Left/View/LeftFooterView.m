@@ -58,8 +58,8 @@
     [setBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
     [setBtn setTitleColor:[UIColor lightGrayColor] forState:(UIControlStateHighlighted)];
     setBtn.btnType = XFBtnTypeLeft;
-    setBtn.imageSize = CGSizeMake(SCREEN_CURRETWIDTH(50), SCREEN_CURRETWIDTH(50));
-    setBtn.imageToBorderOffset = SCREEN_CURRETWIDTH(0);
+    setBtn.imageSize = CGSizeMake(SCREEN_ORIGINWIDTH_5(50), SCREEN_ORIGINWIDTH_5(50));
+    setBtn.imageToBorderOffset = SCREEN_ORIGINWIDTH_5(0);
     [self addSubview:setBtn];
     _setView = setBtn;
     
@@ -70,8 +70,8 @@
     [nightBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
     [nightBtn setTitleColor:[UIColor lightGrayColor] forState:(UIControlStateHighlighted)];
     nightBtn.btnType = XFBtnTypeLeft;
-    nightBtn.imageSize = CGSizeMake(SCREEN_CURRETWIDTH(50), SCREEN_CURRETWIDTH(50));
-    nightBtn.imageToBorderOffset = SCREEN_CURRETWIDTH(10);
+    nightBtn.imageSize = CGSizeMake(SCREEN_ORIGINWIDTH_5(50), SCREEN_ORIGINWIDTH_5(50));
+    nightBtn.imageToBorderOffset = SCREEN_ORIGINWIDTH_5(10);
     [self addSubview:nightBtn];
     _nightView = nightBtn;
     
@@ -97,12 +97,12 @@
     
     __weak typeof (self) weakSelf = self;
     //左侧
-    CGFloat blockWidth = SCREEN_CURRETWIDTH(130);
-    CGFloat blank = (self.frame.size.width - 3 * blockWidth - SCREEN_CURRETWIDTH(40)) / 2;
+    CGFloat blockWidth = SCREEN_ORIGINWIDTH_5(130);
+    CGFloat blank = (self.frame.size.width - 3 * blockWidth - SCREEN_ORIGINWIDTH_5(40)) / 2;
     [setBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo (weakSelf.mas_left).offset (SCREEN_CURRETWIDTH(0));
-        make.bottom.equalTo (weakSelf.mas_bottom).offset (SCREEN_CURRETWIDTH(-10));
-        make.height.offset (SCREEN_CURRETWIDTH(50));
+        make.left.equalTo (weakSelf.mas_left).offset (SCREEN_ORIGINWIDTH_5(0));
+        make.bottom.equalTo (weakSelf.mas_bottom).offset (SCREEN_ORIGINWIDTH_5(-10));
+        make.height.offset (SCREEN_ORIGINWIDTH_5(50));
         make.width.offset (blockWidth);
     }];
     //中间
@@ -115,14 +115,14 @@
     //右侧
     [weatherView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo (nightBtn.mas_right).offset (blank);
-        make.top.equalTo (nightBtn.mas_top).offset (SCREEN_CURRETWIDTH(-40));
-        make.right.equalTo (weakSelf.mas_right).offset (SCREEN_CURRETWIDTH(-10));
+        make.top.equalTo (nightBtn.mas_top).offset (SCREEN_ORIGINWIDTH_5(-40));
+        make.right.equalTo (weakSelf.mas_right).offset (SCREEN_ORIGINWIDTH_5(-10));
         make.bottom.equalTo (nightBtn.mas_bottom);
     }];
     [_degreeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(weatherView.mas_left);
         make.top.equalTo (weatherView.mas_top);
-        make.height.offset (SCREEN_CURRETWIDTH(40));
+        make.height.offset (SCREEN_ORIGINWIDTH_5(40));
         make.width.equalTo (weatherView.mas_width);
     }];
     [_locationLabel mas_makeConstraints:^(MASConstraintMaker *make) {

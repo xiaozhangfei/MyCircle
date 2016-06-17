@@ -69,16 +69,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MyCircleToday.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-MyCircleWatch.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Qiniu.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -167,17 +157,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>24356E08633F4611539275EDF1718D2A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>2DF3F600228A1675661534A93F7EBD1E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3C721696EB6A26AEE05B16984F77490D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -207,12 +187,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8DAC9DAEDAB75CE3FE8CDB3BAF380723</key>
+		<key>95A38504EFF517E1CF16D45DD6644A71</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>95A38504EFF517E1CF16D45DD6644A71</key>
+		<key>9BEC5DDDA367FE2664DA610E24D153F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -222,7 +202,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A71A2A5F92B210E9AFEC2CD7DB8F7C97</key>
+		<key>AD1E2E7BA3DC4D9C3EE7E52DE1F8645E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

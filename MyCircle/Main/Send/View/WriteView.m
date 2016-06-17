@@ -60,10 +60,10 @@
         [imagePic addSubview:deImg];
         
         [deImg mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo (imagePic.mas_right).with.offset (SCREEN_CURRETWIDTH(10));
-            make.top.equalTo (imagePic.mas_top).with.offset (SCREEN_CURRETWIDTH(-10));
-            make.width.offset (SCREEN_CURRETWIDTH(50));
-            make.height.offset (SCREEN_CURRETWIDTH(50));
+            make.right.equalTo (imagePic.mas_right).with.offset (SCREEN_ORIGINWIDTH_5(10));
+            make.top.equalTo (imagePic.mas_top).with.offset (SCREEN_ORIGINWIDTH_5(-10));
+            make.width.offset (SCREEN_ORIGINWIDTH_5(50));
+            make.height.offset (SCREEN_ORIGINWIDTH_5(50));
         }];
     }
 
@@ -82,41 +82,41 @@
     
     __weak typeof (self) weakSelf = self;
     [_textFieldTitle mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo (weakSelf.mas_top).with.offset (SCREEN_CURRETWIDTH(20));
-        make.left.equalTo (weakSelf.mas_left).with.offset (SCREEN_CURRETWIDTH(20));
-        make.right.equalTo (weakSelf.mas_right).with.offset (SCREEN_CURRETWIDTH(-20));
-        make.height.offset (SCREEN_CURRETWIDTH(50));
+        make.top.equalTo (weakSelf.mas_top).with.offset (SCREEN_ORIGINWIDTH_5(20));
+        make.left.equalTo (weakSelf.mas_left).with.offset (SCREEN_ORIGINWIDTH_5(20));
+        make.right.equalTo (weakSelf.mas_right).with.offset (SCREEN_ORIGINWIDTH_5(-20));
+        make.height.offset (SCREEN_ORIGINWIDTH_5(50));
     }];
 
     [_textViewIntro mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo (weakSelf.textFieldTitle.mas_bottom).with.offset (SCREEN_CURRETWIDTH(20));
+        make.top.equalTo (weakSelf.textFieldTitle.mas_bottom).with.offset (SCREEN_ORIGINWIDTH_5(20));
         make.left.equalTo (weakSelf.textFieldTitle.mas_left).with.offset (0);
         make.right.equalTo (weakSelf.textFieldTitle.mas_right).with.offset (0);
-        make.height.offset (SCREEN_CURRETWIDTH(100));
+        make.height.offset (SCREEN_ORIGINWIDTH_5(100));
     }];
     
     [_imageLocation mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo (weakSelf.textViewIntro.mas_bottom).with.offset (SCREEN_CURRETWIDTH(20));
+        make.top.equalTo (weakSelf.textViewIntro.mas_bottom).with.offset (SCREEN_ORIGINWIDTH_5(20));
         make.left.equalTo (weakSelf.textViewIntro.mas_left).with.offset (0);
-        make.height.offset (SCREEN_CURRETWIDTH(50));
-        make.width.offset (SCREEN_CURRETWIDTH(50));
+        make.height.offset (SCREEN_ORIGINWIDTH_5(50));
+        make.width.offset (SCREEN_ORIGINWIDTH_5(50));
     }];
     
     [_labelLocation mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo (weakSelf.textViewIntro.mas_bottom).with.offset (SCREEN_CURRETWIDTH(20));
-        make.left.equalTo (weakSelf.imageLocation.mas_right).with.offset (SCREEN_CURRETWIDTH(10));
+        make.top.equalTo (weakSelf.textViewIntro.mas_bottom).with.offset (SCREEN_ORIGINWIDTH_5(20));
+        make.left.equalTo (weakSelf.imageLocation.mas_right).with.offset (SCREEN_ORIGINWIDTH_5(10));
         make.right.equalTo (weakSelf.textViewIntro.mas_right).with.offset (0);
-        make.height.offset (SCREEN_CURRETWIDTH(50));
+        make.height.offset (SCREEN_ORIGINWIDTH_5(50));
     }];
     
     UIImageView *imv = [self viewWithTag:300];
     [imv mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo (weakSelf.labelLocation.mas_bottom).with.offset (SCREEN_CURRETWIDTH(20));
+        make.top.equalTo (weakSelf.labelLocation.mas_bottom).with.offset (SCREEN_ORIGINWIDTH_5(20));
         make.left.equalTo (weakSelf.imageLocation.mas_left).with.offset (0);
-        make.width.offset (SCREEN_CURRETWIDTH(120));
-        make.height.offset (SCREEN_CURRETWIDTH(120));
+        make.width.offset (SCREEN_ORIGINWIDTH_5(120));
+        make.height.offset (SCREEN_ORIGINWIDTH_5(120));
     }];
-    CGFloat offset = SCREEN_CURRETWIDTH(20);
+    CGFloat offset = SCREEN_ORIGINWIDTH_5(20);
     for (int i = 1; i < 5; i ++) {
         UIImageView *img = [self viewWithTag:300 + i];
         [img mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -125,11 +125,11 @@
             make.width.equalTo (imv.mas_width);
             make.height.equalTo (imv.mas_height);
         }];
-        offset += (SCREEN_CURRETWIDTH(140));
+        offset += (SCREEN_ORIGINWIDTH_5(140));
     }
     
     [_videoPic mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo (imv.mas_bottom).with.offset (SCREEN_CURRETWIDTH(20));
+        make.top.equalTo (imv.mas_bottom).with.offset (SCREEN_ORIGINWIDTH_5(20));
         make.left.equalTo (imv.mas_left);
         make.right.equalTo (imv.mas_right);
         make.height.equalTo (imv.mas_height);

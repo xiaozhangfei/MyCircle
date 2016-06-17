@@ -45,11 +45,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return SCREEN_CURRETWIDTH(10);
+    return SCREEN_ORIGINWIDTH_5(10);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return SCREEN_CURRETWIDTH(10);
+    return SCREEN_ORIGINWIDTH_5(10);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

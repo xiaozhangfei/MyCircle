@@ -24,6 +24,7 @@
 
 @property (strong, nonatomic) UITableView *hotTableView;
 @property (strong, nonatomic) NSMutableArray *hotDataArray;
+@property (assign, nonatomic) NSInteger count;
 @property (assign, nonatomic) NSInteger nowPage;
 
 @property (assign, nonatomic) CGFloat scrollViewOffsetY;
@@ -170,7 +171,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return SCREEN_CURRETWIDTH(500);
+    return SCREEN_ORIGINWIDTH_5(500);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -182,11 +183,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return SCREEN_CURRETWIDTH(10);
+    return SCREEN_ORIGINWIDTH_5(10);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return SCREEN_CURRETWIDTH(10);
+    return SCREEN_ORIGINWIDTH_5(10);
 }
 
 #pragma mark -- 上拉下滑 的 事件响应

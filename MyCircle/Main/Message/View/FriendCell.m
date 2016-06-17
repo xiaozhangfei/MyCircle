@@ -41,7 +41,7 @@
     
     _photoImg = [[UIImageView alloc] initWithFrame:CGRectZero];
     _photoImg.layer.masksToBounds = YES;
-    _photoImg.layer.cornerRadius = SCREEN_CURRETWIDTH(10);
+    _photoImg.layer.cornerRadius = SCREEN_ORIGINWIDTH_5(10);
     [self.contentView addSubview:_photoImg];
     
     _nickLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -78,8 +78,8 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    _photoImg.frame = CGRectMake(SCREEN_CURRETWIDTH(15), SCREEN_CURRETWIDTH(15), SCREEN_CURRETWIDTH(80), SCREEN_CURRETWIDTH(80));
-    _nickLabel.frame = CGRectMake(CGRectGetMaxX(_photoImg.frame) + SCREEN_CURRETWIDTH(15), CGRectGetMinY(_photoImg.frame), self.contentView.width - CGRectGetMaxX(_photoImg.frame) - SCREEN_CURRETWIDTH(45), _photoImg.height / 2);
+    _photoImg.frame = CGRectMake(SCREEN_ORIGINWIDTH_5(15), SCREEN_ORIGINWIDTH_5(15), SCREEN_ORIGINWIDTH_5(80), SCREEN_ORIGINWIDTH_5(80));
+    _nickLabel.frame = CGRectMake(CGRectGetMaxX(_photoImg.frame) + SCREEN_ORIGINWIDTH_5(15), CGRectGetMinY(_photoImg.frame), self.contentView.width - CGRectGetMaxX(_photoImg.frame) - SCREEN_ORIGINWIDTH_5(45), _photoImg.height / 2);
     _introLabel.frame = CGRectMake(CGRectGetMinX(_nickLabel.frame), CGRectGetMaxY(_nickLabel.frame), CGRectGetWidth(_nickLabel.frame), CGRectGetHeight(_nickLabel.frame));
 }
 

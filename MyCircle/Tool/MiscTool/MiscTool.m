@@ -152,9 +152,9 @@
 
 + (UIView *)returnIconAndTitleViewWithIndex:(NSInteger )index
 {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH_XF(45), SCREEN_WIDTH_XF(72))];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_ORIGINWIDTH_4(45), SCREEN_ORIGINWIDTH_4(72))];
     view.userInteractionEnabled = YES;
-    UIImageView *imv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH_XF(45), SCREEN_WIDTH_XF(45))];
+    UIImageView *imv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_ORIGINWIDTH_4(45), SCREEN_ORIGINWIDTH_4(45))];
     [view addSubview:imv];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, imv.height, imv.width, view.height - imv.height)];
     label.textAlignment = NSTextAlignmentCenter;
@@ -362,6 +362,16 @@
     NSString *md5 = [self md5:pwd];
     NSString *s = [RSA encryptString:md5 publicKey:rsa_public_key];
     return s;
+}
+
+
+//状态栏小菊花显示
++ (void)showNetworkActivityIndicator {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+//状态栏小菊花隐藏
++ (void)hideNetworkActivityIndicatorVisible {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 

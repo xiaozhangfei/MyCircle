@@ -120,7 +120,7 @@
 }
 
 - (UIView *)headerView {
-    _headImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, SCREEN_CURRETWIDTH(464))];
+    _headImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, SCREEN_ORIGINWIDTH_5(464))];
     _headImg.image = [UIImage imageNamed:@"hed.jpg"];
     if (!ISEMPTY([XFAppContext sharedContext].backgroundUrl)) {
         [_headImg sd_setImageWithURL:[NSURL URLWithString:[XFAPI image_url:[XFAppContext sharedContext].backgroundUrl]] placeholderImage:[UIImage imageNamed:@"hed.jpg"] completed:nil];

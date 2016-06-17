@@ -36,17 +36,17 @@
     
     __weak typeof (self) weakSelf = self;
     [_thumbImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo (weakSelf.mas_left).with.offset (SCREEN_CURRETWIDTH(20));
-        make.top.equalTo (weakSelf.mas_top).with.offset (SCREEN_CURRETWIDTH(20));
-        make.width.offset (SCREEN_CURRETWIDTH(90));
-        make.bottom.equalTo (weakSelf.mas_bottom).with.offset (SCREEN_CURRETWIDTH(-20));
+        make.left.equalTo (weakSelf.mas_left).with.offset (SCREEN_ORIGINWIDTH_5(20));
+        make.top.equalTo (weakSelf.mas_top).with.offset (SCREEN_ORIGINWIDTH_5(20));
+        make.width.offset (SCREEN_ORIGINWIDTH_5(90));
+        make.bottom.equalTo (weakSelf.mas_bottom).with.offset (SCREEN_ORIGINWIDTH_5(-20));
     }];
     
     [_videoName mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo (weakSelf.thumbImage.mas_right).with.offset (SCREEN_CURRETWIDTH(10));
+        make.left.equalTo (weakSelf.thumbImage.mas_right).with.offset (SCREEN_ORIGINWIDTH_5(10));
         make.top.equalTo (weakSelf.thumbImage.mas_top);
-        make.right.equalTo (weakSelf.mas_right).with.offset (SCREEN_CURRETWIDTH(-130));
-        make.height.equalTo (weakSelf.mas_height).with.offset (SCREEN_CURRETWIDTH(45));
+        make.right.equalTo (weakSelf.mas_right).with.offset (SCREEN_ORIGINWIDTH_5(-130));
+        make.height.equalTo (weakSelf.mas_height).with.offset (SCREEN_ORIGINWIDTH_5(45));
     }];
     
     [_sizeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -57,8 +57,8 @@
     }];
     
     [_progressImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo (weakSelf.mas_left).with.offset (SCREEN_CURRETWIDTH(20));
-        make.right.equalTo (weakSelf.mas_right).with.offset (SCREEN_CURRETWIDTH(-20));
+        make.left.equalTo (weakSelf.mas_left).with.offset (SCREEN_ORIGINWIDTH_5(20));
+        make.right.equalTo (weakSelf.mas_right).with.offset (SCREEN_ORIGINWIDTH_5(-20));
         make.width.equalTo (weakSelf.thumbImage.mas_width);
         make.height.equalTo (weakSelf.thumbImage.mas_height);
     }];

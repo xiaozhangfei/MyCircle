@@ -100,15 +100,15 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return SCREEN_CURRETWIDTH(50);
+    return SCREEN_ORIGINWIDTH_5(50);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return SCREEN_CURRETWIDTH(10);
+    return SCREEN_ORIGINWIDTH_5(10);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return SCREEN_CURRETWIDTH(110);
+    return SCREEN_ORIGINWIDTH_5(110);
 }
 
 //右边索引 字节数(如果不实现 就不显示右侧索引)
@@ -153,9 +153,9 @@
 //        });
 //    }else {
 //        dispatch_async(dispatch_get_main_queue(), ^{
-//            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_CURRETWIDTH(90), SCREEN_CURRETWIDTH(90))];
+//            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_ORIGINWIDTH_5(90), SCREEN_ORIGINWIDTH_5(90))];
 //            label.layer.masksToBounds = YES;
-//            label.layer.cornerRadius = SCREEN_CURRETWIDTH(45);
+//            label.layer.cornerRadius = SCREEN_ORIGINWIDTH_5(45);
 //            label.tag = 1222;
 //            label.text = title;
 //            label.backgroundColor = [UIColor lightGrayColor];

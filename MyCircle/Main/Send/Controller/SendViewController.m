@@ -89,7 +89,7 @@
 - (void)initPopButtons {
     NSArray *titleArray = @[@"文字", @"相册", @"长微博", @"签到", @"点评", @"更多"];
     NSArray *imageArray = @[@"tabbar_compose_idea",@"tabbar_compose_photo",@"tabbar_compose_headlines",@"tabbar_compose_lbs",@"tabbar_compose_review",@"tabbar_compose_more"];
-    CGFloat w = SCREEN_CURRETWIDTH(170);
+    CGFloat w = SCREEN_ORIGINWIDTH_5(170);
 
     for (int i = 0; i < 6; i ++) {
         BtnExt *btn = [[BtnExt alloc] initWithFrame:CGRectMake((self.view.width - w) / 2, self.view.height - 3 * w, w, w)];
@@ -99,8 +99,8 @@
         [btn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
         [btn setTitleColor:[UIColor lightGrayColor] forState:(UIControlStateHighlighted)];
         btn.btnType = XFBtnTypeBottom;
-        btn.imageSize = CGSizeMake(SCREEN_CURRETWIDTH(120), SCREEN_CURRETWIDTH(120));
-        btn.imageToBorderOffset = SCREEN_CURRETWIDTH(0);
+        btn.imageSize = CGSizeMake(SCREEN_ORIGINWIDTH_5(120), SCREEN_ORIGINWIDTH_5(120));
+        btn.imageToBorderOffset = SCREEN_ORIGINWIDTH_5(0);
         btn.tag = 1210 + i;
         [btn addTarget:self action:@selector(popImvAction:) forControlEvents:(UIControlEventTouchUpInside)];
         [self.view addSubview:btn];
@@ -118,9 +118,9 @@
 //视图出现后执行
 - (void)execAnimationsWhenAppear {
 
-    CGFloat x = SCREEN_CURRETWIDTH(50);//x向间隔
-    CGFloat y = SCREEN_CURRETWIDTH(80);//y向间隔
-    CGFloat w = SCREEN_CURRETWIDTH(170);//宽
+    CGFloat x = SCREEN_ORIGINWIDTH_5(50);//x向间隔
+    CGFloat y = SCREEN_ORIGINWIDTH_5(80);//y向间隔
+    CGFloat w = SCREEN_ORIGINWIDTH_5(170);//宽
     //x 50 + w
     CGPoint point = CGPointMake(self.view.width / 2 - x - w, self.view.height - 2 * w - 2 * y - 40);
     for (int i = 0; i < 2; i ++) {

@@ -70,7 +70,7 @@
             
             [[textCell viewWithTag:1400] removeFromSuperview];
             
-            UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMinX(textCell.bubbleBackgroundView.frame) - SCREEN_CURRETWIDTH(20), CGRectGetMaxY(textCell.bubbleBackgroundView.frame) - SCREEN_CURRETWIDTH(30), SCREEN_CURRETWIDTH(50), SCREEN_CURRETWIDTH(40))];
+            UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMinX(textCell.bubbleBackgroundView.frame) - SCREEN_ORIGINWIDTH_5(20), CGRectGetMaxY(textCell.bubbleBackgroundView.frame) - SCREEN_ORIGINWIDTH_5(30), SCREEN_ORIGINWIDTH_5(50), SCREEN_ORIGINWIDTH_5(40))];
             img.image = [UIImage imageNamed:@"chat_pendant"];
             img.tag = 1400;
             [[textCell.bubbleBackgroundView superview] addSubview:img];
